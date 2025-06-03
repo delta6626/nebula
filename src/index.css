@@ -496,25 +496,3 @@ html[data-theme="light"] .tiptap {
 .tiptap.resize-cursor {
   cursor: col-resize;
 }
-
-.shadow {
-  animation: shadowSpin 4s linear infinite alternate-reverse;
-}
-
-@keyframes shadowSpin {
-  0% {
-    box-shadow: 0 0 10px 15px #48abe0;
-  }
-  25% {
-    box-shadow: 10px 0 20px 15px #48abe0;
-  }
-  50% {
-    box-shadow: 0 10px 20px 15px #48abe0;
-  }
-  75% {
-    box-shadow: -10px 0 20px 15px #48abe0;
-  }
-  100% {
-    box-shadow: 0 -10px 20px 15px #48abe0;
-  }
-}

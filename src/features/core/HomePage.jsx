@@ -67,7 +67,7 @@ function HomePage() {
 
           <div className="mt-40 flex flex-col items-center text-center">
             <img
-              className="rounded-lg shadow"
+              className="rounded-lg"
               src={theme == "dark" ? "/dark.png" : "/light.png"}
             />
           </div>
