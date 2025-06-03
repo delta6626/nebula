@@ -66,10 +66,12 @@ function HomePage() {
           </div>
 
           <div className="mt-40 flex flex-col items-center text-center">
-            <img
-              className="rounded-lg"
-              src={theme == "dark" ? "/dark.png" : "/light.png"}
-            />
+            <div className="">
+              <img
+                className="rounded-lg"
+                src={theme == "dark" ? "/dark.png" : "/light.png"}
+              />
+            </div>
           </div>
 
           {/* Features */}
@@ -182,7 +184,7 @@ function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center p-20 border-1 border-accent rounded-lg bg-base-300">
+            <div className="flex items-center p-20 border-1 border-accent rounded-lg bg-base-300 border-tracker-card">
               <Cloud size={120} />
             </div>
           </div>
@@ -205,7 +207,7 @@ function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="flex items-center p-20 border-1 border-accent rounded-lg bg-base-300">
+            <div className="flex items-center p-20 border-1 border-accent rounded-lg bg-base-300 border-tracker-card">
               <Code2 size={120} />
             </div>
           </div>
@@ -233,7 +235,7 @@ function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="flex items-center p-20 border-1 border-accent rounded-lg bg-base-300">
+            <div className="flex items-center p-20 border-1 border-accent rounded-lg bg-base-300 border-tracker-card">
               <DollarSign size={120} />
             </div>
           </div>
