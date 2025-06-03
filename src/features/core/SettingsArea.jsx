@@ -1,4 +1,4 @@
-import React, { useState, useSyncExternalStore } from "react";
+import { useState } from "react";
 import { ArrowBigUp, Command, Info, Plus } from "lucide-react";
 import { LANGUAGES } from "../../constants/LANGUAGES";
 import { THEMES } from "../../constants/THEMES";
