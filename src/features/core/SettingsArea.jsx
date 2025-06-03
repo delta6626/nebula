@@ -7,6 +7,7 @@ import { useUserVerifiedStore } from "../../store/userVerifiedStore";
 import { useMessageStore } from "../../store/messageStore";
 import { useNotesStore } from "../../store/notesStore";
 import { useNotebooksStore } from "../../store/notebooksStore";
+import { useActiveTabStore } from "../../store/activeTabStore";
 import { hasEmptyStringValue } from "../../utils/hasEmptyStringValue";
 import {
   softDeleteAllNotes,
@@ -27,6 +28,7 @@ function SettingsArea() {
   const { setMessage } = useMessageStore();
   const { setNotebooks } = useNotebooksStore();
   const { setNotes } = useNotesStore();
+  const { setActiveTab } = useActiveTabStore();
 
   // State variables
   const [name, setName] = useState(user.name);
@@ -143,6 +145,7 @@ function SettingsArea() {
     signOutUser()
       .then(() => {
         setSigningOut(false);
+        setActiveTab(APP_CONSTANTS.DASHBOARD_PAGE);
         navigate("/signup");
       })
       .catch((error) => {
