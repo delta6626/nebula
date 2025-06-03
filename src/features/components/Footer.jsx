@@ -27,7 +27,8 @@ function Footer() {
         <h1 className="text-xl font-jakarta font-bold">Product</h1>
         <div className="flex flex-col gap-2 text-gray-400">
           <Link
-            className=""
+            to={"#features"}
+            className="hover:text-primary"
             onClick={() => {
               const f = document.getElementById("features");
               f.scrollIntoView({ behavior: "smooth" });
@@ -36,7 +37,8 @@ function Footer() {
             Features
           </Link>
           <Link
-            className=""
+            className="hover:text-primary"
+            to={"#faq"}
             onClick={() => {
               const f = document.getElementById("faq");
               f.scrollIntoView({ behavior: "smooth" });
@@ -44,11 +46,15 @@ function Footer() {
           >
             FAQ
           </Link>
-          <Link className="" to={"https://ko-fi.com/hasan04"} target="_blank">
+          <Link
+            className="hover:text-primary"
+            to={"https://ko-fi.com/hasan04"}
+            target="_blank"
+          >
             Donate
           </Link>
           <Link
-            className=""
+            className="hover:text-primary"
             to={"https://github.com/delta6626/nebula"}
             target="_blank"
           >
@@ -60,10 +66,10 @@ function Footer() {
       <div className="flex flex-col gap-10">
         <h1 className="text-xl font-jakarta font-bold">Legal</h1>
         <div className="flex flex-col gap-2 text-gray-400">
-          <Link className="" to={"/terms-of-service"}>
+          <Link className="hover:text-primary" to={"/terms-of-service"}>
             Terms of Service
           </Link>
-          <Link className="" to={"/privacy-policy"}>
+          <Link className="hover:text-primary" to={"/privacy-policy"}>
             Privacy Policy
           </Link>
         </div>
@@ -72,21 +78,25 @@ function Footer() {
       <div className="flex flex-col gap-10">
         <h1 className="text-xl font-jakarta font-bold">Contact</h1>
         <div className="flex flex-col gap-2 text-gray-400">
-          <Link className="" to={"https://"} target="_blank">
+          <Link className="hover:text-primary" to={"https://"} target="_blank">
             Developer site
           </Link>
           <Link
-            className=""
+            className="hover:text-primary"
             to={"mailto:hasan04.asm@gmail.com"}
             target="_blank"
           >
             Mail
           </Link>
-          <Link className="" to={"https://x.com/delta6626"} target="_blank">
+          <Link
+            className="hover:text-primary"
+            to={"https://x.com/delta6626"}
+            target="_blank"
+          >
             X
           </Link>
           <Link
-            className=""
+            className="hover:text-primary"
             to={"https://github.com/delta6626"}
             target="_blank"
           >

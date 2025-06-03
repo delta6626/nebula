@@ -53,16 +53,17 @@ function HomePage() {
             >
               Start taking notes <ArrowRight size={20} />
             </Link>
-            <button
+            <Link
               className="btn border-1 border-accent"
               onClick={() => {
                 const el = document.getElementById("features");
                 el.scrollIntoView({ behavior: "smooth" });
               }}
+              to={"#features"}
             >
               <Sparkles size={20} />
               Explore features
-            </button>
+            </Link>
           </div>
 
           <div className="mt-40 flex flex-col items-center text-center">

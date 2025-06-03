@@ -10,16 +10,37 @@ function NavBar() {
         </Link>
       </div>
       <div className="">
-        <Link className="btn bg-transparent border-none" to={"/#features"}>
+        <Link
+          to={"#features"}
+          className="btn bg-transparent border-none hover:text-primary"
+          onClick={() => {
+            const f = document.getElementById("features");
+            f.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
           Features
         </Link>
-        <Link className="btn bg-transparent border-none" to={"/#about"}>
-          About
+        <Link
+          className="btn bg-transparent border-none hover:text-primary"
+          to={"https://ko-fi.com/hasan04"}
+          target="_blank"
+        >
+          Donate
         </Link>
-        <Link className="btn bg-transparent border-none" to={"/#contact"}>
-          Contact
+        <Link
+          to={"#faq"}
+          className="btn bg-transparent border-none hover:text-primary"
+          onClick={() => {
+            const f = document.getElementById("faq");
+            f.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          FAQ
         </Link>
-        <Link className="btn bg-transparent border-none" to={"/login"}>
+        <Link
+          className="btn bg-transparent border-none hover:text-primary"
+          to={"/login"}
+        >
           Log In
         </Link>
         <Link className="btn btn-primary border-none mx-2" to={"/signup"}>
