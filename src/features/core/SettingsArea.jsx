@@ -24,7 +24,7 @@ function SettingsArea() {
 
   const { user, setUser } = useUserStore();
   const { userVerified } = useUserVerifiedStore();
-  const { message, setMessage } = useMessageStore();
+  const { setMessage } = useMessageStore();
   const { setNotebooks } = useNotebooksStore();
   const { setNotes } = useNotesStore();
 
