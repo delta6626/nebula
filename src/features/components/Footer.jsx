@@ -14,7 +14,7 @@ function Footer() {
           and doers.
         </p>
         <div className="flex gap-4">
-          <Link to={"https://github.com/delta6626"} target="_blank">
+          <Link to={"https://github.com/delta6626/"} target="_blank">
             <GithubIcon />
           </Link>
           <Link to={"https://x.com/delta6626"} target="_blank">
@@ -47,7 +47,13 @@ function Footer() {
           <Link className="" to={"https://ko-fi.com/hasan04"} target="_blank">
             Donate
           </Link>
-          <Link className="">Source code</Link>
+          <Link
+            className=""
+            to={"https://github.com/delta6626/nebula"}
+            target="_blank"
+          >
+            Source code
+          </Link>
         </div>
       </div>
 

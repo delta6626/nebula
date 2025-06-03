@@ -68,11 +68,7 @@ function HomePage() {
           <div className="mt-40 flex flex-col items-center text-center">
             <img
               className="rounded-lg shadow"
-              src={
-                theme == "dark"
-                  ? "../../public/dark.png"
-                  : "../../public/light.png"
-              }
+              src={theme == "dark" ? "/dark.png" : "/light.png"}
             />
           </div>
 
@@ -200,7 +196,11 @@ function HomePage() {
                   paywalls. You can view, use, and contribute to the entire
                   codebase on GitHub.
                 </p>
-                <Link className="btn mt-4 border-1 border-accent">
+                <Link
+                  className="btn mt-4 border-1 border-accent"
+                  to={"https://github.com/delta6626/nebula"}
+                  target="_blank"
+                >
                   Star on GitHub <Star size={20} />
                 </Link>
               </div>
