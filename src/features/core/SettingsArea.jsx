@@ -146,7 +146,7 @@ function SettingsArea() {
       .then(() => {
         setSigningOut(false);
         setActiveTab(APP_CONSTANTS.DASHBOARD_PAGE);
-        navigate("/signup");
+        navigate("/login");
       })
       .catch((error) => {
         setMessage({
