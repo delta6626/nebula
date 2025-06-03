@@ -29,7 +29,7 @@ function HomePage() {
   const { theme } = useThemeStore();
 
   return (
-    <div className="font-jakarta scroll-smooth scrollbar-thin">
+    <div className="font-jakarta h-[100vh] overflow-y-scroll scroll-smooth scrollbar-thin">
       <NavBar></NavBar>
       <div className="px-80">
         <div className="mt-40 flex flex-col">
