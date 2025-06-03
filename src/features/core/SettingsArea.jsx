@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ArrowBigUp, Command, Info, Plus } from "lucide-react";
-import { LANGUAGES } from "../../constants/LANGUAGES";
 import { THEMES } from "../../constants/THEMES";
 import { useUserStore } from "../../store/userStore";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
@@ -18,7 +17,6 @@ import {
   sendVerificationEmail,
 } from "../../firebase/services";
 import { Timestamp } from "firebase/firestore";
-import GenericModal from "../components/GenericModal";
 import { useNavigate } from "react-router-dom";
 
 function SettingsArea() {
