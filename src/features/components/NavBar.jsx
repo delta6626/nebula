@@ -7,7 +7,7 @@ function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="navbar font-jakarta bg-base-100 flex justify-between py-5 sm:px-10 md:px-20 lg:px-40 xl:px-60 2xl:px-80">
+    <div className="navbar font-jakarta bg-base-100 flex justify-between py-5 px-10 md:px-20 lg:px-40 xl:px-60 2xl:px-80">
       <div className="">
         <Link className="text-xl font-bold" to={"/"}>
           Nebula
@@ -65,7 +65,7 @@ function NavBar() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden absolute top-0 left-0 w-full h-full bg-base-100 py-5 sm:px-10 z-10 flex justify-between">
+        <div className="md:hidden absolute top-0 left-0 w-full h-full bg-base-100 py-5 px-10 z-10 flex justify-between">
           <div className="flex flex-col w-fit gap-5">
             <Link
               className="text-xl font-bold"
