@@ -31,7 +31,7 @@ function HomePage() {
   return (
     <div className="font-jakarta h-[100vh] overflow-y-scroll scroll-smooth scrollbar-thin">
       <NavBar></NavBar>
-      <div className="px-80">
+      <div className="px-10 md:px-20 lg:px-40 xl:px-60 2xl:px-80">
         <div className="mt-40 flex flex-col">
           <h1 className="text-6xl font-bold">
             Bring clarity to your <br />

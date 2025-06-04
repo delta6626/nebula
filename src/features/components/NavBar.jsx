@@ -1,15 +1,20 @@
 import { Link } from "react-router-dom";
 import ThemeChanger from "./ThemeChanger";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 function NavBar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className="navbar bg-base-100 flex justify-between px-80 py-5">
+    <div className="navbar bg-base-100 flex justify-between py-5 px-10 md:px-20 lg:px-40 xl:px-60 2xl:px-80">
       <div className="">
         <Link className="text-xl font-jakarta font-bold" to={"/"}>
           Nebula
         </Link>
       </div>
-      <div className="">
+      {/* Desktop Links */}
+      <div className="hidden md:flex">
         <Link
           to={"#features"}
           className="btn bg-transparent border-none hover:text-primary"
@@ -48,6 +53,58 @@ function NavBar() {
         </Link>
         <ThemeChanger></ThemeChanger>
       </div>
+
+      {/* Mobile hamburger menu */}
+      <div
+        className="btn btn-square md:hidden"
+        onClick={() => {
+          setMenuOpen(!menuOpen);
+        }}
+      >
+        {menuOpen ? <X /> : <Menu />}
+      </div>
+
+      {menuOpen && (
+        <div className="md:hidden absolute top-20 left-0 w-full h-full bg-base-100 py-5 px-5 sm:px-10 z-10">
+          <div className="flex flex-col gap-5">
+            <Link
+              className="text-xl hover:text-primary"
+              onClick={() => {
+                setMenuOpen(false);
+                const f = document.getElementById("features");
+                f.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Features
+            </Link>
+            <Link
+              className="text-xl hover:text-primary"
+              to={"https://ko-fi.com/hasan04"}
+              target="_blank"
+            >
+              Donate
+            </Link>
+            <Link
+              className="text-xl hover:text-primary"
+              onClick={() => {
+                setMenuOpen(false);
+                const f = document.getElementById("faq");
+                f.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              FAQ
+            </Link>
+            <Link className="text-xl hover:text-primary" to={"/login"}>
+              Log In
+            </Link>
+            <button className="btn btn-primary">
+              <Link className="text-xl" to={"/signup"}>
+                Sign Up
+              </Link>
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
