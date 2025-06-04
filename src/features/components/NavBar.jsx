@@ -97,11 +97,9 @@ function NavBar() {
             <Link className="text-xl hover:text-primary" to={"/login"}>
               Log In
             </Link>
-            <button className="btn btn-primary">
-              <Link className="text-xl" to={"/signup"}>
-                Sign Up
-              </Link>
-            </button>
+            <Link className="text-xl btn btn-primary" to={"/signup"}>
+              Sign Up
+            </Link>
           </div>
         </div>
       )}
