@@ -29,24 +29,19 @@ function HomePage() {
   const { theme } = useThemeStore();
 
   return (
-    <div className="font-jakarta h-[100vh] overflow-y-scroll scroll-smooth scrollbar-thin">
+    <div className="overflow-x-hidden font-jakarta h-[100vh] overflow-y-scroll scroll-smooth scrollbar-thin">
       <NavBar></NavBar>
       <div className="px-10 md:px-20 lg:px-30 xl:px-40 2xl:px-50">
-        <div className="mt-40 flex flex-col">
-          <h1 className="text-6xl font-bold">
-            Bring clarity to your <br />
-            thoughts.
+        <div className="mt-20 md:mt-40 flex flex-col">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+            Bring clarity to your thoughts.
           </h1>
-          <p className="mt-10 text-xl text-gray-400">
-            Craft and organize your thoughts in a space
-            <br />
-            built for clarity, speed, and creativity.
-            <br />
-            Free. Cloud-based. Feature-packed.
-            <br />
-            Fully yours.
+          <p className="max-w-120 mt-10 text-xl text-gray-400">
+            Craft and organize your thoughts in a space built for clarity,
+            speed, and creativity. Free. Cloud-based. Feature-packed. Fully
+            yours.
           </p>
-          <div className="mt-10 flex gap-4">
+          <div className="mt-10 flex gap-4 flex-col sm:flex-row">
             <Link
               className="btn btn-primary border-1 border-accent"
               to={"/signup"}
@@ -66,7 +61,7 @@ function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-40 flex flex-col items-center text-center">
+          <div className="mt-20 md:mt-40 flex flex-col items-center text-center">
             <div className="">
               <img
                 className="rounded-lg"
@@ -79,9 +74,11 @@ function HomePage() {
 
           <div
             id="features"
-            className="mt-40 flex flex-col items-center text-center"
+            className="mt-20 md:mt-40 flex flex-col items-center text-center"
           >
-            <h1 className="text-4xl font-bold">Packed with features</h1>
+            <h1 className="text-3xl md:text-4xl font-bold">
+              Packed with features
+            </h1>
             <div className="mt-10 grid xl:grid-cols-2 2xl:grid-cols-3 gap-6">
               <FeatureCard
                 title={"Rich Text Formatting"}
@@ -170,9 +167,11 @@ function HomePage() {
             </div>
           </div>
 
-          <div className="mt-40 flex flex-row-reverse items-center justify-between">
+          <div className="mt-20 md:mt-40 flex flex-row-reverse items-center justify-between">
             <div className="">
-              <h1 className="text-4xl font-bold">Cloud based & Secure</h1>
+              <h1 className="text-center md:text-left text-3xl md:text-4xl font-bold">
+                Cloud based & Secure
+              </h1>
               <div className="mt-10">
                 <p className="md:max-w-110 lg:max-w-150 text-xl text-gray-400">
                   Nebula securely backs up your notes to the cloud whenever you
@@ -187,9 +186,11 @@ function HomePage() {
             </div>
           </div>
 
-          <div className="mt-40 flex items-center justify-between">
+          <div className="mt-20 md:mt-40 flex items-center justify-between">
             <div className="">
-              <h1 className="text-4xl font-bold">Open Source</h1>
+              <h1 className="text-center md:text-left text-3xl md:text-4xl font-bold">
+                Open Source
+              </h1>
               <div className="mt-10">
                 <p className="md:max-w-110 lg:max-w-150 text-xl text-gray-400">
                   Nebula is built for the community — no subscriptions, no
@@ -197,7 +198,7 @@ function HomePage() {
                   codebase on GitHub.
                 </p>
                 <Link
-                  className="btn mt-4 border-1 border-accent"
+                  className="btn mt-4 border-1 border-accent w-full sm:w-fit"
                   to={"https://github.com/delta6626/nebula"}
                   target="_blank"
                 >
@@ -210,9 +211,11 @@ function HomePage() {
             </div>
           </div>
 
-          <div className="mt-40 flex flex-row-reverse items-center justify-between">
+          <div className="mt-20 md:mt-40 flex flex-row-reverse items-center justify-between">
             <div className="">
-              <h1 className="text-4xl font-bold">Free Cloud Storage</h1>
+              <h1 className="text-center md:text-left text-3xl md:text-4xl font-bold">
+                Free Cloud Storage
+              </h1>
               <div className="mt-10">
                 <p className="md:max-w-110 lg:max-w-150 text-xl text-gray-400">
                   Nebula offers free cloud storage for your notes — no
@@ -223,7 +226,7 @@ function HomePage() {
                   open and sustainable for everyone.
                 </p>
                 <Link
-                  className="btn mt-4 border-1 border-accent"
+                  className="btn mt-4 border-1 border-accent w-full sm:w-fit"
                   to={"https://ko-fi.com/hasan04"}
                   target="_blank"
                 >
@@ -236,8 +239,10 @@ function HomePage() {
             </div>
           </div>
 
-          <div id="faq" className="mt-40 flex flex-col items-center">
-            <h1 className="text-4xl font-bold">Frequently Asked Questions</h1>
+          <div id="faq" className="mt-20 md:mt-40 flex flex-col items-center">
+            <h1 className="text-3xl md:text-4xl font-bold">
+              Frequently Asked Questions
+            </h1>
             <div className="mt-10 w-full flex flex-col gap-4">
               <div className="collapse collapse-arrow border border-accent">
                 <input type="radio" name="my-accordion-2" defaultChecked />
@@ -359,15 +364,17 @@ function HomePage() {
             </div>
           </div>
 
-          <div className="mt-40 flex flex-col items-center text-center">
-            <h1 className="text-4xl font-bold">Ready to get organized?</h1>
+          <div className="mt-20 md:mt-40 flex flex-col items-center sm:text-center">
+            <h1 className="text-3xl md:text-4xl font-bold">
+              Ready to get organized?
+            </h1>
             <p className="max-w-150 mt-10 text-xl text-gray-400">
               Take control of your notes with Nebula — free, simple and fully
               yours. Start creating, organizing, and finding your ideas
               effortlessly today.
             </p>
             <Link
-              className="btn btn-primary mt-10 border-1 border-accent"
+              className="btn btn-primary mt-10 border-1 border-accent w-full sm:w-fit"
               to={"/signup"}
             >
               Get started <ArrowRight size={20} />
@@ -377,7 +384,7 @@ function HomePage() {
       </div>
 
       {/* Footer */}
-      <div className="mt-40">
+      <div className="mt-20 md:mt-40">
         <Footer></Footer>
       </div>
     </div>
