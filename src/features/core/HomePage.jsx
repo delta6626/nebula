@@ -174,7 +174,7 @@ function HomePage() {
             <div className="">
               <h1 className="text-4xl font-bold">Cloud based & Secure</h1>
               <div className="mt-10">
-                <p className="max-w-150 text-xl text-gray-400">
+                <p className="md:max-w-110 lg:max-w-150 text-xl text-gray-400">
                   Nebula securely backs up your notes to the cloud whenever you
                   hit save, giving you full control while keeping your work
                   safe. Cloud storage is completely free* for all users, made
@@ -182,7 +182,7 @@ function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center p-20 border-1 border-accent rounded-lg bg-base-300 border-tracker-card">
+            <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300 border-tracker-card">
               <Cloud size={120} />
             </div>
           </div>
@@ -191,7 +191,7 @@ function HomePage() {
             <div className="">
               <h1 className="text-4xl font-bold">Open Source</h1>
               <div className="mt-10">
-                <p className="max-w-150 text-xl text-gray-400">
+                <p className="md:max-w-110 lg:max-w-150 text-xl text-gray-400">
                   Nebula is built for the community — no subscriptions, no
                   paywalls. You can view, use, and contribute to the entire
                   codebase on GitHub.
@@ -205,18 +205,16 @@ function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="flex items-center p-20 border-1 border-accent rounded-lg bg-base-300 border-tracker-card">
+            <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300 border-tracker-card">
               <Code2 size={120} />
             </div>
           </div>
 
           <div className="mt-40 flex flex-row-reverse items-center justify-between">
             <div className="">
-              <h1 className="text-4xl font-bold">
-                Free Cloud Storage, Powered by You
-              </h1>
+              <h1 className="text-4xl font-bold">Free Cloud Storage</h1>
               <div className="mt-10">
-                <p className="max-w-150 text-xl text-gray-400">
+                <p className="md:max-w-110 lg:max-w-150 text-xl text-gray-400">
                   Nebula offers free cloud storage for your notes — no
                   subscriptions, no hidden fees. Just hit save and your work is
                   securely backed up. This is possible thanks to a
@@ -233,7 +231,7 @@ function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="flex items-center p-20 border-1 border-accent rounded-lg bg-base-300 border-tracker-card">
+            <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300 border-tracker-card">
               <DollarSign size={120} />
             </div>
           </div>
