@@ -31,7 +31,7 @@ function HomePage() {
   return (
     <div className="font-jakarta h-[100vh] overflow-y-scroll scroll-smooth scrollbar-thin">
       <NavBar></NavBar>
-      <div className="px-10 md:px-20 lg:px-40 xl:px-60 2xl:px-80">
+      <div className="px-10 md:px-20 lg:px-30 xl:px-40 2xl:px-50">
         <div className="mt-40 flex flex-col">
           <h1 className="text-6xl font-bold">
             Bring clarity to your <br />
@@ -82,7 +82,7 @@ function HomePage() {
             className="mt-40 flex flex-col items-center text-center"
           >
             <h1 className="text-4xl font-bold">Packed with features</h1>
-            <div className="mt-10 grid grid-cols-3 gap-6">
+            <div className="mt-10 grid xl:grid-cols-2 2xl:grid-cols-3 gap-6">
               <FeatureCard
                 title={"Rich Text Formatting"}
                 body={
@@ -170,10 +170,7 @@ function HomePage() {
             </div>
           </div>
 
-          <div
-            id="features"
-            className="mt-40 flex flex-row-reverse items-center justify-between"
-          >
+          <div className="mt-40 flex flex-row-reverse items-center justify-between">
             <div className="">
               <h1 className="text-4xl font-bold">Cloud based & Secure</h1>
               <div className="mt-10">

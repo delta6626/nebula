@@ -7,7 +7,7 @@ function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="navbar font-jakarta bg-base-100 flex justify-between py-5 px-10 md:px-20 lg:px-40 xl:px-60 2xl:px-80">
+    <div className="navbar font-jakarta bg-base-100 flex justify-between py-5 px-10 md:px-20 lg:px-30 xl:px-40 2xl:px-50">
       <div className="">
         <Link className="text-xl font-bold" to={"/"}>
           Nebula
