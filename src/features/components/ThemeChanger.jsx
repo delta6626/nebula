@@ -19,7 +19,10 @@ function ThemeChanger() {
   }
 
   return (
-    <button className="btn border-accent" onClick={handleThemeChange}>
+    <button
+      className="btn btn-square border-accent"
+      onClick={handleThemeChange}
+    >
       {theme == "light" ? (
         <Moon className=""></Moon>
       ) : theme == "dark" ? (
