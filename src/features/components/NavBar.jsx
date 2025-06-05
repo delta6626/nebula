@@ -66,7 +66,7 @@ function NavBar() {
 
       {menuOpen && (
         <div className="md:hidden absolute top-0 left-0 w-full h-full bg-base-100 py-5 px-10 z-10 flex justify-between">
-          <div className="flex flex-col w-fit gap-5">
+          <div className="flex justify-center flex-col w-fit gap-5">
             <Link
               className="text-xl font-bold"
               to={"/"}

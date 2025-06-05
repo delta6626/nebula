@@ -1,10 +1,10 @@
-import NavBar from "../components/NavBar";
 import { Link } from "react-router-dom";
+import MenuExcludedNavBar from "../components/MenuExcludedNavBar";
 
 function TermsOfService() {
   return (
     <div className="">
-      <NavBar />
+      <MenuExcludedNavBar />
       <div className="w-full py-10 font-jakarta flex flex-col items-center scroll-smooth scrollbar-thin">
         <h1 className="text-4xl font-semibold">Terms of Service</h1>
         <p className="mt-2 text-gray-400">Updated June 2, 2025</p>

@@ -11,6 +11,7 @@ import {
 } from "../../firebase/services";
 import { useThemeStore } from "../../store/themeStore";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
+import MenuExcludedNavBar from "../components/MenuExcludedNavBar";
 
 function SignUpPage() {
   const navigate = useNavigate();
@@ -198,7 +199,7 @@ function SignUpPage() {
 
   return (
     <div className="">
-      <NavBar></NavBar>
+      <MenuExcludedNavBar />
       <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
         <fieldset className="fieldset bg-base-200 border-base-300 rounded-md border w-md p-4 font-jakarta">
           <h1 className="text-2xl font-bold text-center">

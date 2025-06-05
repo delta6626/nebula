@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import validateEmail from "../../utils/validateEmail";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import { useThemeStore } from "../../store/themeStore";
+import MenuExcludedNavBar from "../components/MenuExcludedNavBar";
 import {
   logInWithEmailAndPassword,
   getAuthenticatedUser,
@@ -174,7 +175,7 @@ function LogInPage() {
 
   return (
     <div className="">
-      <NavBar></NavBar>
+      <MenuExcludedNavBar />
       <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
         <fieldset className="fieldset bg-base-200 border-base-300 rounded-md border w-md p-4 font-jakarta">
           <h1 className="text-2xl font-bold text-center">Hey, Welcome back.</h1>
