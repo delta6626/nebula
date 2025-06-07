@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import ThemeChanger from "./ThemeChanger";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Logo from "../../assets/Logo";
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,7 +10,8 @@ function NavBar() {
   return (
     <div className="navbar font-jakarta bg-base-100 flex justify-between py-5 px-10 md:px-20 lg:px-30 xl:px-40 2xl:px-50">
       <div className="">
-        <Link className="text-xl font-bold" to={"/"}>
+        <Link className="flex items-center gap-2 text-xl font-bold" to={"/"}>
+          <Logo />
           Nebula
         </Link>
       </div>

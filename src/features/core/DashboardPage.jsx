@@ -43,6 +43,7 @@ import EditNoteModal from "../components/EditNoteModal";
 import EditNotebookModal from "../components/EditNotebookModal";
 import fetchAllQuotes from "../../utils/fetchAllQuotes";
 import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
+import Logo from "../../assets/Logo";
 
 function DashboardPage() {
   const navigate = useNavigate();
@@ -314,10 +315,11 @@ function DashboardPage() {
         <div className="logo flex items-center justify-between px-4">
           <h1
             className={
-              "text-xl font-jakarta font-bold text-center" +
+              "flex items-center gap-2 text-xl font-jakarta font-bold text-center" +
               (sideBarCollapsed ? " hidden" : "")
             }
           >
+            <Logo />
             Nebula
           </h1>
           <button

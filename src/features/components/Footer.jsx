@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
 import XIcon from "../../assets/XIcon";
 import GithubIcon from "../../assets/GithubIcon";
+import Logo from "../../assets/Logo";
 
 function Footer() {
   return (
     <div className="w-full border-t-1 border-accent py-10 px-10 md:px-20 lg:px-30 xl:px-40 2xl:px-50 flex flex-wrap justify-between gap-15">
       <div className="flex flex-col gap-10">
-        <Link className="text-xl font-jakarta font-bold" to={"/"}>
-          Nebula
+        <Link
+          className="flex items-center gap-2 text-xl font-jakarta font-bold"
+          to={"/"}
+        >
+          <Logo /> Nebula
         </Link>
         <p className="text-gray-400">
           Built for thinkers, dreamers, <br />
