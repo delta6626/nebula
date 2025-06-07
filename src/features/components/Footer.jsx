@@ -4,7 +4,7 @@ import GithubIcon from "../../assets/GithubIcon";
 
 function Footer() {
   return (
-    <div className="w-full border-t-1 border-accent py-10 px-10 md:px-20 lg:px-30 xl:px-40 2xl:px-50 flex justify-between">
+    <div className="w-full border-t-1 border-accent py-10 px-10 md:px-20 lg:px-30 xl:px-40 2xl:px-50 flex flex-wrap justify-between gap-15">
       <div className="flex flex-col gap-10">
         <Link className="text-xl font-jakarta font-bold" to={"/"}>
           Nebula
