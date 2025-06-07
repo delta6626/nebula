@@ -112,6 +112,9 @@ function NavBar() {
             <Link className="text-xl hover:text-primary" to={"/signup"}>
               Sign Up
             </Link>
+            <p className="flex items-center gap-2">
+              Theme <ThemeChanger />
+            </p>
           </div>
           <div
             className="btn btn-square"
