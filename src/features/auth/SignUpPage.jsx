@@ -277,7 +277,7 @@ function SignUpPage() {
           </button>
 
           <button
-            className="btn bg-secondary mt-2 text-secondary-content"
+            className="btn bg-white mt-2 text-black"
             onClick={handleSignUpWithGoogle}
             disabled={
               authenticating == APP_CONSTANTS.WITH_EMAIL ||

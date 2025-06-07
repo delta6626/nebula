@@ -220,7 +220,7 @@ function LogInPage() {
             )}
           </button>
           <button
-            className="btn bg-secondary text-secondary-content"
+            className="btn bg-white mt-2 text-black"
             onClick={handleLogInWithGoogle}
             disabled={
               authenticating == APP_CONSTANTS.WITH_EMAIL ||
