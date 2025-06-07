@@ -13,7 +13,7 @@ function Footer() {
         >
           <Logo /> Nebula
         </Link>
-        <p className="text-gray-400">
+        <p className="text-secondary">
           Built for thinkers, dreamers, <br />
           and doers.
         </p>
@@ -29,7 +29,7 @@ function Footer() {
 
       <div className="flex flex-col gap-10">
         <h1 className="text-xl font-jakarta font-bold">Product</h1>
-        <div className="flex flex-col gap-2 text-gray-400">
+        <div className="flex flex-col gap-2 text-secondary">
           <Link
             to={"#features"}
             className="hover:text-primary"
@@ -69,7 +69,7 @@ function Footer() {
 
       <div className="flex flex-col gap-10">
         <h1 className="text-xl font-jakarta font-bold">Legal</h1>
-        <div className="flex flex-col gap-2 text-gray-400">
+        <div className="flex flex-col gap-2 text-secondary">
           <Link className="hover:text-primary" to={"/terms-of-service"}>
             Terms of Service
           </Link>
@@ -81,7 +81,7 @@ function Footer() {
 
       <div className="flex flex-col gap-10">
         <h1 className="text-xl font-jakarta font-bold">Contact</h1>
-        <div className="flex flex-col gap-2 text-gray-400">
+        <div className="flex flex-col gap-2 text-secondary">
           <Link className="hover:text-primary" to={"https://"} target="_blank">
             Developer site
           </Link>

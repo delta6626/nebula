@@ -7,7 +7,7 @@ function TermsOfService() {
       <MenuExcludedNavBar />
       <div className="w-full py-10 font-jakarta flex flex-col items-center scroll-smooth scrollbar-thin">
         <h1 className="text-4xl font-semibold">Terms of Service</h1>
-        <p className="mt-2 text-gray-400">Updated June 2, 2025</p>
+        <p className="mt-2 text-secondary">Updated June 2, 2025</p>
         <div className="w-[40%] text-lg">
           <div className="mt-10">
             <p className="">

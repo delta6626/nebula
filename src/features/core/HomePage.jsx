@@ -36,7 +36,7 @@ function HomePage() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
             Bring clarity to your thoughts.
           </h1>
-          <p className="max-w-120 mt-10 text-xl text-gray-400">
+          <p className="max-w-120 mt-10 text-xl text-secondary">
             Craft and organize your thoughts in a space built for clarity,
             speed, and creativity. Free. Cloud-based. Feature-packed. Fully
             yours.
@@ -173,7 +173,7 @@ function HomePage() {
                 Cloud based & Secure
               </h1>
               <div className="mt-10">
-                <p className="md:max-w-110 lg:max-w-150 text-xl text-gray-400">
+                <p className="md:max-w-110 lg:max-w-150 text-xl text-secondary">
                   Nebula securely backs up your notes to the cloud whenever you
                   hit save, giving you full control while keeping your work
                   safe. Cloud storage is completely free* for all users, made
@@ -192,7 +192,7 @@ function HomePage() {
                 Open Source
               </h1>
               <div className="mt-10">
-                <p className="md:max-w-110 lg:max-w-150 text-xl text-gray-400">
+                <p className="md:max-w-110 lg:max-w-150 text-xl text-secondary">
                   Nebula is built for the community — no subscriptions, no
                   paywalls. You can view, use, and contribute to the entire
                   codebase on GitHub.
@@ -217,7 +217,7 @@ function HomePage() {
                 Free Cloud Storage
               </h1>
               <div className="mt-10">
-                <p className="md:max-w-110 lg:max-w-150 text-xl text-gray-400">
+                <p className="md:max-w-110 lg:max-w-150 text-xl text-secondary">
                   Nebula offers free cloud storage for your notes — no
                   subscriptions, no hidden fees. Just hit save and your work is
                   securely backed up. This is possible thanks to a
@@ -249,7 +249,7 @@ function HomePage() {
                 <div className="collapse-title font-semibold text-xl">
                   1. What platforms does Nebula support?
                 </div>
-                <div className="collapse-content text-gray-400">
+                <div className="collapse-content text-secondary">
                   Nebula is currently optimized for desktop browsers. Mobile
                   support is coming soon!
                 </div>
@@ -259,7 +259,7 @@ function HomePage() {
                 <div className="collapse-title font-semibold text-xl">
                   2. Is Nebula really free to use?
                 </div>
-                <div className="collapse-content text-gray-400">
+                <div className="collapse-content text-secondary">
                   Yes! Nebula offers completely free cloud storage for your
                   notes with no subscriptions or hidden fees. While the app
                   remains free to use, unusually heavy usage may be subject to
@@ -276,7 +276,7 @@ function HomePage() {
                 <div className="collapse-title font-semibold text-xl">
                   3. Can I export my notes?
                 </div>
-                <div className="collapse-content text-gray-400">
+                <div className="collapse-content text-secondary">
                   Absolutely! You can export your notes as Markdown files,
                   perfect for sharing or integrating with other tools.
                 </div>
@@ -286,7 +286,7 @@ function HomePage() {
                 <div className="collapse-title font-semibold text-xl">
                   4. Is my data safe and private?
                 </div>
-                <div className="collapse-content text-gray-400">
+                <div className="collapse-content text-secondary">
                   Yes. Nebula prioritizes your privacy and security. Your notes
                   are stored securely in the cloud.we never view or share your
                   notes. Our Terms of Service strictly forbid it. We believe in
@@ -298,7 +298,7 @@ function HomePage() {
                 <div className="collapse-title font-semibold text-xl">
                   5. What happens if I don't donate?
                 </div>
-                <div className="collapse-content text-gray-400">
+                <div className="collapse-content text-secondary">
                   Donations help keep Nebula free and running smoothly. While
                   the app remains free to use, unusually heavy usage may be
                   subject to limits to keep things sustainable for everyone.
@@ -309,7 +309,7 @@ function HomePage() {
                 <div className="collapse-title font-semibold text-xl">
                   6. Are there plans to offer a paid model?
                 </div>
-                <div className="collapse-content text-gray-400">
+                <div className="collapse-content text-secondary">
                   Not right now. If the community loves Nebula and there's clear
                   demand for more advanced features, we may explore a paid
                   version in the future. But for now, everything is completely
@@ -321,7 +321,7 @@ function HomePage() {
                 <div className="collapse-title font-semibold text-xl">
                   7. Who's behind Nebula?
                 </div>
-                <div className="collapse-content text-gray-400">
+                <div className="collapse-content text-secondary">
                   Hi! My name is Hasan, and I'm the developer. Nebula is a
                   personal project crafted with care to help others think better
                   and write more freely. You can learn more about me{" "}
@@ -333,7 +333,7 @@ function HomePage() {
                 <div className="collapse-title font-semibold text-xl">
                   8. How can I contact Nebula?
                 </div>
-                <div className="collapse-content text-gray-400">
+                <div className="collapse-content text-secondary">
                   You can reach out anytime via{" "}
                   <Link
                     className="text-primary"
@@ -368,7 +368,7 @@ function HomePage() {
             <h1 className="text-3xl md:text-4xl font-bold">
               Ready to get organized?
             </h1>
-            <p className="max-w-150 mt-10 text-xl text-gray-400">
+            <p className="max-w-150 mt-10 text-xl text-secondary">
               Take control of your notes with Nebula — free, simple and fully
               yours. Start creating, organizing, and finding your ideas
               effortlessly today.

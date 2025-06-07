@@ -260,13 +260,13 @@ function GridNote({ noteObject }) {
           </ul>
         </div>
       </div>
-      <div className="flex gap-4 mt-4 text-gray-400 text-sm">
+      <div className="flex gap-4 mt-4 text-secondary text-sm">
         <NotebookChip
           bookIcon={true}
           notebookName={noteObject.assignedTo[1]}
         ></NotebookChip>
       </div>
-      <div className="flex gap-4 mt-4 text-gray-400 text-sm">
+      <div className="flex gap-4 mt-4 text-secondary text-sm">
         <p className="flex gap-2 items-center">
           <Clock size={20} />
           {formatDateMonthDayYear(objectToDate(noteObject.creationDate))}
@@ -278,7 +278,7 @@ function GridNote({ noteObject }) {
         </p>
       </div>
       <div className="divider"></div>
-      <div className="text-gray-400">
+      <div className="text-secondary">
         <p
           className={
             noteObject.tags.length != 0 ? "line-clamp-3" : "line-clamp-3 mb-4"
@@ -299,7 +299,7 @@ function GridNote({ noteObject }) {
       ) : (
         <div className="">
           <div className="divider"></div>
-          <p className="text-gray-400 mb-4">{APP_CONSTANTS.NO_TAGS}</p>
+          <p className="text-secondary mb-4">{APP_CONSTANTS.NO_TAGS}</p>
         </div>
       )}
       <div className="flex gap-2">

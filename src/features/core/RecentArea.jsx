@@ -152,7 +152,7 @@ function RecentArea() {
             <h1 className="text-3xl font-bold">Recent</h1>
             <div className="flex gap-2 absolute left-1/2 -translate-x-1/2">
               <div className="w-2xl input focus-within:input-primary">
-                <Search className="text-gray-400" />
+                <Search className="text-secondary" />
                 <input
                   className=""
                   placeholder="Search tagged items"
@@ -187,7 +187,7 @@ function RecentArea() {
           <div className="px-8">
             {filteredRecentNotes.length === 0 &&
             filteredRecentNotebooks.length === 0 ? (
-              <div className="flex justify-center items-center h-[calc(100vh-8rem)] text-gray-400 mt-4 select-none">
+              <div className="flex justify-center items-center h-[calc(100vh-8rem)] text-secondary mt-4 select-none">
                 <p className="whitespace-pre-line text-center">
                   {APP_CONSTANTS.NO_RECENT_ITEMS}
                 </p>

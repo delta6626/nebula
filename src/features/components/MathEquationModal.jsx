@@ -13,7 +13,7 @@ function MathEquationModal({ addMathToEditor }) {
     <dialog id={APP_CONSTANTS.MATH_EQUATION_MODAL} className="modal">
       <div className="modal-box">
         <h3 className="text-lg font-bold">Insert math</h3>
-        <p className="mt-2 text-gray-400">
+        <p className="mt-2 text-secondary">
           Craft math with LaTeX—perfect for equations, formulas, and beyond.
           Expressions with known values can be evaluated with a click.
         </p>

@@ -37,7 +37,7 @@ function DigitalClock() {
 
   return (
     <div className="bg-transparent border-1 border-accent mt-4 w-sm mx-auto h-[10rem] rounded-lg p-4">
-      <h1 className="flex items-center gap-2 font-semibold text-gray-400">
+      <h1 className="flex items-center gap-2 font-semibold text-secondary">
         <MemoizedClock />
         Now
       </h1>
@@ -53,7 +53,7 @@ function DigitalClock() {
             </tr>
           </tbody>
         </table>
-        <p className="font-semibold text-center mt-2 text-gray-400">{date}</p>
+        <p className="font-semibold text-center mt-2 text-secondary">{date}</p>
       </div>
     </div>
   );

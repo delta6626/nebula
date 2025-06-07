@@ -286,7 +286,7 @@ function GridNotebook({ notebookObject }) {
         </div>
       </div>
 
-      <div className="flex gap-4 mt-4 text-gray-400 text-sm">
+      <div className="flex gap-4 mt-4 text-secondary text-sm">
         <p className="flex gap-2 items-center">
           <Clock size={20} />
           {formatDateDDMMYY(objectToDate(notebookObject.creationDate))}
@@ -302,7 +302,7 @@ function GridNotebook({ notebookObject }) {
       ) : (
         <div className="">
           <div className="divider"></div>
-          <p className="text-gray-400">{APP_CONSTANTS.NO_TAGS}</p>
+          <p className="text-secondary">{APP_CONSTANTS.NO_TAGS}</p>
         </div>
       )}
       <div className="flex gap-2">

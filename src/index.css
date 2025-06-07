@@ -21,7 +21,7 @@
   --color-base-content: oklch(21% 0.034 264.665);
   --color-primary: oklch(0.55 0.2453 278.16);
   --color-primary-content: oklch(98% 0.003 247.858);
-  --color-secondary: oklch(90% 0 0);
+  --color-secondary: oklch(50% 0 0);
   --color-secondary-content: oklch(30% 0.056 229.695);
   --color-accent: oklch(85% 0.03 293.571);
   --color-accent-content: oklch(28% 0.141 291.089);
@@ -54,7 +54,7 @@
   --color-base-content: oklch(97.807% 0.029 256.847);
   --color-primary: oklch(0.55 0.2453 278.16);
   --color-primary-content: oklch(96% 0.018 272.314);
-  --color-secondary: oklch(100% 0 0);
+  --color-secondary: oklch(70% 0 0);
   --color-secondary-content: oklch(0% 0 0);
   --color-accent: oklch(25% 0.03 293.571);
   --color-accent-content: oklch(38% 0.063 188.416);
@@ -89,7 +89,7 @@
   --color-base-content: oklch(90% 0.058 230.902);
   --color-primary: oklch(85.661% 0.144 198.645);
   --color-primary-content: oklch(40.124% 0.068 197.603);
-  --color-secondary: oklch(60.682% 0.108 309.782);
+  --color-secondary: oklch(75% 0 0);
   --color-secondary-content: oklch(96% 0.016 293.756);
   --color-accent: oklch(40% 0.091 267.935);
   --color-accent-content: oklch(18.685% 0.02 94.555);
@@ -159,7 +159,7 @@
   --color-base-content: oklch(40% 0.123 38.172);
   --color-primary: oklch(0% 0 0);
   --color-primary-content: oklch(100% 0 0);
-  --color-secondary: oklch(22.45% 0.075 37.85);
+  --color-secondary: oklch(62.45% 0.075 37.85);
   --color-secondary-content: oklch(90% 0.076 70.697);
   --color-accent: oklch(80% 0.076 70.697);
   --color-accent-content: oklch(90% 0.076 70.697);
@@ -194,7 +194,7 @@
   --color-base-content: oklch(72.354% 0.092 79.129);
   --color-primary: oklch(71.996% 0.123 62.756);
   --color-primary-content: oklch(14.399% 0.024 62.756);
-  --color-secondary: oklch(34.465% 0.029 199.194);
+  --color-secondary: oklch(60.465% 0.029 199.194);
   --color-secondary-content: oklch(86.893% 0.005 199.194);
   --color-accent: oklch(40% 0.019 329.708);
   --color-accent-content: oklch(88.524% 0.014 224.389);

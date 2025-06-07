@@ -154,7 +154,7 @@ function TableNotebook({ id, notebookObject }) {
       <td>
         <div className="flex flex-wrap items-center gap-2 h-full">
           {notebookObject.tags.length === 0 ? (
-            <p className="text-gray-400">{APP_CONSTANTS.NO_TAGS}</p>
+            <p className="text-secondary">{APP_CONSTANTS.NO_TAGS}</p>
           ) : null}
           {notebookObject.tags.slice(0, 10).map((tag, index) => (
             <Tag
@@ -174,11 +174,11 @@ function TableNotebook({ id, notebookObject }) {
         </div>
       </td>
 
-      <td className="text-gray-400 whitespace-nowrap">
+      <td className="text-secondary whitespace-nowrap">
         {formatDateDDMMYY(objectToDate(notebookObject.creationDate))}
       </td>
 
-      <td className="text-gray-400 whitespace-nowrap">
+      <td className="text-secondary whitespace-nowrap">
         {dateDistanceFromNow(objectToDate(notebookObject.lastEditDate))}
       </td>
 

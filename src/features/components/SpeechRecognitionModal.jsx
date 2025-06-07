@@ -34,7 +34,7 @@ function SpeechRecognitionModal({ addSpeechContent }) {
             <p
               className={
                 transcript.length === 0
-                  ? "text-gray-400"
+                  ? "text-secondary"
                   : "" + " max-h-[300px] overflow-y-auto"
               }
             >
@@ -44,7 +44,7 @@ function SpeechRecognitionModal({ addSpeechContent }) {
             </p>
           </div>
         ) : (
-          <p className="mt-2 text-gray-400">
+          <p className="mt-2 text-secondary">
             Sorry, your browser doesn't support speech recognition. Please
             switch to Google Chrome or Microsoft Edge if you would like to use
             this feature.

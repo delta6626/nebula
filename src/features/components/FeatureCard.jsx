@@ -16,7 +16,7 @@ function FeatureCard({ title, body, icon }) {
           {icon}
         </div>
         <h1 className="mt-2 text-xl font-semibold">{title}</h1>
-        <p className="mt-4 text-gray-400">{body}</p>
+        <p className="mt-4 text-secondary">{body}</p>
       </div>
     </div>
   );

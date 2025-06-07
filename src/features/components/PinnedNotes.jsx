@@ -19,7 +19,7 @@ function PinnedNotes() {
       {notesView === APP_CONSTANTS.VIEW_NOTE_EDITOR ? (
         <NoteEditor />
       ) : pinnedNotes.length == 0 ? (
-        <div className="w-full h-[60vh] flex items-center justify-center text-gray-400">
+        <div className="w-full h-[60vh] flex items-center justify-center text-secondary">
           <p className="whitespace-pre-line text-center select-none">
             {APP_CONSTANTS.NO_PINNED_ITEMS}
           </p>

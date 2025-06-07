@@ -248,7 +248,7 @@ function LogInPage() {
                 className={
                   validateEmail(email)
                     ? "text-primary cursor-pointer"
-                    : "text-gray-400"
+                    : "text-secondary"
                 }
                 onClick={handlePasswordReset}
                 disabled={!validateEmail(email)}

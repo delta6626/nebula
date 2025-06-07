@@ -414,7 +414,7 @@ function EditorMenuTopBar() {
         </div>
       </div>
       <div className="flex justify-between px-8">
-        <div className="text-gray-400 flex items-center gap-4 mt-2">
+        <div className="text-secondary flex items-center gap-4 mt-2">
           <MemoizedNotebookChip
             bookIcon={true}
             notebookName={editTargetNote.assignedTo[1]}
@@ -443,7 +443,7 @@ function EditorMenuTopBar() {
             )}
           </div>
         </div>
-        <div className="text-gray-400 flex items-center gap-4 mt-2">
+        <div className="text-secondary flex items-center gap-4 mt-2">
           <p>{wordCount + " " + (wordCount == 1 ? "word" : "words")}</p>
         </div>
       </div>

@@ -33,7 +33,7 @@ function QuickActions() {
         >
           <FilePlus size={30} />
           <p className="text-xl">New note</p>
-          <div className="flex flex-row items-center text-gray-400">
+          <div className="flex flex-row items-center text-secondary">
             {user ? `Shift + ${user.shortcuts.NEW_NOTE}` : ""}
           </div>
         </button>
@@ -50,7 +50,7 @@ function QuickActions() {
         >
           <BookPlus size={30} />
           <p className="text-xl">New notebook</p>
-          <div className="flex flex-row items-center text-gray-400">
+          <div className="flex flex-row items-center text-secondary">
             {user ? `Shift + ${user.shortcuts.NEW_NOTE_BOOK}` : ""}
           </div>
         </button>
@@ -62,7 +62,7 @@ function QuickActions() {
       >
         <Clock size={30} />
         <p className="text-xl">Recent</p>
-        <div className="flex flex-row items-center text-gray-400">
+        <div className="flex flex-row items-center text-secondary">
           {user ? `Shift + ${user.shortcuts.RECENT_PAGE}` : ""}
         </div>
       </button>

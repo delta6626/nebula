@@ -25,7 +25,7 @@ function NotebookChip({ bookIcon, notebookName, source }) {
 
   return (
     <div
-      className="btn bg-base-200 text-gray-400 flex gap-2 items-center max-w-full"
+      className="btn bg-base-200 text-secondary flex gap-2 items-center max-w-full"
       onClick={handleNotebookChipClick}
     >
       {bookIcon ? (

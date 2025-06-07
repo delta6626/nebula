@@ -120,7 +120,7 @@ function EditorMenu() {
   function Section({ title, children, className }) {
     return (
       <div className="w-fit">
-        <h3 className="font-bold mb-2 text-gray-400">{title}</h3>
+        <h3 className="font-bold mb-2 text-secondary">{title}</h3>
         <div className={className}>{children}</div>
       </div>
     );

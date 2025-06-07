@@ -295,14 +295,14 @@ function SignUpPage() {
             )}
           </button>
 
-          <p className="text-center text-gray-400 text-sm mt-2">
+          <p className="text-center text-secondary text-sm mt-2">
             Already have an account?{" "}
             <Link className="text-primary" to={"/login"}>
               Login.
             </Link>
           </p>
 
-          <p className="text-sm text-gray-400 mt-4">
+          <p className="text-sm text-secondary mt-4">
             By signing up, you acknowledge that you have read, understood and
             agree to our{" "}
             <Link className="text-primary" to={"/terms-of-service"}>
