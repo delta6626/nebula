@@ -121,7 +121,7 @@ function TableNote({ id, noteObject }) {
     document.getElementById(APP_CONSTANTS.GENERIC_MODAL).showModal();
   }
 
-  return (
+  /* return (
     <tr className="hover:bg-base-200 cursor-pointer" onClick={handleNoteClick}>
       <th className="font-normal">{id + 1}</th>
       <td className="text-lg break-all" title={noteObject.name}>
@@ -222,6 +222,141 @@ function TableNote({ id, noteObject }) {
         </div>
       </td>
     </tr>
+  ); 
+  */
+
+  return (
+    <div
+      className="mt-2 w-full bg-base-100 rounded-lg p-4 select-none cursor-pointer grid gap-4 items-center"
+      style={{
+        gridTemplateColumns: `
+        minmax(180px, 1.5fr) 0.2fr
+        minmax(240px, 2.5fr) 0.2fr
+        minmax(120px, 1fr)   0.2fr
+        minmax(240px, 3fr)   0.2fr
+        minmax(100px, 1fr)   0.2fr
+        minmax(100px, 1fr)   0.2fr
+        auto
+      `,
+      }}
+      onClick={handleNoteClick}
+    >
+      <div className="text-xl overflow-hidden text-ellipsis">
+        {noteObject.name}
+      </div>
+
+      <div className="divider divider-horizontal"></div>
+
+      <div className="text-secondary overflow-hidden text-ellipsis">
+        {(() => {
+          const plain = sanitizeHTML(noteObject.content);
+          return plain.trim()
+            ? plain.length > 200
+              ? plain.slice(0, 200) + ".."
+              : plain
+            : APP_CONSTANTS.NOTE_EMPTY;
+        })()}
+      </div>
+
+      <div className="divider divider-horizontal"></div>
+
+      <div>
+        <NotebookChip
+          bookIcon={false}
+          notebookName={noteObject.assignedTo[1]}
+        />
+      </div>
+
+      <div className="divider divider-horizontal"></div>
+
+      <div className="flex flex-wrap gap-2 items-center overflow-hidden">
+        {noteObject.tags.length === 0 ? (
+          <p className="text-secondary">{APP_CONSTANTS.NO_TAGS}</p>
+        ) : null}
+        {noteObject.tags.slice(0, 10).map((tag, index) => (
+          <Tag
+            key={index}
+            tagText={tag}
+            showTagIcon={false}
+            source={APP_CONSTANTS.SOURCE_NOTE}
+          />
+        ))}
+        {noteObject.tags.length > 10 && (
+          <Tag
+            key="more"
+            moreTag={true}
+            tagText={`${noteObject.tags.length - 10} more`}
+          />
+        )}
+      </div>
+
+      <div className="divider divider-horizontal"></div>
+
+      <div className="whitespace-nowrap text-secondary text-center">
+        {formatDateDDMMYY(objectToDate(noteObject.creationDate))}
+      </div>
+
+      <div className="divider divider-horizontal"></div>
+
+      <div className="whitespace-nowrap text-secondary text-center">
+        {dateDistanceFromNow(objectToDate(noteObject.lastEditDate))}
+      </div>
+
+      <div className="divider divider-horizontal"></div>
+
+      {/* Action Buttons */}
+      <div className="flex gap-2">
+        {/* Pin/Unpin Button */}
+        <div
+          className="tooltip"
+          data-tip={
+            noteObject.pinned ? "Unpin from dashboard" : "Pin to dashboard"
+          }
+        >
+          <button
+            className="btn btn-square"
+            disabled={updatingPin}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNotePinAndUnpin(noteObject.id);
+            }}
+          >
+            {updatingPin ? (
+              <span className="loading loading-spinner"></span>
+            ) : noteObject.pinned ? (
+              <PinOff size={20} />
+            ) : (
+              <Pin size={20} />
+            )}
+          </button>
+        </div>
+
+        {/* Edit Button */}
+        <div className="tooltip" data-tip="Edit details">
+          <button
+            className="btn btn-square"
+            onClick={handleNoteEditButtonClick}
+          >
+            <FileEdit size={20} />
+          </button>
+        </div>
+
+        {/* Delete Button */}
+        <div className="tooltip tooltip-error" data-tip="Delete note">
+          <button
+            className="btn btn-square text-error"
+            disabled={deletingNote}
+            onClick={handleDeleteButtonClick}
+          >
+            {deletingNote ? (
+              <span className="loading loading-spinner"></span>
+            ) : (
+              <Trash2 size={20} />
+            )}
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 

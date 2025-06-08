@@ -149,26 +149,10 @@ function NotesArea() {
               )
             ) : notesView === APP_CONSTANTS.VIEW_TABLE ? (
               filteredNotes.length > 0 ? (
-                <div className="rounded-lg bg-base-100 p-4 mt-4">
-                  <table className="table">
-                    <thead>
-                      <tr className="text-lg">
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Content</th>
-                        <th>Notebook</th>
-                        <th>Tags</th>
-                        <th>Created</th>
-                        <th>Last edited</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {filteredNotes.map((note, id) => (
-                        <TableNote key={id} id={id} noteObject={note} />
-                      ))}
-                    </tbody>
-                  </table>
+                <div className="mt-4">
+                  {filteredNotes.map((note, id) => (
+                    <TableNote key={id} id={id} noteObject={note} />
+                  ))}
                 </div>
               ) : (
                 <div className="flex justify-center items-center h-[calc(100vh-8rem)] text-secondary mt-4 select-none">
