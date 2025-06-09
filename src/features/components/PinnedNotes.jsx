@@ -33,26 +33,15 @@ function PinnedNotes() {
               })}
             </div>
           ) : (
-            <div className="rounded-lg bg-base-100 p-4">
-              <table className="table">
-                <thead>
-                  <tr className="text-lg">
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Content</th>
-                    <th>Notebook</th>
-                    <th>Tags</th>
-                    <th>Created</th>
-                    <th>Last edited</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {pinnedNotes.map((note, id) => (
-                    <TableNote key={id} id={id} noteObject={note} />
-                  ))}
-                </tbody>
-              </table>
+            <div className="mt-2">
+              {pinnedNotes.map((note, id) => (
+                <TableNote
+                  isInDashboard={true}
+                  key={id}
+                  id={id}
+                  noteObject={note}
+                />
+              ))}
             </div>
           )}
         </div>

@@ -13,7 +13,7 @@ import { sanitizeHTML } from "../../utils/sanitizeHTML";
 import { useState } from "react";
 import NotebookChip from "./NotebookChip";
 
-function TableNote({ id, noteObject }) {
+function TableNote({ id, noteObject, isInDashboard }) {
   const { notes, setNotes } = useNotesStore();
   const { message, setMessage } = useMessageStore();
   const { editTargetNote, setEditTargetNote } = useEditTargetNoteStore();
@@ -227,9 +227,11 @@ function TableNote({ id, noteObject }) {
 
   return (
     <div
-      className="mt-2 w-full bg-base-100 rounded-lg p-4 select-none cursor-pointer grid gap-4 items-center"
-      style={{
-        gridTemplateColumns: `
+      className="mt-2 w-fit bg-base-100 rounded-lg p-4 select-none cursor-pointer grid gap-4 items-center"
+      style={
+        !isInDashboard
+          ? {
+              gridTemplateColumns: `
         minmax(180px, 1.5fr) 0.2fr
         minmax(240px, 2.5fr) 0.2fr
         minmax(120px, 1fr)   0.2fr
@@ -238,7 +240,19 @@ function TableNote({ id, noteObject }) {
         minmax(100px, 1fr)   0.2fr
         auto
       `,
-      }}
+            }
+          : {
+              gridTemplateColumns: `
+        minmax(150px, 1fr) 0.2fr
+        minmax(200px, 2fr) 0.2fr
+        minmax(100px, 1fr) 0.2fr
+        minmax(200px, 2fr) 0.2fr
+        minmax(50px, 2fr)  0.2fr
+        minmax(50px, 2fr)  0.2fr
+        auto
+      `,
+            }
+      }
       onClick={handleNoteClick}
     >
       <div className="text-xl overflow-hidden text-ellipsis">
@@ -305,7 +319,7 @@ function TableNote({ id, noteObject }) {
       <div className="divider divider-horizontal"></div>
 
       {/* Action Buttons */}
-      <div className="flex gap-2">
+      <div className={isInDashboard ? "flex flex-col gap-2" : "flex gap-2"}>
         {/* Pin/Unpin Button */}
         <div
           className="tooltip"
