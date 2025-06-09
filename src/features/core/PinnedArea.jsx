@@ -187,28 +187,14 @@ function PinnedArea() {
                         <h2 className="text-xl font-semibold mb-4">
                           {`Notebooks (${filteredPinnedNotebooks.length})`}
                         </h2>
-                        <div className="rounded-lg bg-base-100 p-4">
-                          <table className="table">
-                            <thead>
-                              <tr className="text-lg">
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Tags</th>
-                                <th>Created</th>
-                                <th>Last edited</th>
-                                <th>Actions</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {filteredPinnedNotebooks.map((notebook, id) => (
-                                <TableNotebook
-                                  key={id}
-                                  id={id}
-                                  notebookObject={notebook}
-                                />
-                              ))}
-                            </tbody>
-                          </table>
+                        <div className="mt-2">
+                          {filteredPinnedNotebooks.map((notebook, id) => (
+                            <TableNotebook
+                              key={id}
+                              id={id}
+                              notebookObject={notebook}
+                            />
+                          ))}
                         </div>
                       </div>
                     )}
@@ -217,26 +203,10 @@ function PinnedArea() {
                     {filteredPinnedNotes.length > 0 && (
                       <div className="">
                         <h2 className="text-xl font-semibold mb-4">{`Notes (${filteredPinnedNotes.length})`}</h2>
-                        <div className="rounded-lg bg-base-100 p-4">
-                          <table className="table">
-                            <thead>
-                              <tr className="text-lg">
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Content</th>
-                                <th>Notebook</th>
-                                <th>Tags</th>
-                                <th>Created</th>
-                                <th>Last edited</th>
-                                <th>Actions</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {filteredPinnedNotes.map((note, id) => (
-                                <TableNote key={id} id={id} noteObject={note} />
-                              ))}
-                            </tbody>
-                          </table>
+                        <div className="mt-2">
+                          {filteredPinnedNotes.map((note, id) => (
+                            <TableNote key={id} id={id} noteObject={note} />
+                          ))}
                         </div>
                       </div>
                     )}
