@@ -141,6 +141,7 @@ function TableNotebook({ id, notebookObject }) {
     setActiveTab(APP_CONSTANTS.NOTES_PAGE);
   }
 
+  /*
   return (
     <tr
       className="hover:bg-base-200 cursor-pointer"
@@ -235,6 +236,113 @@ function TableNotebook({ id, notebookObject }) {
         </div>
       </td>
     </tr>
+  ); 
+  */
+
+  return (
+    <div
+      className="mt-2 w-full bg-base-100 rounded-lg p-4 select-none cursor-pointer grid gap-4 items-center"
+      style={{
+        gridTemplateColumns: `
+        minmax(180px, 1.5fr) 0.2fr
+        minmax(240px, 4fr) 0.2fr
+        minmax(100px, 1fr)   0.2fr
+        minmax(200px, 1fr)   0.2fr
+        auto
+      `,
+      }}
+      onClick={handleNotebookClick}
+    >
+      <div className="text-xl overflow-hidden text-ellipsis">
+        {notebookObject.name}
+      </div>
+
+      <div className="divider divider-horizontal"></div>
+
+      <div className="flex flex-wrap items-center gap-2 overflow-hidden">
+        {notebookObject.tags.length === 0 ? (
+          <p className="text-secondary">{APP_CONSTANTS.NO_TAGS}</p>
+        ) : null}
+        {notebookObject.tags.slice(0, 10).map((tag, index) => (
+          <Tag
+            key={index}
+            tagText={tag}
+            showTagIcon={false}
+            source={APP_CONSTANTS.SOURCE_NOTEBOOK}
+          />
+        ))}
+        {notebookObject.tags.length > 10 && (
+          <Tag
+            key="more"
+            moreTag={true}
+            tagText={`${notebookObject.tags.length - 10} more`}
+          />
+        )}
+      </div>
+
+      <div className="divider divider-horizontal"></div>
+
+      <div className="whitespace-nowrap text-secondary text-center">
+        {formatDateDDMMYY(objectToDate(notebookObject.creationDate))}
+      </div>
+
+      <div className="divider divider-horizontal"></div>
+
+      <div className="whitespace-nowrap text-secondary text-center">
+        {dateDistanceFromNow(objectToDate(notebookObject.lastEditDate))}
+      </div>
+
+      <div className="divider divider-horizontal"></div>
+
+      <div className="flex gap-2">
+        <div
+          className="tooltip"
+          data-tip={
+            notebookObject.pinned ? "Unpin from dashboard" : "Pin to dashboard"
+          }
+        >
+          <button
+            className="btn btn-square"
+            disabled={updatingPin}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNotebookPinAndUnpin(notebookObject.id);
+            }}
+          >
+            {updatingPin ? (
+              <span className="loading loading-spinner"></span>
+            ) : notebookObject.pinned ? (
+              <PinOff size={20} />
+            ) : (
+              <Pin size={20} />
+            )}
+          </button>
+        </div>
+
+        <div className="tooltip" data-tip="Edit details">
+          <button
+            className="btn btn-square"
+            onClick={handleNotebookEditButtonClick}
+          >
+            <FileEdit size={20} />
+          </button>
+        </div>
+
+        <div className="tooltip tooltip-error" data-tip="Delete notebook">
+          <button
+            className="btn btn-square text-error"
+            disabled={deletingNotebook}
+            onClick={handleDeleteButtonClick}
+          >
+            {deletingNotebook ? (
+              <span className="loading loading-spinner"></span>
+            ) : (
+              <Trash2 size={20} />
+            )}
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 

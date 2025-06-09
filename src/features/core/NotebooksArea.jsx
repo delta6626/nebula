@@ -140,24 +140,10 @@ function NotebooksArea() {
           )
         ) : notesView === APP_CONSTANTS.VIEW_TABLE ? (
           filteredNotebooks.length > 0 ? (
-            <div className="rounded-lg bg-base-100 p-4 mt-4">
-              <table className="table">
-                <thead>
-                  <tr className="text-lg">
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Tags</th>
-                    <th>Created</th>
-                    <th>Last edited</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {filteredNotebooks.map((notebook, id) => (
-                    <TableNotebook key={id} id={id} notebookObject={notebook} />
-                  ))}
-                </tbody>
-              </table>
+            <div className="mt-4">
+              {filteredNotebooks.map((notebook, id) => (
+                <TableNotebook key={id} id={id} notebookObject={notebook} />
+              ))}
             </div>
           ) : (
             <div className="flex justify-center items-center h-[calc(100vh-8rem)] text-secondary mt-4 select-none">
