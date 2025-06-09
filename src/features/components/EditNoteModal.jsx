@@ -147,6 +147,7 @@ function EditNoteModal() {
           type="text"
           className="input focus:input-primary w-full mt-4"
           placeholder="New name"
+          maxLength={150}
           value={noteName}
           onChange={(e) => setNoteName(e.target.value)}
         />

@@ -123,6 +123,7 @@ function EditNotebookModal() {
           type="text"
           className="input focus:input-primary w-full mt-4"
           placeholder="New name"
+          maxLength={100}
           value={notebookName}
           onChange={(e) => setNotebookName(e.target.value)}
         />
