@@ -191,28 +191,14 @@ function TaggedArea() {
                         <h2 className="text-xl font-semibold mb-4">
                           {`Notebooks (${filteredTaggedNotebooks.length})`}
                         </h2>
-                        <div className="rounded-lg bg-base-100 p-4">
-                          <table className="table">
-                            <thead>
-                              <tr className="text-lg">
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Tags</th>
-                                <th>Created</th>
-                                <th>Last edited</th>
-                                <th>Actions</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {filteredTaggedNotebooks.map((notebook, id) => (
-                                <TableNotebook
-                                  key={id}
-                                  id={id}
-                                  notebookObject={notebook}
-                                />
-                              ))}
-                            </tbody>
-                          </table>
+                        <div className="mt-2">
+                          {filteredTaggedNotebooks.map((notebook, id) => (
+                            <TableNotebook
+                              key={id}
+                              id={id}
+                              notebookObject={notebook}
+                            />
+                          ))}
                         </div>
                       </div>
                     )}
@@ -221,26 +207,10 @@ function TaggedArea() {
                     {filteredTaggedNotes.length > 0 && (
                       <div className="">
                         <h2 className="text-xl font-semibold mb-4">{`Notes (${filteredTaggedNotes.length})`}</h2>
-                        <div className="rounded-lg bg-base-100 p-4">
-                          <table className="table">
-                            <thead>
-                              <tr className="text-lg">
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Content</th>
-                                <th>Notebook</th>
-                                <th>Tags</th>
-                                <th>Created</th>
-                                <th>Last edited</th>
-                                <th>Actions</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {filteredTaggedNotes.map((note, id) => (
-                                <TableNote key={id} id={id} noteObject={note} />
-                              ))}
-                            </tbody>
-                          </table>
+                        <div className="mt-2">
+                          {filteredTaggedNotes.map((note, id) => (
+                            <TableNote key={id} id={id} noteObject={note} />
+                          ))}
                         </div>
                       </div>
                     )}
