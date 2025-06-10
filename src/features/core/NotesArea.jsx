@@ -1,4 +1,4 @@
-import { Search, LayoutGrid, Table, FilePlus, Divide } from "lucide-react";
+import { Search } from "lucide-react";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import { useNotesStore } from "../../store/notesStore";
 import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
@@ -8,18 +8,13 @@ import { useUserStore } from "../../store/userStore";
 import { useNoteSearchTermStore } from "../../store/noteSearchTermStore";
 import GridNote from "../components/GridNote";
 import TableNote from "../components/TableNote";
-import GenericModal from "../components/GenericModal";
-import { useState } from "react";
-import EditNoteModal from "../components/EditNoteModal";
 import NoteEditor from "../components/NoteEditor";
 import ViewSwitcher from "../components/ViewSwitcher";
 
 function NotesArea() {
-  const { notes, setNotes } = useNotesStore();
-  const { notesView, setNotesView } = useCurrentNotesViewStore();
-  const { userVerified, setUserVerified } = useUserVerifiedStore();
+  const { notes } = useNotesStore();
+  const { notesView } = useCurrentNotesViewStore();
   const { user } = useUserStore();
-  const { message, setMessage } = useMessageStore();
   const { noteSearchTerm, setNoteSearchTerm } = useNoteSearchTermStore();
 
   const filteredNotes = notes.filter((note) => {
