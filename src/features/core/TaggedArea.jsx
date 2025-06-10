@@ -1,7 +1,7 @@
 import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import { useState } from "react";
-import { Search, LayoutGrid, Table } from "lucide-react";
+import { Search } from "lucide-react";
 import { useNotesStore } from "../../store/notesStore";
 import { useNotebooksStore } from "../../store/notebooksStore";
 import { useUserStore } from "../../store/userStore";
@@ -13,7 +13,7 @@ import NoteEditor from "../components/NoteEditor";
 import ViewSwitcher from "../components/ViewSwitcher";
 
 function TaggedArea() {
-  const { notesView, setNotesView } = useCurrentNotesViewStore();
+  const { notesView } = useCurrentNotesViewStore();
   const { notes } = useNotesStore();
   const { notebooks } = useNotebooksStore();
   const { user } = useUserStore();
