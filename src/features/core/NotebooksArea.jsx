@@ -1,11 +1,6 @@
-import GenericModal from "../components/GenericModal";
-import EditNoteModal from "../components/EditNoteModal";
-import CreateNotebookModal from "../components/CreateNotebookModal";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
-import { useMessageStore } from "../../store/messageStore";
 import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
 import { useNotebooksStore } from "../../store/notebooksStore";
-import { useUserVerifiedStore } from "../../store/userVerifiedStore";
 import { useNotebookSearchTermStore } from "../../store/notebookSearchTermStore";
 import { Search } from "lucide-react";
 import { useEffect } from "react";

@@ -2,8 +2,6 @@ import { Search } from "lucide-react";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import { useNotesStore } from "../../store/notesStore";
 import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
-import { useUserVerifiedStore } from "../../store/userVerifiedStore";
-import { useMessageStore } from "../../store/messageStore";
 import { useUserStore } from "../../store/userStore";
 import { useNoteSearchTermStore } from "../../store/noteSearchTermStore";
 import GridNote from "../components/GridNote";
