@@ -1,15 +1,12 @@
-import { useNotesStore } from "../../store/notesStore";
 import { useMessageStore } from "../../store/messageStore";
 import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
-import { useUserVerifiedStore } from "../../store/userVerifiedStore";
 import GenericModal from "../components/GenericModal";
 import EditNoteModal from "../components/EditNoteModal";
 import CreateNoteModal from "../components/CreateNoteModal";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import { useEffect, useState } from "react";
-import { Search, Table, LayoutGrid } from "lucide-react";
+import { Search } from "lucide-react";
 import CreateNotebookModal from "../components/CreateNotebookModal";
-import { useNotebooksStore } from "../../store/notebooksStore";
 import EditNotebookModal from "../components/EditNotebookModal";
 import NoteEditor from "../components/NoteEditor";
 import GreetingSection from "../components/GreetingSection";
