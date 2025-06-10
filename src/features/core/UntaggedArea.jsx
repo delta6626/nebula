@@ -1,10 +1,9 @@
 import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import { useState } from "react";
-import { Search, LayoutGrid, Table } from "lucide-react";
+import { Search } from "lucide-react";
 import { useNotesStore } from "../../store/notesStore";
 import { useNotebooksStore } from "../../store/notebooksStore";
-import { useUserStore } from "../../store/userStore";
 import GridNote from "../components/GridNote";
 import GridNotebook from "../components/GridNotebook";
 import TableNote from "../components/TableNote";
@@ -13,11 +12,9 @@ import NoteEditor from "../components/NoteEditor";
 import ViewSwitcher from "../components/ViewSwitcher";
 
 function UntaggedArea() {
-  const { notesView, setNotesView } = useCurrentNotesViewStore();
+  const { notesView } = useCurrentNotesViewStore();
   const { notes } = useNotesStore();
   const { notebooks } = useNotebooksStore();
-  const { user } = useUserStore();
-
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredUntaggedNotes = notes.filter((note) => {
