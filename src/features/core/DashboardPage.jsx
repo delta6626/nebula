@@ -54,7 +54,7 @@ function DashboardPage() {
   const { setNotes } = useNotesStore();
   const { activeTab, setActiveTab } = useActiveTabStore();
   const { message } = useMessageStore();
-  const { quotes, setQuotes } = useQuoteStore();
+  const { setQuotes } = useQuoteStore();
   const { setNotesView } = useCurrentNotesViewStore();
 
   const [sideBarCollapsed, setSideBarCollapsed] = useState(false);
