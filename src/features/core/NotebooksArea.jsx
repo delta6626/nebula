@@ -7,19 +7,16 @@ import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
 import { useNotebooksStore } from "../../store/notebooksStore";
 import { useUserVerifiedStore } from "../../store/userVerifiedStore";
 import { useNotebookSearchTermStore } from "../../store/notebookSearchTermStore";
-import { Search, Table, LayoutGrid, BookPlus } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Search } from "lucide-react";
+import { useEffect } from "react";
 import GridNotebook from "../components/GridNotebook";
 import TableNotebook from "../components/TableNotebook";
-import EditNotebookModal from "../components/EditNotebookModal";
 import { useUserStore } from "../../store/userStore";
 import ViewSwitcher from "../components/ViewSwitcher";
 
 function NotebooksArea() {
-  const { message } = useMessageStore();
   const { notebooks } = useNotebooksStore();
   const { notesView, setNotesView } = useCurrentNotesViewStore();
-  const { userVerified } = useUserVerifiedStore();
   const { user } = useUserStore();
   const { notebookSearchTerm, setNotebookSearchTerm } =
     useNotebookSearchTermStore();
