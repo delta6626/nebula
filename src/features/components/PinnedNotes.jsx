@@ -35,12 +35,7 @@ function PinnedNotes() {
           ) : (
             <div className="mt-2">
               {pinnedNotes.map((note, id) => (
-                <TableNote
-                  isInDashboard={true}
-                  key={id}
-                  id={id}
-                  noteObject={note}
-                />
+                <TableNote key={id} id={id} noteObject={note} />
               ))}
             </div>
           )}
