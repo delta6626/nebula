@@ -8,7 +8,7 @@ import { toTimestamp } from "../../utils/toTimestamp";
 
 function CreateNotebookModal() {
   const { notebooks, setNotebooks } = useNotebooksStore();
-  const { message, setMessage } = useMessageStore();
+  const { setMessage } = useMessageStore();
 
   const [notebookName, setNotebookName] = useState("");
   const [creatingNotebook, setCreatingNotebook] = useState(false);

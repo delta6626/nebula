@@ -15,7 +15,7 @@ import NotebookChip from "./NotebookChip";
 
 function TableNote({ id, noteObject }) {
   const { notes, setNotes } = useNotesStore();
-  const { message, setMessage } = useMessageStore();
+  const { setMessage } = useMessageStore();
   const { setEditTargetNote } = useEditTargetNoteStore();
   const { setNotesView } = useCurrentNotesViewStore();
 

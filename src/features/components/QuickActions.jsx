@@ -1,10 +1,10 @@
-import { ArrowBigUp, BookPlus, Clock, FilePlus, Plus } from "lucide-react";
+import { BookPlus, Clock, FilePlus } from "lucide-react";
 import { useActiveTabStore } from "../../store/activeTabStore";
 import { useUserVerifiedStore } from "../../store/userVerifiedStore";
 import { useUserStore } from "../../store/userStore";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 function QuickActions() {
-  const { activeTab, setActiveTab } = useActiveTabStore();
+  const { setActiveTab } = useActiveTabStore();
   const { userVerified, setUserVerified } = useUserVerifiedStore();
   const { user } = useUserStore();
 

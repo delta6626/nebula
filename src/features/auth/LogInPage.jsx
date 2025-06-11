@@ -1,4 +1,3 @@
-import NavBar from "../components/NavBar";
 import GoogleIcon from "../../assets/GoogleIcon";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";

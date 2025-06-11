@@ -8,9 +8,9 @@ import { toTimestamp } from "../../utils/toTimestamp";
 import Tag from "../components/Tag";
 
 function CreateNoteModal() {
-  const { notebooks, setNotebooks } = useNotebooksStore();
+  const { notebooks } = useNotebooksStore();
   const { notes, setNotes } = useNotesStore();
-  const { message, setMessage } = useMessageStore();
+  const { setMessage } = useMessageStore();
 
   const [noteName, setNoteName] = useState("");
   const [selectedNotebook, setSelectedNotebook] = useState("");

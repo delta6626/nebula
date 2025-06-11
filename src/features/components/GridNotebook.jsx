@@ -27,9 +27,8 @@ import { useNoteSearchTermStore } from "../../store/noteSearchTermStore";
 function GridNotebook({ notebookObject }) {
   const { notes, setNotes } = useNotesStore();
   const { notebooks, setNotebooks } = useNotebooksStore();
-  const { message, setMessage } = useMessageStore();
-  const { editTargetNotebook, setEditTargetNotebook } =
-    useEditTargetNotebookStore();
+  const { setMessage } = useMessageStore();
+  const { setEditTargetNotebook } = useEditTargetNotebookStore();
   const { setActiveTab } = useActiveTabStore();
   const { setNoteSearchTerm } = useNoteSearchTermStore();
 

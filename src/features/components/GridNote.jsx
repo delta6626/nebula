@@ -23,9 +23,9 @@ import NotebookChip from "./NotebookChip";
 
 function GridNote({ noteObject }) {
   const { notes, setNotes } = useNotesStore();
-  const { message, setMessage } = useMessageStore();
-  const { editTargetNote, setEditTargetNote } = useEditTargetNoteStore();
-  const { notesView, setNotesView } = useCurrentNotesViewStore();
+  const { setMessage } = useMessageStore();
+  const { setEditTargetNote } = useEditTargetNoteStore();
+  const { setNotesView } = useCurrentNotesViewStore();
 
   const [updatingPin, setUpdatingPin] = useState(false);
   const [deletingNote, setDeletingNote] = useState(false);

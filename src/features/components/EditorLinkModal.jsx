@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
-import { useCurrentEditor } from "@tiptap/react";
 
 function EditorLinkModal({ addLinkToEditor }) {
   const urlRegex =
     /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/;
 
-  const { editor } = useCurrentEditor();
   const [urlText, setUrlText] = useState();
   const [isValid, setIsValid] = useState(true);
 

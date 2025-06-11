@@ -1,9 +1,8 @@
-import { Disc, LoaderIcon, Mic } from "lucide-react";
+import { Disc } from "lucide-react";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
-import { useEffect, useState } from "react";
 
 function SpeechRecognitionModal({ addSpeechContent }) {
   const {

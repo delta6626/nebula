@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
-import { useCurrentEditor } from "@tiptap/react";
 
 function EditorYouTubeLinkModal({ addYouTubeLinkToEditor }) {
   const [urlText, setUrlText] = useState();

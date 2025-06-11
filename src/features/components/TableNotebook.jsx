@@ -19,7 +19,7 @@ import {
 function TableNotebook({ id, notebookObject }) {
   const { notes, setNotes } = useNotesStore();
   const { notebooks, setNotebooks } = useNotebooksStore();
-  const { message, setMessage } = useMessageStore();
+  const { setMessage } = useMessageStore();
   const { setEditTargetNotebook } = useEditTargetNotebookStore();
   const { setActiveTab } = useActiveTabStore();
   const { setNoteSearchTerm } = useNoteSearchTermStore();

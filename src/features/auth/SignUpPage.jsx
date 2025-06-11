@@ -1,7 +1,6 @@
-import NavBar from "../components/NavBar";
 import GoogleIcon from "../../assets/GoogleIcon";
 import { Link } from "react-router-dom";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import validateEmail from "../../utils/validateEmail";
 import {
