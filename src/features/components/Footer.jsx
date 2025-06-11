@@ -82,7 +82,11 @@ function Footer() {
       <div className="flex flex-col gap-10">
         <h1 className="text-xl font-jakarta font-bold">Contact</h1>
         <div className="flex flex-col gap-2 text-secondary">
-          <Link className="hover:text-primary" to={"https://"} target="_blank">
+          <Link
+            className="hover:text-primary"
+            to={"https://github.com/delta6626"}
+            target="_blank"
+          >
             Developer site
           </Link>
           <Link

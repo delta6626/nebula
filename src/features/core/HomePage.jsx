@@ -334,13 +334,19 @@ function HomePage() {
               <div className="collapse collapse-arrow border border-accent">
                 <input type="radio" name="my-accordion-2" />
                 <div className="collapse-title font-semibold text-xl">
-                  7. Who's behind Nebula?
+                  7. Who's the developer?
                 </div>
                 <div className="collapse-content text-secondary">
                   Hi! My name is Hasan, and I'm the developer. Nebula is a
                   personal project crafted with care to help others think better
                   and write more freely. You can learn more about me{" "}
-                  <Link className="text text-primary">here.</Link>
+                  <Link
+                    className="text text-primary"
+                    target="_blank"
+                    to={"https://github.com/delta6626"}
+                  >
+                    here.
+                  </Link>
                 </div>
               </div>
               <div className="collapse collapse-arrow border border-accent">
