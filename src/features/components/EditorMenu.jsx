@@ -197,6 +197,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().toggleHeading({ level: 1 }).run();
             }}
+            title="Cmd + Alt + 1"
             className={
               editorState.isH1 ? "btn btn-primary btn-square" : "btn btn-square"
             }
@@ -208,6 +209,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().toggleHeading({ level: 2 }).run();
             }}
+            title="Cmd + Alt + 2"
             className={
               editorState.isH2 ? "btn btn-primary btn-square" : "btn btn-square"
             }
@@ -219,6 +221,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().toggleHeading({ level: 3 }).run();
             }}
+            title="Cmd + Alt + 3"
             className={
               editorState.isH3 ? "btn btn-primary btn-square" : "btn btn-square"
             }
@@ -230,6 +233,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().toggleHeading({ level: 4 }).run();
             }}
+            title="Cmd + Alt + 4"
             className={
               editorState.isH4 ? "btn btn-primary btn-square" : "btn btn-square"
             }
@@ -241,6 +245,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().toggleHeading({ level: 5 }).run();
             }}
+            title="Cmd + Alt + 5"
             className={
               editorState.isH5 ? "btn btn-primary btn-square" : "btn btn-square"
             }
@@ -252,6 +257,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().toggleHeading({ level: 6 }).run();
             }}
+            title="Cmd + Alt + 6"
             className={
               editorState.isH6 ? "btn btn-primary btn-square" : "btn btn-square"
             }
@@ -292,6 +298,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().toggleBold().run();
             }}
+            title="Cmd + B"
             className={
               editorState.isBold
                 ? "btn btn-primary btn-square"
@@ -305,6 +312,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().toggleItalic().run();
             }}
+            title="Cmd + I"
             className={
               editorState.isItalic
                 ? "btn btn-primary btn-square"
@@ -318,6 +326,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().toggleUnderline().run();
             }}
+            title="Cmd + U"
             className={
               editorState.isUnderline
                 ? "btn btn-primary btn-square"
@@ -331,6 +340,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().toggleStrike().run();
             }}
+            title="Cmd + Shift + S"
             className={
               editorState.isStrike
                 ? "btn btn-primary btn-square"
@@ -344,6 +354,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().toggleSubscript().run();
             }}
+            title="Cmd + ,"
             className={
               editorState.isSubscript
                 ? "btn btn-primary btn-square"
@@ -357,6 +368,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().toggleSuperscript().run();
             }}
+            title="Cmd + ."
             className={
               editorState.isSuperscript
                 ? "btn btn-primary btn-square"
@@ -370,6 +382,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().toggleBlockquote().run();
             }}
+            title="Cmd + Shift + B"
             className={
               editorState.isBlockquote
                 ? "btn btn-primary btn-square"
@@ -394,21 +407,9 @@ function EditorMenu() {
           <button
             onMouseDown={(e) => e.preventDefault()}
             onClick={() => {
-              editor.chain().focus().toggleBulletList().run();
-            }}
-            className={
-              editorState.isBulletList
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <List />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
               editor.chain().focus().toggleOrderedList().run();
             }}
+            title="Cmd + Shift + 7"
             className={
               editorState.isOrderedList
                 ? "btn btn-primary btn-square"
@@ -420,8 +421,23 @@ function EditorMenu() {
           <button
             onMouseDown={(e) => e.preventDefault()}
             onClick={() => {
+              editor.chain().focus().toggleBulletList().run();
+            }}
+            title="Cmd + Shift + 8"
+            className={
+              editorState.isBulletList
+                ? "btn btn-primary btn-square"
+                : "btn btn-square"
+            }
+          >
+            <List />
+          </button>
+          <button
+            onMouseDown={(e) => e.preventDefault()}
+            onClick={() => {
               editor.chain().focus().toggleTaskList().run();
             }}
+            title="Cmd + Shift + 9"
             className={
               editorState.isTaskList
                 ? "btn btn-primary btn-square"
@@ -442,6 +458,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().setTextAlign("left").run();
             }}
+            title="Cmd + Shift + L"
             className={
               editorState.isAlignLeft
                 ? "btn btn-primary btn-square"
@@ -455,6 +472,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().setTextAlign("center").run();
             }}
+            title="Cmd + Shift + E"
             className={
               editorState.isAlignCenter
                 ? "btn btn-primary btn-square"
@@ -468,6 +486,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().setTextAlign("right").run();
             }}
+            title="Cmd + Shift + R"
             className={
               editorState.isAlignRight
                 ? "btn btn-primary btn-square"
@@ -481,6 +500,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().setTextAlign("justify").run();
             }}
+            title="Cmd + Shift + J"
             className={
               editorState.isAlignJustify
                 ? "btn btn-primary btn-square"
@@ -623,6 +643,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().toggleCode().run();
             }}
+            title="Cmd + E"
             className={
               editorState.isCode
                 ? "btn btn-primary btn-square"
@@ -636,6 +657,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().toggleCodeBlock().run();
             }}
+            title="Cmd + Alt + C"
             className={
               editorState.isCodeBlock
                 ? "btn btn-primary btn-square"
@@ -683,6 +705,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().undo().run();
             }}
+            title="Cmd + Z"
             className={"btn btn-square"}
             disabled={!editorState.canUndo}
           >
@@ -693,6 +716,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().redo().run();
             }}
+            title="Cmd + Shift + Z"
             className={"btn btn-square"}
             disabled={!editorState.canRedo}
           >
