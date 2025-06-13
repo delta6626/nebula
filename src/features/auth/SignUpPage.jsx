@@ -199,8 +199,8 @@ function SignUpPage() {
   return (
     <div className="">
       <MenuExcludedNavBar />
-      <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-        <fieldset className="fieldset bg-base-200 border-base-300 rounded-md border w-md p-4 font-jakarta">
+      <div className="flex w-full justify-center lg:absolute lg:top-[50%] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[-50%]">
+        <fieldset className="fieldset bg-base-200 border-base-300 rounded-md border w-xs sm:w-sm md:w-md lg:w-lg xl:w-xl p-4 font-jakarta">
           <h1 className="text-2xl font-bold text-center">
             Hi there, Welcome to Nebula.
           </h1>
@@ -212,7 +212,7 @@ function SignUpPage() {
           <input
             type="text"
             maxLength={150}
-            className={!nameError ? "input w-md" : "input input-error w-md"}
+            className={!nameError ? "input w-full" : "input input-error w-full"}
             placeholder="Name"
             value={name}
             onChange={handleNameChange}
@@ -221,7 +221,9 @@ function SignUpPage() {
           <label className="label">Email</label>
           <input
             type="email"
-            className={!emailError ? "input w-md" : "input input-error w-md"}
+            className={
+              !emailError ? "input w-full" : "input input-error w-full"
+            }
             placeholder="Email"
             value={email}
             onChange={handleEmailChange}
@@ -232,7 +234,9 @@ function SignUpPage() {
             type="password"
             minLength={8}
             maxLength={64}
-            className={!passwordError ? "input w-md" : "input input-error w-md"}
+            className={
+              !passwordError ? "input w-full" : "input input-error w-full"
+            }
             placeholder="Password"
             value={password}
             onChange={handlePasswordChange}
@@ -244,7 +248,9 @@ function SignUpPage() {
             minLength={8}
             maxLength={64}
             className={
-              !confirmPasswordError ? "input w-md" : "input input-error w-md"
+              !confirmPasswordError
+                ? "input w-full"
+                : "input input-error w-full"
             }
             placeholder="Confirm Password"
             value={confirmPassword}
