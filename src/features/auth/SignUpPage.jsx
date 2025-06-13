@@ -1,15 +1,14 @@
-import GoogleIcon from "../../assets/GoogleIcon";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import validateEmail from "../../utils/validateEmail";
+import { Link, useNavigate } from "react-router-dom";
+import GoogleIcon from "../../assets/GoogleIcon";
+import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import {
   createNewUserWithEmailAndPassword,
   getAuthenticatedUser,
   googleAuthSignIn,
 } from "../../firebase/services";
 import { useThemeStore } from "../../store/themeStore";
-import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
+import validateEmail from "../../utils/validateEmail";
 import MenuExcludedNavBar from "../components/MenuExcludedNavBar";
 
 function SignUpPage() {
@@ -194,7 +193,7 @@ function SignUpPage() {
         navigate("/dashboard");
       }
     });
-  }, []);
+  }, [navigate]);
 
   return (
     <div className="">

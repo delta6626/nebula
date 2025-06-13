@@ -1,4 +1,3 @@
-import NavBar from "../components/NavBar";
 import {
   ArrowRight,
   Book,
@@ -20,13 +19,14 @@ import {
   Type,
   Zap,
 } from "lucide-react";
+import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
+import { getAuthenticatedUser } from "../../firebase/services";
+import { useThemeStore } from "../../store/themeStore";
 import FeatureCard from "../components/FeatureCard";
 import Footer from "../components/Footer";
-import { useThemeStore } from "../../store/themeStore";
-import { useEffect } from "react";
-import { getAuthenticatedUser } from "../../firebase/services";
-import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
+import NavBar from "../components/NavBar";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -41,7 +41,7 @@ function HomePage() {
         navigate("/dashboard");
       }
     });
-  }, []);
+  }, [navigate]);
 
   return (
     <div className="overflow-x-hidden font-jakarta h-[100vh] overflow-y-scroll scroll-smooth scrollbar-thin">

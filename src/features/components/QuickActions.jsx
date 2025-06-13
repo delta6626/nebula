@@ -1,11 +1,11 @@
 import { BookPlus, Clock, FilePlus } from "lucide-react";
-import { useActiveTabStore } from "../../store/activeTabStore";
-import { useUserVerifiedStore } from "../../store/userVerifiedStore";
-import { useUserStore } from "../../store/userStore";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
+import { useActiveTabStore } from "../../store/activeTabStore";
+import { useUserStore } from "../../store/userStore";
+import { useUserVerifiedStore } from "../../store/userVerifiedStore";
 function QuickActions() {
   const { setActiveTab } = useActiveTabStore();
-  const { userVerified, setUserVerified } = useUserVerifiedStore();
+  const { userVerified } = useUserVerifiedStore();
   const { user } = useUserStore();
 
   function handleNewNoteClick() {

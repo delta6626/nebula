@@ -1,31 +1,31 @@
-import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
-import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
+import { useCurrentEditor } from "@tiptap/react";
+import debounce from "lodash.debounce";
 import {
+  CheckCircle2,
+  CheckIcon,
+  Ellipsis,
+  FileUp,
+  FileWarning,
+  HelpCircle,
+  Layout,
+  PencilLine,
+  RectangleEllipsis,
   Save,
   X,
-  FileWarning,
-  CheckCircle2,
-  FileUp,
-  Ellipsis,
-  Layout,
-  CheckIcon,
-  RectangleEllipsis,
-  HelpCircle,
-  PencilLine,
 } from "lucide-react";
 import { memo, useEffect, useState } from "react";
-import { objectToDate } from "../../utils/objectToDate";
-import { dateDistanceFromNow } from "../../utils/dateDistanceFromNow";
+import { useHotkeys } from "react-hotkeys-hook";
+import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
+import { updateNoteFromEditor } from "../../firebase/services";
+import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
 import { useEditTargetNoteStore } from "../../store/editTargetNoteStore";
+import { useMessageStore } from "../../store/messageStore";
 import { useNotesStore } from "../../store/notesStore";
 import { useToolBarVisibilityStore } from "../../store/toolBarVisibilityStore";
-import { useCurrentEditor } from "@tiptap/react";
-import { updateNoteFromEditor } from "../../firebase/services";
-import { toTimestamp } from "../../utils/toTimestamp";
-import debounce from "lodash.debounce";
-import { useHotkeys } from "react-hotkeys-hook";
 import { useUserStore } from "../../store/userStore";
-import { useMessageStore } from "../../store/messageStore";
+import { dateDistanceFromNow } from "../../utils/dateDistanceFromNow";
+import { objectToDate } from "../../utils/objectToDate";
+import { toTimestamp } from "../../utils/toTimestamp";
 import NotebookChip from "./NotebookChip";
 
 const MemoizedFileWarning = memo(FileWarning);
@@ -255,7 +255,7 @@ function EditorMenuTopBar() {
     } else {
       setWordCount(text.trim().split(" ").length);
     }
-  }, []);
+  }, [editor]);
 
   useEffect(() => {
     setNoteName(editTargetNote.name);
@@ -263,7 +263,7 @@ function EditorMenuTopBar() {
     document
       .querySelectorAll(".tiptap")[0]
       .setAttribute("auto-spacing", user.preferences.autoSpacing);
-  }, []);
+  }, [editTargetNote.editorWidth, editTargetNote.name, user.preferences.autoSpacing]);
 
   useEffect(() => {
     document
@@ -337,6 +337,7 @@ function EditorMenuTopBar() {
                   {widthOptions.map((option, id) => {
                     return (
                       <button
+                        key={id}
                         className="btn flex justify-between"
                         onClick={() => {
                           handleEditorWidthChange(option);

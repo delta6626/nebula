@@ -1,6 +1,6 @@
 import { Plus, TagIcon, Trash2 } from "lucide-react";
-import { useActiveTabStore } from "../../store/activeTabStore";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
+import { useActiveTabStore } from "../../store/activeTabStore";
 import { useNoteSearchTermStore } from "../../store/noteSearchTermStore";
 import { useNotebookSearchTermStore } from "../../store/notebookSearchTermStore";
 
@@ -14,7 +14,7 @@ function Tag({
   onDeleteClick,
   source,
 }) {
-  const { activeTab, setActiveTab } = useActiveTabStore();
+  const { _activeTab, setActiveTab } = useActiveTabStore();
   const { noteSearchTerm, setNoteSearchTerm } = useNoteSearchTermStore();
   const { notebookSearchTerm, setNotebookSearchTerm } =
     useNotebookSearchTermStore();

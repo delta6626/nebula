@@ -1,16 +1,16 @@
-import GoogleIcon from "../../assets/GoogleIcon";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
-import validateEmail from "../../utils/validateEmail";
+import GoogleIcon from "../../assets/GoogleIcon";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
-import { useThemeStore } from "../../store/themeStore";
-import MenuExcludedNavBar from "../components/MenuExcludedNavBar";
 import {
-  logInWithEmailAndPassword,
   getAuthenticatedUser,
   googleAuthSignIn,
+  logInWithEmailAndPassword,
   resetPassword,
 } from "../../firebase/services";
+import { useThemeStore } from "../../store/themeStore";
+import validateEmail from "../../utils/validateEmail";
+import MenuExcludedNavBar from "../components/MenuExcludedNavBar";
 
 function LogInPage() {
   const navigate = useNavigate();
@@ -170,7 +170,7 @@ function LogInPage() {
         navigate("/dashboard");
       }
     });
-  }, []);
+  }, [navigate]);
 
   return (
     <div className="">

@@ -1,12 +1,12 @@
-import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
-import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
-import { useNotebooksStore } from "../../store/notebooksStore";
-import { useNotebookSearchTermStore } from "../../store/notebookSearchTermStore";
 import { Search } from "lucide-react";
 import { useEffect } from "react";
+import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
+import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
+import { useNotebookSearchTermStore } from "../../store/notebookSearchTermStore";
+import { useNotebooksStore } from "../../store/notebooksStore";
+import { useUserStore } from "../../store/userStore";
 import GridNotebook from "../components/GridNotebook";
 import TableNotebook from "../components/TableNotebook";
-import { useUserStore } from "../../store/userStore";
 import ViewSwitcher from "../components/ViewSwitcher";
 
 function NotebooksArea() {
@@ -61,7 +61,7 @@ function NotebooksArea() {
     if (notesView == APP_CONSTANTS.VIEW_NOTE_EDITOR) {
       setNotesView(APP_CONSTANTS.VIEW_GRID);
     }
-  }, []);
+  }, [notesView, setNotesView]);
 
   return (
     <div className="flex-1 bg-base-300 h-[100vh] font-jakarta overflow-y-scroll scroll-smooth scrollbar-thin py-4">

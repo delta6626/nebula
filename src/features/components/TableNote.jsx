@@ -1,19 +1,19 @@
-import { dateDistanceFromNow } from "../../utils/dateDistanceFromNow";
-import { objectToDate } from "../../utils/objectToDate";
-import { formatDateDDMMYY } from "../../utils/formatDateDDMMYY";
-import Tag from "./Tag";
-import { PinOff, Pin, FileEdit, Trash2 } from "lucide-react";
-import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
-import { useNotesStore } from "../../store/notesStore";
-import { useMessageStore } from "../../store/messageStore";
-import { hardDeleteNote, updatePinStatus } from "../../firebase/services";
-import { useEditTargetNoteStore } from "../../store/editTargetNoteStore";
-import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
-import { sanitizeHTML } from "../../utils/sanitizeHTML";
+import { FileEdit, Pin, PinOff, Trash2 } from "lucide-react";
 import { useState } from "react";
+import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
+import { hardDeleteNote, updatePinStatus } from "../../firebase/services";
+import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
+import { useEditTargetNoteStore } from "../../store/editTargetNoteStore";
+import { useMessageStore } from "../../store/messageStore";
+import { useNotesStore } from "../../store/notesStore";
+import { dateDistanceFromNow } from "../../utils/dateDistanceFromNow";
+import { formatDateDDMMYY } from "../../utils/formatDateDDMMYY";
+import { objectToDate } from "../../utils/objectToDate";
+import { sanitizeHTML } from "../../utils/sanitizeHTML";
 import NotebookChip from "./NotebookChip";
+import Tag from "./Tag";
 
-function TableNote({ id, noteObject }) {
+function TableNote({ noteObject }) {
   const { notes, setNotes } = useNotesStore();
   const { setMessage } = useMessageStore();
   const { setEditTargetNote } = useEditTargetNoteStore();

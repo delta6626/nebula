@@ -1,35 +1,35 @@
-import { EditorProvider } from "@tiptap/react";
-import StarterKit from "@tiptap/starter-kit";
-import Placeholder from "@tiptap/extension-placeholder";
-import Underline from "@tiptap/extension-underline";
+import MathExtension from "@aarkue/tiptap-math-extension";
+import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
+import FontFamily from "@tiptap/extension-font-family";
 import Heading from "@tiptap/extension-heading";
-import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
-import EditorMenu from "./EditorMenu";
+import Link from "@tiptap/extension-link";
+import Placeholder from "@tiptap/extension-placeholder";
 import Subscript from "@tiptap/extension-subscript";
 import Superscript from "@tiptap/extension-superscript";
-import TaskList from "@tiptap/extension-task-list";
-import TaskItem from "@tiptap/extension-task-item";
-import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
-import { createLowlight, all } from "lowlight";
-import TextAlign from "@tiptap/extension-text-align";
 import Table from "@tiptap/extension-table";
-import TableRow from "@tiptap/extension-table-row";
-import TableHeader from "@tiptap/extension-table-header";
 import TableCell from "@tiptap/extension-table-cell";
-import Link from "@tiptap/extension-link";
-import Youtube from "@tiptap/extension-youtube";
-import FontFamily from "@tiptap/extension-font-family";
+import TableHeader from "@tiptap/extension-table-header";
+import TableRow from "@tiptap/extension-table-row";
+import TaskItem from "@tiptap/extension-task-item";
+import TaskList from "@tiptap/extension-task-list";
+import TextAlign from "@tiptap/extension-text-align";
 import TextStyle from "@tiptap/extension-text-style";
-import { useEditTargetNoteStore } from "../../store/editTargetNoteStore";
+import Underline from "@tiptap/extension-underline";
+import Youtube from "@tiptap/extension-youtube";
+import { EditorProvider } from "@tiptap/react";
+import StarterKit from "@tiptap/starter-kit";
+import { all, createLowlight } from "lowlight";
 import { memo } from "react";
 import { Markdown } from "tiptap-markdown";
-import MathExtension from "@aarkue/tiptap-math-extension";
+import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
+import { useEditTargetNoteStore } from "../../store/editTargetNoteStore";
+import EditorMenu from "./EditorMenu";
 
 const MemoizedEditorMenu = memo(EditorMenu);
 
 function NoteEditor() {
   const lowlight = createLowlight(all);
-  const { editTargetNote, setEditTargetNote } = useEditTargetNoteStore();
+  const { editTargetNote } = useEditTargetNoteStore();
 
   const extensions = [
     StarterKit.configure({
