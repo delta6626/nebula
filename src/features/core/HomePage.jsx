@@ -303,9 +303,13 @@ function HomePage() {
                 </div>
                 <div className="collapse-content text-secondary">
                   Yes. Nebula prioritizes your privacy and security. Your notes
-                  are stored securely in the cloud.we never view or share your
-                  notes. Our Terms of Service strictly forbid it. We believe in
-                  trust, transparency, and respecting your space.
+                  are stored securely in the cloud. We never view or share your
+                  notes. Our{" "}
+                  <Link className="text-primary" to={"terms-of-service"}>
+                    Terms of Service
+                  </Link>{" "}
+                  strictly forbid it. We believe in trust, transparency, and
+                  respecting your space.
                 </div>
               </div>
               <div className="collapse collapse-arrow border border-accent">
@@ -341,7 +345,7 @@ function HomePage() {
                   personal project crafted with care to help others think better
                   and write more freely. You can learn more about me{" "}
                   <Link
-                    className="text text-primary"
+                    className="text-primary"
                     target="_blank"
                     to={"https://github.com/delta6626"}
                   >
