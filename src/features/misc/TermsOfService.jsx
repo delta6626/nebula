@@ -8,7 +8,7 @@ function TermsOfService() {
       <div className="w-full py-10 font-jakarta flex flex-col items-center scroll-smooth scrollbar-thin">
         <h1 className="text-4xl font-semibold">Terms of Service</h1>
         <p className="mt-2 text-secondary">Updated June 2, 2025</p>
-        <div className="w-[40%] text-lg">
+        <div className="w-[85%] sm:w-[80%] md:w-[70%] lg:[w-60%] xl:w-[50%] 2xl:w-[40%] text-lg">
           <div className="mt-10">
             <p className="">
               These Terms of Service ("Terms") govern your access to and use of
