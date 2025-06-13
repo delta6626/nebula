@@ -61,7 +61,7 @@ function DashboardArea() {
         <div className="">
           <div className="flex items-center justify-between px-8 relative">
             <h1 className="text-3xl font-bold">Dashboard</h1>
-            <div className="flex absolute left-1/2 -translate-x-1/2">
+            <div className="flex justify-center">
               <div className="w-2xl input focus-within:input-primary">
                 <Search className="text-secondary"></Search>
                 <input
