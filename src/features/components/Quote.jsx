@@ -1,15 +1,15 @@
 import { Feather, RefreshCcw } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
 import { useQuoteStore } from "../../store/quoteStore";
-import { useEffect, useState } from "react";
 
 function Quote() {
   const { quotes } = useQuoteStore();
   const [currentQuote, setCurrentQuote] = useState();
   const [loading, setLoading] = useState(false);
 
-  function getRandomQuote() {
+  const getRandomQuote = useCallback(() => {
     return quotes[Math.floor(Math.random() * quotes.length)];
-  }
+  }, [quotes]);
 
   function handleRefreshClick() {
     setLoading(true);
@@ -19,7 +19,7 @@ function Quote() {
 
   useEffect(() => {
     setCurrentQuote(getRandomQuote());
-  }, [quotes]);
+  }, [getRandomQuote]);
 
   return (
     <div className="bg-transparent border-1 border-accent mt-4 w-sm mx-auto rounded-lg p-4">

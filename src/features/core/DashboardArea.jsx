@@ -1,22 +1,22 @@
-import { useMessageStore } from "../../store/messageStore";
-import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
-import GenericModal from "../components/GenericModal";
-import EditNoteModal from "../components/EditNoteModal";
-import CreateNoteModal from "../components/CreateNoteModal";
-import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
-import { useEffect, useState } from "react";
 import { Search } from "lucide-react";
+import { useEffect, useState } from "react";
+import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
+import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
+import { useMessageStore } from "../../store/messageStore";
 import CreateNotebookModal from "../components/CreateNotebookModal";
-import EditNotebookModal from "../components/EditNotebookModal";
-import NoteEditor from "../components/NoteEditor";
-import GreetingSection from "../components/GreetingSection";
-import QuickActions from "../components/QuickActions";
+import CreateNoteModal from "../components/CreateNoteModal";
 import DigitalClock from "../components/DigitalClock";
-import PinnedNotes from "../components/PinnedNotes";
-import UserStatistics from "../components/UserStatistics";
-import Quote from "../components/Quote";
-import ViewSwitcher from "../components/ViewSwitcher";
 import Donation from "../components/Donation";
+import EditNotebookModal from "../components/EditNotebookModal";
+import EditNoteModal from "../components/EditNoteModal";
+import GenericModal from "../components/GenericModal";
+import GreetingSection from "../components/GreetingSection";
+import NoteEditor from "../components/NoteEditor";
+import PinnedNotes from "../components/PinnedNotes";
+import QuickActions from "../components/QuickActions";
+import Quote from "../components/Quote";
+import UserStatistics from "../components/UserStatistics";
+import ViewSwitcher from "../components/ViewSwitcher";
 
 function DashboardArea() {
   const { message } = useMessageStore();
@@ -35,7 +35,7 @@ function DashboardArea() {
 
   useEffect(() => {
     setNotesView(APP_CONSTANTS.VIEW_GRID);
-  }, []);
+  }, [setNotesView]);
 
   return (
     <div className="flex-1 bg-base-300 h-[100vh] font-jakarta overflow-y-scroll scroll-smooth scrollbar-thin py-4">

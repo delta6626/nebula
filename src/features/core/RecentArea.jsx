@@ -1,16 +1,16 @@
-import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
-import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
-import { useState } from "react";
 import { Search } from "lucide-react";
-import { useNotesStore } from "../../store/notesStore";
+import { useState } from "react";
+import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
+import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
 import { useNotebooksStore } from "../../store/notebooksStore";
+import { useNotesStore } from "../../store/notesStore";
 import { useUserStore } from "../../store/userStore";
 import { objectToDate } from "../../utils/objectToDate";
 import GridNote from "../components/GridNote";
 import GridNotebook from "../components/GridNotebook";
+import NoteEditor from "../components/NoteEditor";
 import TableNote from "../components/TableNote";
 import TableNotebook from "../components/TableNotebook";
-import NoteEditor from "../components/NoteEditor";
 import ViewSwitcher from "../components/ViewSwitcher";
 
 function RecentArea() {
@@ -169,7 +169,7 @@ function RecentArea() {
                 >
                   {timeRangeOptions.map((range, id) => {
                     return (
-                      <option value={JSON.stringify(range)}>
+                      <option key={id} value={JSON.stringify(range)}>
                         {range.label}
                       </option>
                     );

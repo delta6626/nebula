@@ -1,24 +1,24 @@
-import { useState } from "react";
+import { Timestamp } from "firebase/firestore";
 import { ArrowBigUp, Command, Info, Plus } from "lucide-react";
-import { THEMES } from "../../constants/THEMES";
-import { useUserStore } from "../../store/userStore";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
-import { useUserVerifiedStore } from "../../store/userVerifiedStore";
-import { useMessageStore } from "../../store/messageStore";
-import { useNotesStore } from "../../store/notesStore";
-import { useNotebooksStore } from "../../store/notebooksStore";
-import { useActiveTabStore } from "../../store/activeTabStore";
-import { hasEmptyStringValue } from "../../utils/hasEmptyStringValue";
+import { THEMES } from "../../constants/THEMES";
 import {
+  deleteUserAccount,
+  sendVerificationEmail,
+  signOutUser,
+  softDeleteAllNotebooks,
   softDeleteAllNotes,
   updateUserData,
-  softDeleteAllNotebooks,
-  deleteUserAccount,
-  signOutUser,
-  sendVerificationEmail,
 } from "../../firebase/services";
-import { Timestamp } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
+import { useActiveTabStore } from "../../store/activeTabStore";
+import { useMessageStore } from "../../store/messageStore";
+import { useNotebooksStore } from "../../store/notebooksStore";
+import { useNotesStore } from "../../store/notesStore";
+import { useUserStore } from "../../store/userStore";
+import { useUserVerifiedStore } from "../../store/userVerifiedStore";
+import { hasEmptyStringValue } from "../../utils/hasEmptyStringValue";
 
 function SettingsArea() {
   const navigate = useNavigate();
@@ -33,14 +33,14 @@ function SettingsArea() {
   // State variables
   const [name, setName] = useState(user?.name);
   const [email, setEmail] = useState(user?.email);
-  const [autoSaveTriggerTime, setAutoSaveTriggerTime] = useState(
+  const [autoSaveTriggerTime, _setAutoSaveTriggerTime] = useState(
     user?.preferences.autoSaveTriggerTime,
   );
   const [strictTagMatching, setStrictTagMatching] = useState(
     user?.preferences.strictTagMatching,
   );
   const [autoSpacing, setAutoSpacing] = useState(user?.preferences.autoSpacing);
-  const [language, setLanguage] = useState(user?.preferences.language);
+  const [language, _setLanguage] = useState(user?.preferences.language);
   const [theme, setTheme] = useState(user?.preferences.theme);
   const [subscribed, setSubscribed] = useState(
     user?.preferences.subscribedToEmailNotifications,
@@ -228,7 +228,7 @@ function SettingsArea() {
         });
         document.getElementById(APP_CONSTANTS.GENERIC_MODAL).showModal();
       })
-      .catch(() => {
+      .catch((error) => {
         setSendingMail(false);
         setMessage({
           title: APP_CONSTANTS.ERROR_MODAL_TITLE,
