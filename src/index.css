@@ -3,12 +3,18 @@
 @plugin "@tailwindcss/typography";
 
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark, celestra, synthwave, caramel,
-    coffee, coffee;
+  themes:
+    light --default,
+    dark --prefersdark,
+    celestra,
+    synthwave,
+    caramel,
+    coffee,
+    coffee;
   root: ":root";
-  include: ;
-  exclude: ;
-  prefix: ;
+  include:;
+  exclude:;
+  prefix:;
   logs: true;
 }
 

@@ -30,7 +30,7 @@ function RecentArea() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [currentTimeRange, setCurrentTimeRange] = useState(
-    JSON.stringify(timeRangeOptions[2]) // Default: Last 7 days
+    JSON.stringify(timeRangeOptions[2]), // Default: Last 7 days
   );
 
   const filteredRecentNotes = notes.filter((note) => {

@@ -140,7 +140,7 @@ function LogInPage() {
         switch (error.code) {
           case "auth/account-exists-with-different-credential":
             setErrorMessage(
-              APP_CONSTANTS.ACCOUNT_EXISTS_WITH_DIFFERENT_CREDENTIAL
+              APP_CONSTANTS.ACCOUNT_EXISTS_WITH_DIFFERENT_CREDENTIAL,
             );
             break;
           case "auth/popup-blocked":

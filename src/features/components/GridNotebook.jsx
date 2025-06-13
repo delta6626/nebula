@@ -44,8 +44,8 @@ function GridNotebook({ notebookObject }) {
           notebooks.map((notebook) =>
             notebook.id == notebookObject.id
               ? { ...notebook, pinned: !notebook.pinned }
-              : notebook
-          )
+              : notebook,
+          ),
         );
         setUpdatingPin(false);
       })
@@ -77,11 +77,11 @@ function GridNotebook({ notebookObject }) {
               !(
                 note.assignedTo[0] === notebookObject.id &&
                 note.assignedTo[1] === notebookObject.name
-              )
-          )
+              ),
+          ),
         );
         setNotebooks(
-          notebooks.filter((notebook) => notebook.id !== notebookObject.id)
+          notebooks.filter((notebook) => notebook.id !== notebookObject.id),
         );
 
         setMessage({

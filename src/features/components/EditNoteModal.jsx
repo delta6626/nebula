@@ -25,7 +25,7 @@ function EditNoteModal() {
       setAssignedTo(
         editTargetNote.assignedTo
           ? JSON.stringify(editTargetNote.assignedTo)
-          : "[]"
+          : "[]",
       );
       setTags(editTargetNote.tags || []);
     }
@@ -96,7 +96,7 @@ function EditNoteModal() {
       newNoteNameClean,
       parsedAssignedTo,
       newTagListClean,
-      newLastEditDate
+      newLastEditDate,
     )
       .then(() => {
         const updatedNote = {
@@ -109,7 +109,9 @@ function EditNoteModal() {
 
         setEditTargetNote(updatedNote);
         setNotes(
-          notes.map((note) => (note.id === updatedNote.id ? updatedNote : note))
+          notes.map((note) =>
+            note.id === updatedNote.id ? updatedNote : note,
+          ),
         );
 
         setEditingNote(false);

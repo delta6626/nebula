@@ -38,7 +38,7 @@ function CreateNotebookModal() {
     setCreatingNotebook(true);
     addNotebookToDatabase(
       notebookName == "" ? "Untitled notebook" : notebookName,
-      tags
+      tags,
     )
       .then((doc) => {
         const notebookObject = {

@@ -95,7 +95,7 @@ export function createNewUserWithEmailAndPassword(
   email,
   password,
   authenticationMethod,
-  theme
+  theme,
 ) {
   return createUserWithEmailAndPassword(auth, email, password)
     .then((userCredentials) => {
@@ -122,7 +122,7 @@ export function googleAuthSignIn(theme) {
           result.user.displayName,
           result.user.email,
           APP_CONSTANTS.WITH_GOOGLE,
-          theme
+          theme,
         );
       } else {
         return;
@@ -198,7 +198,7 @@ export function addNotebookToDatabase(notebookName, tags) {
       firestore,
       "users",
       user.uid,
-      "notebooks"
+      "notebooks",
     );
     return addDoc(notebooksCollection, basicNotebookSchema);
   });
@@ -209,7 +209,7 @@ export function updateNote(
   newNoteName,
   newAssignedTo,
   newTagList,
-  newLastEditDate
+  newLastEditDate,
 ) {
   return getAuthenticatedUser().then((user) => {
     const noteDocRef = doc(firestore, "users", user.uid, "notes", noteId);
@@ -234,7 +234,7 @@ export function updateNotebook(
   oldNotebookName,
   newNotebookName,
   newTagList,
-  newLastEditDate
+  newLastEditDate,
 ) {
   return getAuthenticatedUser().then((user) => {
     const notebookRef = doc(
@@ -242,13 +242,13 @@ export function updateNotebook(
       "users",
       user.uid,
       "notebooks",
-      notebookId
+      notebookId,
     );
 
     const notesRef = collection(firestore, "users", user.uid, "notes");
     const notesQuery = query(
       notesRef,
-      where("assignedTo", "==", [notebookId, oldNotebookName])
+      where("assignedTo", "==", [notebookId, oldNotebookName]),
     );
 
     return getDocs(notesQuery).then((snapshots) => {
@@ -256,7 +256,7 @@ export function updateNotebook(
 
       snapshots.forEach((noteDoc) => {
         updatePromises.push(
-          updateDoc(noteDoc.ref, { assignedTo: [notebookId, newNotebookName] })
+          updateDoc(noteDoc.ref, { assignedTo: [notebookId, newNotebookName] }),
         );
       });
 
@@ -265,7 +265,7 @@ export function updateNotebook(
           name: newNotebookName,
           tags: newTagList,
           lastEditDate: newLastEditDate,
-        })
+        }),
       );
     });
   });
@@ -285,13 +285,13 @@ export function hardDeleteNotebookAndLinkedNotes(notebookId, notebookName) {
       "users",
       user.uid,
       "notebooks",
-      notebookId
+      notebookId,
     );
 
     const notesRef = collection(firestore, "users", user.uid, "notes");
     const notesQuery = query(
       notesRef,
-      where("assignedTo", "==", [notebookId, notebookName])
+      where("assignedTo", "==", [notebookId, notebookName]),
     );
 
     return getDocs(notesQuery).then((snapshots) => {
@@ -320,7 +320,7 @@ export function updateNotebookPinStatus(notebookId, currentPinStatus) {
       "users",
       user.uid,
       "notebooks",
-      notebookId
+      notebookId,
     );
     return updateDoc(notebookRef, { pinned: !currentPinStatus });
   });

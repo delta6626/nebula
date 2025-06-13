@@ -54,7 +54,7 @@ function EditNotebookModal() {
       oldNotebookName,
       newNotebookNameClean,
       newTagListClean,
-      newLastEditDate
+      newLastEditDate,
     )
       .then(() => {
         const updatedNotebook = {
@@ -68,8 +68,8 @@ function EditNotebookModal() {
 
         setNotebooks(
           notebooks.map((notebook) =>
-            notebook.id === updatedNotebook.id ? updatedNotebook : notebook
-          )
+            notebook.id === updatedNotebook.id ? updatedNotebook : notebook,
+          ),
         );
 
         setNotes(
@@ -77,8 +77,8 @@ function EditNotebookModal() {
             note.assignedTo[0] === notebookId &&
             note.assignedTo[1] === oldNotebookName
               ? { ...note, assignedTo: [notebookId, newNotebookNameClean] }
-              : note
-          )
+              : note,
+          ),
         );
 
         setEditingNotebook(false);

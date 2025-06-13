@@ -42,8 +42,8 @@ function GridNote({ noteObject }) {
       .then(() => {
         setNotes(
           notes.map((note) =>
-            note.id == noteId ? { ...note, pinned: !note.pinned } : note
-          )
+            note.id == noteId ? { ...note, pinned: !note.pinned } : note,
+          ),
         );
         setUpdatingPin(false);
       })

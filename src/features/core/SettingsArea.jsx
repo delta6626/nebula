@@ -34,16 +34,16 @@ function SettingsArea() {
   const [name, setName] = useState(user?.name);
   const [email, setEmail] = useState(user?.email);
   const [autoSaveTriggerTime, setAutoSaveTriggerTime] = useState(
-    user?.preferences.autoSaveTriggerTime
+    user?.preferences.autoSaveTriggerTime,
   );
   const [strictTagMatching, setStrictTagMatching] = useState(
-    user?.preferences.strictTagMatching
+    user?.preferences.strictTagMatching,
   );
   const [autoSpacing, setAutoSpacing] = useState(user?.preferences.autoSpacing);
   const [language, setLanguage] = useState(user?.preferences.language);
   const [theme, setTheme] = useState(user?.preferences.theme);
   const [subscribed, setSubscribed] = useState(
-    user?.preferences.subscribedToEmailNotifications
+    user?.preferences.subscribedToEmailNotifications,
   );
   const [shortcuts, setShortcuts] = useState({ ...user?.shortcuts });
   const [updating, setUpdating] = useState(false);

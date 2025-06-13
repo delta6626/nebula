@@ -130,7 +130,9 @@ function EditorMenuTopBar() {
 
         setEditTargetNote(updatedNote);
         setNotes(
-          notes.map((note) => (note.id === updatedNote.id ? updatedNote : note))
+          notes.map((note) =>
+            note.id === updatedNote.id ? updatedNote : note,
+          ),
         );
         setNoteNameDelta(false);
         setnoteContentDelta(false);
@@ -195,7 +197,7 @@ function EditorMenuTopBar() {
       preventDefault: true,
       enableOnContentEditable: true,
       enableOnFormTags: true,
-    }
+    },
   );
 
   // Hard coded shortcut for save. Will be customizable in the future (maybe).
@@ -211,7 +213,7 @@ function EditorMenuTopBar() {
       preventDefault: true,
       enableOnContentEditable: true,
       enableOnFormTags: true,
-    }
+    },
   );
 
   useEffect(() => {

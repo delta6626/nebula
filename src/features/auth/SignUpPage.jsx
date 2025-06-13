@@ -87,7 +87,7 @@ function SignUpPage() {
       email,
       password,
       APP_CONSTANTS.WITH_EMAIL,
-      theme
+      theme,
     )
       .then(() => {
         setAuthenticating(APP_CONSTANTS.NULL);
@@ -164,7 +164,7 @@ function SignUpPage() {
         switch (error.code) {
           case "auth/account-exists-with-different-credential":
             setErrorMessage(
-              APP_CONSTANTS.ACCOUNT_EXISTS_WITH_DIFFERENT_CREDENTIAL
+              APP_CONSTANTS.ACCOUNT_EXISTS_WITH_DIFFERENT_CREDENTIAL,
             );
             break;
           case "auth/popup-blocked":

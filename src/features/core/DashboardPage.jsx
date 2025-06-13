@@ -119,7 +119,7 @@ function DashboardPage() {
     {
       preventDefault: true,
       enableOnFormTags: true,
-    }
+    },
   );
 
   useHotkeys(
@@ -130,7 +130,7 @@ function DashboardPage() {
     {
       preventDefault: true,
       enableOnFormTags: true,
-    }
+    },
   );
 
   useHotkeys(
@@ -141,7 +141,7 @@ function DashboardPage() {
     {
       preventDefault: true,
       enableOnFormTags: true,
-    }
+    },
   );
 
   useHotkeys(
@@ -152,7 +152,7 @@ function DashboardPage() {
     {
       preventDefault: true,
       enableOnFormTags: true,
-    }
+    },
   );
 
   useHotkeys(
@@ -163,7 +163,7 @@ function DashboardPage() {
     {
       preventDefault: true,
       enableOnFormTags: true,
-    }
+    },
   );
 
   useHotkeys(
@@ -174,7 +174,7 @@ function DashboardPage() {
     {
       preventDefault: true,
       enableOnFormTags: true,
-    }
+    },
   );
 
   useHotkeys(
@@ -185,7 +185,7 @@ function DashboardPage() {
     {
       preventDefault: true,
       enableOnFormTags: true,
-    }
+    },
   );
 
   useHotkeys(
@@ -196,7 +196,7 @@ function DashboardPage() {
     {
       preventDefault: true,
       enableOnFormTags: true,
-    }
+    },
   );
 
   useHotkeys(
@@ -211,7 +211,7 @@ function DashboardPage() {
     },
     {
       preventDefault: true,
-    }
+    },
   );
 
   useHotkeys(
@@ -228,7 +228,7 @@ function DashboardPage() {
     },
     {
       preventDefault: true,
-    }
+    },
   );
 
   useEffect(() => {

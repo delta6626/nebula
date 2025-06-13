@@ -61,7 +61,7 @@ function CreateNoteModal() {
     addNoteToDatabase(
       noteName == "" ? "Untitled" : noteName,
       JSON.parse(selectedNotebook),
-      tags
+      tags,
     )
       .then((doc) => {
         const noteObject = {
