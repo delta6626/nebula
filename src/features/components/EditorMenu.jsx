@@ -183,7 +183,7 @@ function EditorMenu() {
       <div
         className={
           toolBarVisible
-            ? "flex flex-wrap justify-between w-full select-none px-8"
+            ? "flex flex-wrap gap-5 justify-between w-full select-none px-8"
             : "hidden"
         }
       >
