@@ -7,7 +7,7 @@ function FeatureCard({ title, body, icon }) {
 
   return (
     <div
-      className="border-tracker-card bg-base-100 rounded-lg border-1 border-accent text-left"
+      className="bg-base-100 rounded-lg border-1 border-accent text-left"
       ref={cardRef}
       onMouseMove={handleMouseMove}
     >

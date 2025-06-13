@@ -196,7 +196,7 @@ function HomePage() {
                 </p>
               </div>
             </div>
-            <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300 border-tracker-card">
+            <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300">
               <Cloud size={120} />
             </div>
           </div>
@@ -221,7 +221,7 @@ function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300 border-tracker-card">
+            <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300">
               <Code2 size={120} />
             </div>
           </div>
@@ -249,7 +249,7 @@ function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300 border-tracker-card">
+            <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300">
               <DollarSign size={120} />
             </div>
           </div>
