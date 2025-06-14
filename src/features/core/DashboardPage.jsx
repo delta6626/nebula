@@ -1,49 +1,49 @@
 import {
   ArrowLeft,
-  File,
-  LayoutPanelTop,
   Book,
+  BookPlus,
+  Clock,
+  File,
+  FilePlus,
+  LayoutPanelTop,
+  Pin,
   Settings,
   Tag,
-  Pin,
-  Clock,
-  FilePlus,
-  BookPlus,
 } from "lucide-react";
-import { useUserStore } from "../../store/userStore";
+import { useEffect, useState } from "react";
+import { useHotkeys } from "react-hotkeys-hook";
+import { useNavigate } from "react-router-dom";
+import Logo from "../../assets/Logo";
+import UntaggedIcon from "../../assets/UntaggedIcon";
+import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import {
   getAllNotebooks,
   getAllNotes,
   getAuthenticatedUser,
   getUserData,
 } from "../../firebase/services";
-import { useEffect, useState } from "react";
-import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
-import { useNavigate } from "react-router-dom";
+import { useActiveTabStore } from "../../store/activeTabStore";
+import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
+import { useMessageStore } from "../../store/messageStore";
+import { useNotebooksStore } from "../../store/notebooksStore";
+import { useNotesStore } from "../../store/notesStore";
+import { useQuoteStore } from "../../store/quoteStore";
+import { useUserStore } from "../../store/userStore";
+import { useUserVerifiedStore } from "../../store/userVerifiedStore";
+import fetchAllQuotes from "../../utils/fetchAllQuotes";
+import CreateNoteModal from "../components/CreateNoteModal";
+import CreateNotebookModal from "../components/CreateNotebookModal";
+import EditNoteModal from "../components/EditNoteModal";
+import EditNotebookModal from "../components/EditNotebookModal";
+import GenericModal from "../components/GenericModal";
 import DashboardArea from "./DashboardArea";
-import NotesArea from "./NotesArea";
 import NotebooksArea from "./NotebooksArea";
+import NotesArea from "./NotesArea";
+import PinnedArea from "./PinnedArea";
+import RecentArea from "./RecentArea";
 import SettingsArea from "./SettingsArea";
 import TaggedArea from "./TaggedArea";
 import UntaggedArea from "./UntaggedArea";
-import PinnedArea from "./PinnedArea";
-import RecentArea from "./RecentArea";
-import { useUserVerifiedStore } from "../../store/userVerifiedStore";
-import { useNotebooksStore } from "../../store/notebooksStore";
-import { useNotesStore } from "../../store/notesStore";
-import { useActiveTabStore } from "../../store/activeTabStore";
-import { useHotkeys } from "react-hotkeys-hook";
-import { useMessageStore } from "../../store/messageStore";
-import { useQuoteStore } from "../../store/quoteStore";
-import CreateNoteModal from "../components/CreateNoteModal";
-import CreateNotebookModal from "../components/CreateNotebookModal";
-import GenericModal from "../components/GenericModal";
-import UntaggedIcon from "../../assets/UntaggedIcon";
-import EditNoteModal from "../components/EditNoteModal";
-import EditNotebookModal from "../components/EditNotebookModal";
-import fetchAllQuotes from "../../utils/fetchAllQuotes";
-import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
-import Logo from "../../assets/Logo";
 
 function DashboardPage() {
   const navigate = useNavigate();
@@ -240,7 +240,7 @@ function DashboardPage() {
         return;
       }
     });
-  }, []);
+  }, [navigate, setUserVerified]);
 
   useEffect(() => {
     getUserData().then((userData) => {
@@ -250,7 +250,7 @@ function DashboardPage() {
         setUser(userData);
       }
     });
-  }, []);
+  }, [setUser]);
 
   useEffect(() => {
     getAllNotebooks().then((notebooksSnapshot) => {
@@ -262,7 +262,7 @@ function DashboardPage() {
       });
       setNotebooks(allNotebooksData);
     });
-  }, []);
+  }, [setNotebooks]);
 
   useEffect(() => {
     getAllNotes().then((notesSnapshot) => {
@@ -274,7 +274,7 @@ function DashboardPage() {
       });
       setNotes(allNotesData);
     });
-  }, []);
+  }, [setNotes]);
 
   useEffect(() => {
     fetchAllQuotes().then((response) => {
@@ -282,7 +282,7 @@ function DashboardPage() {
         setQuotes(quotesArray);
       });
     });
-  }, []);
+  }, [setQuotes]);
 
   useEffect(() => {
     const htmlTag = document.documentElement;
