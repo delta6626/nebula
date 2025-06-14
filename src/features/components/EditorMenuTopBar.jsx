@@ -263,7 +263,11 @@ function EditorMenuTopBar() {
     document
       .querySelectorAll(".tiptap")[0]
       .setAttribute("auto-spacing", user.preferences.autoSpacing);
-  }, [editTargetNote.editorWidth, editTargetNote.name, user.preferences.autoSpacing]);
+  }, [
+    editTargetNote.editorWidth,
+    editTargetNote.name,
+    user.preferences.autoSpacing,
+  ]);
 
   useEffect(() => {
     document
