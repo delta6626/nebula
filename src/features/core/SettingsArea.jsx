@@ -96,6 +96,8 @@ function SettingsArea() {
 
     setUpdating(true);
 
+    localStorage.setItem("theme", theme);
+
     const updatedUser = {
       ...user,
       name,

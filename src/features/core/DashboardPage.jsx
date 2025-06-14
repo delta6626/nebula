@@ -286,15 +286,11 @@ function DashboardPage() {
 
   useEffect(() => {
     const htmlTag = document.documentElement;
-    htmlTag.setAttribute("data-theme", user?.preferences.theme);
+    htmlTag.setAttribute(
+      "data-theme",
+      user?.preferences.theme ?? localStorage.getItem("theme"),
+    );
   }, [user?.preferences.theme]);
-
-  // Temporary fix
-
-  useEffect(() => {
-    const htmlTag = document.documentElement;
-    htmlTag.setAttribute("data-theme", "dark");
-  }, []);
 
   return (
     <div className="flex font-jakarta">

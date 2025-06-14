@@ -7,14 +7,16 @@ function ThemeChanger() {
 
   useEffect(() => {
     const htmlTag = document.documentElement;
-    htmlTag.setAttribute("data-theme", theme);
+    htmlTag.setAttribute("data-theme", theme ?? localStorage.getItem("theme"));
   }, [theme]);
 
   function handleThemeChange() {
     if (theme == "light") {
       setTheme("dark");
+      localStorage.setItem("theme", "dark");
     } else {
       setTheme("light");
+      localStorage.setItem("theme", "light");
     }
   }
 
