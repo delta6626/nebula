@@ -502,3 +502,12 @@ html[data-theme="light"] .tiptap {
 .tiptap.resize-cursor {
   cursor: col-resize;
 }
+
+/* Delay displaying of tooltips */
+
+.tooltip:hover {
+  &:before,
+  &:after {
+    @apply delay-500;
+  }
+}

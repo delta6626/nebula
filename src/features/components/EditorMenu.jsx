@@ -192,78 +192,96 @@ function EditorMenu() {
           title="Headings"
           className={"grid grid-cols-3 grid-rows-2 gap-1"}
         >
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleHeading({ level: 1 }).run();
-            }}
-            title="Cmd + Alt + 1"
-            className={
-              editorState.isH1 ? "btn btn-primary btn-square" : "btn btn-square"
-            }
-          >
-            <Heading1></Heading1>
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleHeading({ level: 2 }).run();
-            }}
-            title="Cmd + Alt + 2"
-            className={
-              editorState.isH2 ? "btn btn-primary btn-square" : "btn btn-square"
-            }
-          >
-            <Heading2 />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleHeading({ level: 3 }).run();
-            }}
-            title="Cmd + Alt + 3"
-            className={
-              editorState.isH3 ? "btn btn-primary btn-square" : "btn btn-square"
-            }
-          >
-            <Heading3 />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleHeading({ level: 4 }).run();
-            }}
-            title="Cmd + Alt + 4"
-            className={
-              editorState.isH4 ? "btn btn-primary btn-square" : "btn btn-square"
-            }
-          >
-            <Heading4 />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleHeading({ level: 5 }).run();
-            }}
-            title="Cmd + Alt + 5"
-            className={
-              editorState.isH5 ? "btn btn-primary btn-square" : "btn btn-square"
-            }
-          >
-            <Heading5 />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleHeading({ level: 6 }).run();
-            }}
-            title="Cmd + Alt + 6"
-            className={
-              editorState.isH6 ? "btn btn-primary btn-square" : "btn btn-square"
-            }
-          >
-            <Heading6 />
-          </button>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Alt + 1">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleHeading({ level: 1 }).run();
+              }}
+              className={
+                editorState.isH1
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <Heading1></Heading1>
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Alt + 2">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleHeading({ level: 2 }).run();
+              }}
+              className={
+                editorState.isH2
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <Heading2 />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Alt + 3">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleHeading({ level: 3 }).run();
+              }}
+              className={
+                editorState.isH3
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <Heading3 />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Alt + 4">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleHeading({ level: 4 }).run();
+              }}
+              className={
+                editorState.isH4
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <Heading4 />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Alt + 5">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleHeading({ level: 5 }).run();
+              }}
+              className={
+                editorState.isH5
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <Heading5 />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Alt+ 6">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleHeading({ level: 6 }).run();
+              }}
+              className={
+                editorState.isH6
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <Heading6 />
+            </button>
+          </div>
         </Section>
 
         {/* Font */}
@@ -293,104 +311,112 @@ function EditorMenu() {
           title="Text Formatting"
           className={"grid grid-cols-4 grid-rows-2 gap-1"}
         >
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleBold().run();
-            }}
-            title="Cmd + B"
-            className={
-              editorState.isBold
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <Bold />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleItalic().run();
-            }}
-            title="Cmd + I"
-            className={
-              editorState.isItalic
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <Italic />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleUnderline().run();
-            }}
-            title="Cmd + U"
-            className={
-              editorState.isUnderline
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <Underline />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleStrike().run();
-            }}
-            title="Cmd + Shift + S"
-            className={
-              editorState.isStrike
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <Strikethrough />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleSubscript().run();
-            }}
-            title="Cmd + ,"
-            className={
-              editorState.isSubscript
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <Subscript />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleSuperscript().run();
-            }}
-            title="Cmd + ."
-            className={
-              editorState.isSuperscript
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <Superscript />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleBlockquote().run();
-            }}
-            title="Cmd + Shift + B"
-            className={
-              editorState.isBlockquote
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <TextQuote />
-          </button>
+          <div className="tooltip tooltip-top" data-tip="Cmd + B">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleBold().run();
+              }}
+              className={
+                editorState.isBold
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <Bold />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + I">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleItalic().run();
+              }}
+              className={
+                editorState.isItalic
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <Italic />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + U">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleUnderline().run();
+              }}
+              className={
+                editorState.isUnderline
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <Underline />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Shift + S">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleStrike().run();
+              }}
+              className={
+                editorState.isStrike
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <Strikethrough />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + ,">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleSubscript().run();
+              }}
+              className={
+                editorState.isSubscript
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <Subscript />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + .">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleSuperscript().run();
+              }}
+              className={
+                editorState.isSuperscript
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <Superscript />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Shift + B">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleBlockquote().run();
+              }}
+              className={
+                editorState.isBlockquote
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <TextQuote />
+            </button>
+          </div>
+          {/* No tooltip for this button */}
           <button
             onMouseDown={(e) => e.preventDefault()}
             onClick={() => {
@@ -404,48 +430,51 @@ function EditorMenu() {
 
         {/* Lists */}
         <Section title="Lists" className={"grid grid-cols-2 grid-rows-1 gap-1"}>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleOrderedList().run();
-            }}
-            title="Cmd + Shift + 7"
-            className={
-              editorState.isOrderedList
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <ListOrdered />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleBulletList().run();
-            }}
-            title="Cmd + Shift + 8"
-            className={
-              editorState.isBulletList
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <List />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleTaskList().run();
-            }}
-            title="Cmd + Shift + 9"
-            className={
-              editorState.isTaskList
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <ListChecks />
-          </button>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Shift + 7">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleOrderedList().run();
+              }}
+              className={
+                editorState.isOrderedList
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <ListOrdered />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Shift + 8">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleBulletList().run();
+              }}
+              className={
+                editorState.isBulletList
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <List />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Shift + 9">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleTaskList().run();
+              }}
+              className={
+                editorState.isTaskList
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <ListChecks />
+            </button>
+          </div>
         </Section>
 
         {/* Alignment */}
@@ -453,62 +482,66 @@ function EditorMenu() {
           title="Alignment"
           className={"grid grid-cols-2 grid-rows-2 gap-1"}
         >
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().setTextAlign("left").run();
-            }}
-            title="Cmd + Shift + L"
-            className={
-              editorState.isAlignLeft
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <AlignLeft />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().setTextAlign("center").run();
-            }}
-            title="Cmd + Shift + E"
-            className={
-              editorState.isAlignCenter
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <AlignCenter />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().setTextAlign("right").run();
-            }}
-            title="Cmd + Shift + R"
-            className={
-              editorState.isAlignRight
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <AlignRight />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().setTextAlign("justify").run();
-            }}
-            title="Cmd + Shift + J"
-            className={
-              editorState.isAlignJustify
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <AlignJustify />
-          </button>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Shift + L">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().setTextAlign("left").run();
+              }}
+              className={
+                editorState.isAlignLeft
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <AlignLeft />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Shift + E">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().setTextAlign("center").run();
+              }}
+              className={
+                editorState.isAlignCenter
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <AlignCenter />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Shift + R">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().setTextAlign("right").run();
+              }}
+              className={
+                editorState.isAlignRight
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <AlignRight />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Shift + J">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().setTextAlign("justify").run();
+              }}
+              className={
+                editorState.isAlignJustify
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <AlignJustify />
+            </button>
+          </div>
         </Section>
 
         {/* Table */}
@@ -638,34 +671,36 @@ function EditorMenu() {
 
         {/* Code, Math*/}
         <Section title="Other" className={"grid grid-cols-2 grid-rows-2 gap-1"}>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleCode().run();
-            }}
-            title="Cmd + E"
-            className={
-              editorState.isCode
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <Code />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().toggleCodeBlock().run();
-            }}
-            title="Cmd + Alt + C"
-            className={
-              editorState.isCodeBlock
-                ? "btn btn-primary btn-square"
-                : "btn btn-square"
-            }
-          >
-            <SquareCode />
-          </button>
+          <div className="tooltip tooltip-top" data-tip="Cmd + E">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleCode().run();
+              }}
+              className={
+                editorState.isCode
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <Code />
+            </button>
+          </div>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Alt + C">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().toggleCodeBlock().run();
+              }}
+              className={
+                editorState.isCodeBlock
+                  ? "btn btn-primary btn-square"
+                  : "btn btn-square"
+              }
+            >
+              <SquareCode />
+            </button>
+          </div>
           <button
             onMouseDown={(e) => e.preventDefault()}
             onClick={() => {
@@ -700,28 +735,30 @@ function EditorMenu() {
           title="History"
           className={"grid grid-cols-2 grid-rows-1 gap-1"}
         >
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().undo().run();
-            }}
-            title="Cmd + Z"
-            className={"btn btn-square"}
-            disabled={!editorState.canUndo}
-          >
-            <Undo />
-          </button>
-          <button
-            onMouseDown={(e) => e.preventDefault()}
-            onClick={() => {
-              editor.chain().focus().redo().run();
-            }}
-            title="Cmd + Shift + Z"
-            className={"btn btn-square"}
-            disabled={!editorState.canRedo}
-          >
-            <Redo />
-          </button>
+          <div className="tooltip tooltip-top" data-tip="Cmd + Z">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().undo().run();
+              }}
+              className={"btn btn-square"}
+              disabled={!editorState.canUndo}
+            >
+              <Undo />
+            </button>
+          </div>
+          <div className="tooltip tooltip-left" data-tip="Cmd + Shift + Z">
+            <button
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => {
+                editor.chain().focus().redo().run();
+              }}
+              className={"btn btn-square"}
+              disabled={!editorState.canRedo}
+            >
+              <Redo />
+            </button>
+          </div>
         </Section>
       </div>
       <div className={toolBarVisible ? "divider" : "hidden"}></div>
