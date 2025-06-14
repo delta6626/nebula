@@ -289,6 +289,13 @@ function DashboardPage() {
     htmlTag.setAttribute("data-theme", user?.preferences.theme);
   }, [user?.preferences.theme]);
 
+  // Temporary fix
+
+  useEffect(() => {
+    const htmlTag = document.documentElement;
+    htmlTag.setAttribute("data-theme", "dark");
+  }, []);
+
   return (
     <div className="flex font-jakarta">
       <CreateNoteModal></CreateNoteModal>
