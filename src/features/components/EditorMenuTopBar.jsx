@@ -189,7 +189,7 @@ function EditorMenuTopBar() {
   }
 
   useHotkeys(
-    `ctrl+${user?.shortcuts.CLOSE}`,
+    `alt+${user?.shortcuts.CLOSE}`,
     () => {
       handleCloseButtonClick();
     },

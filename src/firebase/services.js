@@ -66,7 +66,7 @@ function addUserToDatabase(uid, name, email, authenticationMethod, theme) {
       RECENT_PAGE: "R", // shift+__
       TAGGED_PAGE: "T", // shift+__
       UNTAGGED_PAGE: "U", // shift+__
-      CLOSE: "X", // ctrl+__
+      CLOSE: "X", // alt+__
       NEW_NOTE: "N", // shift+__
       NEW_NOTE_BOOK: "B", // shift+__
     },

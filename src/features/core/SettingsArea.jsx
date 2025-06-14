@@ -1,5 +1,5 @@
 import { Timestamp } from "firebase/firestore";
-import { ArrowBigUp, Command, Info, Plus } from "lucide-react";
+import { ArrowBigUp, Command, Info, Option, Plus } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
@@ -747,10 +747,10 @@ function SettingsArea() {
             </div>
           </div>
           <div className="flex items-center justify-between mt-4">
-            <p className="font-medium">Close note / notebook</p>
+            <p className="font-medium">Close note</p>
             <div className="flex items-center">
               <button className="btn" disabled>
-                <Command />
+                <Option />
               </button>
               <Plus />
               <input
