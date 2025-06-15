@@ -28,19 +28,21 @@ import FeatureCard from "../components/FeatureCard";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
-function HomePage() {
+function HomePage({ redirect }) {
   const navigate = useNavigate();
 
   const { theme } = useThemeStore();
 
   useEffect(() => {
-    getAuthenticatedUser().then((result) => {
-      if (result == APP_CONSTANTS.UNAUTHENTICATED) {
-        return;
-      } else {
-        navigate("/dashboard");
-      }
-    });
+    if (redirect) {
+      getAuthenticatedUser().then((result) => {
+        if (result == APP_CONSTANTS.UNAUTHENTICATED) {
+          return;
+        } else {
+          navigate("/dashboard");
+        }
+      });
+    }
   }, [navigate]);
 
   return (

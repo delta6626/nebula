@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../assets/Logo";
 import UntaggedIcon from "../../assets/UntaggedIcon";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
@@ -317,15 +317,17 @@ function DashboardPage() {
         }
       >
         <div className="logo flex items-center justify-between px-4">
-          <h1
-            className={
-              "flex items-center gap-2 text-xl font-jakarta font-bold text-center" +
-              (sideBarCollapsed ? " hidden" : "")
-            }
-          >
-            <Logo />
-            Nebula
-          </h1>
+          <Link to={"/home"}>
+            <h1
+              className={
+                "flex items-center gap-2 text-xl font-jakarta font-bold text-center" +
+                (sideBarCollapsed ? " hidden" : "")
+              }
+            >
+              <Logo />
+              Nebula
+            </h1>
+          </Link>
           <button
             className={
               "btn btn-square bg-transparent" +

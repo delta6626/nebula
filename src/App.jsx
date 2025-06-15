@@ -13,7 +13,14 @@ function App() {
       <Routes>
         {/* This layout components is rendered on every page */}
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<HomePage></HomePage>}></Route>
+          <Route
+            path="/"
+            element={<HomePage redirect={true}></HomePage>}
+          ></Route>
+          <Route
+            path="/home"
+            element={<HomePage redirect={false}></HomePage>}
+          ></Route>
           <Route
             path="/dashboard"
             element={<DashboardPage></DashboardPage>}
