@@ -44,6 +44,7 @@ import RecentArea from "./RecentArea";
 import SettingsArea from "./SettingsArea";
 import TaggedArea from "./TaggedArea";
 import UntaggedArea from "./UntaggedArea";
+import { SideBarButton } from "../components/SidebarButton";
 
 function DashboardPage() {
   const navigate = useNavigate();
@@ -337,220 +338,93 @@ function DashboardPage() {
         </div>
         <div className="divider"></div>
         <div className="mainButtons flex-1 px-4">
-          <button
-            className={`btn btn-wide ${
-              sideBarCollapsed ? "justify-center" : "justify-start"
-            } flex items-center`}
-            disabled={!userVerified}
+          <SideBarButton
+            icon={FilePlus}
+            label="New note"
             onClick={handleNewNoteButtonClick}
-          >
-            {sideBarCollapsed ? (
-              <FilePlus className="shrink-0" />
-            ) : (
-              <>
-                <FilePlus className="shrink-0" />
-                <p className="text-nowrap">New note</p>
-              </>
-            )}
-          </button>
-
-          <button
-            className={`btn btn-wide mt-2 ${
-              sideBarCollapsed ? "justify-center" : "justify-start"
-            } flex items-center`}
-            disabled={!userVerified}
+            isDisabled={!userVerified}
+            sideBarCollapsed={sideBarCollapsed}
+          />
+          <SideBarButton
+            icon={BookPlus}
+            label="New notebook"
             onClick={handleNewNotebookButtonClick}
-          >
-            {sideBarCollapsed ? (
-              <BookPlus className="shrink-0" />
-            ) : (
-              <>
-                <BookPlus className="shrink-0" />
-                <p className="text-nowrap">New notebook</p>
-              </>
-            )}
-          </button>
+            isDisabled={!userVerified}
+            sideBarCollapsed={sideBarCollapsed}
+            addTopMargin
+          />
 
-          <div className="divider"></div>
+          <div className="divider" />
 
-          <button
-            className={
-              activeTab == APP_CONSTANTS.DASHBOARD_PAGE
-                ? `btn btn-wide btn-primary ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-                : `btn btn-wide bg-transparent ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-            }
+          <SideBarButton
+            icon={LayoutPanelTop}
+            label="Dashboard"
             onClick={handleDashboardButtonClick}
-          >
-            {sideBarCollapsed ? (
-              <LayoutPanelTop className="shrink-0" />
-            ) : (
-              <>
-                <LayoutPanelTop className="shrink-0" />
-                <p>Dashboard</p>
-              </>
-            )}
-          </button>
+            isActive={activeTab === APP_CONSTANTS.DASHBOARD_PAGE}
+            sideBarCollapsed={sideBarCollapsed}
+          />
 
-          <button
-            className={
-              activeTab == APP_CONSTANTS.NOTES_PAGE
-                ? `btn btn-wide btn-primary mt-2 ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-                : `btn btn-wide mt-2 bg-transparent ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-            }
+          <SideBarButton
+            icon={File}
+            label="Notes"
             onClick={handleNotesButtonClick}
-          >
-            {sideBarCollapsed ? (
-              <File className="shrink-0" />
-            ) : (
-              <>
-                <File className="shrink-0" />
-                <p>Notes</p>
-              </>
-            )}
-          </button>
-
-          <button
-            className={
-              activeTab == APP_CONSTANTS.NOTEBOOKS_PAGE
-                ? `btn btn-wide btn-primary mt-2 ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-                : `btn btn-wide mt-2 bg-transparent ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-            }
+            isActive={activeTab === APP_CONSTANTS.NOTES_PAGE}
+            sideBarCollapsed={sideBarCollapsed}
+            addTopMargin
+          />
+          <SideBarButton
+            icon={Book}
+            label="Notebooks"
             onClick={handleNotebooksButtonClick}
-          >
-            {sideBarCollapsed ? (
-              <Book className="shrink-0" />
-            ) : (
-              <>
-                <Book className="shrink-0" />
-                <p>Notebooks</p>
-              </>
-            )}
-          </button>
+            isActive={activeTab === APP_CONSTANTS.NOTEBOOKS_PAGE}
+            sideBarCollapsed={sideBarCollapsed}
+            addTopMargin
+          />
 
-          <div className="divider"></div>
+          <div className="divider" />
 
-          <button
-            className={
-              activeTab == APP_CONSTANTS.PINNED_ITEMS
-                ? `btn btn-wide btn-primary ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-                : `btn btn-wide mt-2 bg-transparent ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-            }
+          <SideBarButton
+            icon={Pin}
+            label="Pinned"
             onClick={handlePinnedClick}
-          >
-            {sideBarCollapsed ? (
-              <Pin className="shrink-0" />
-            ) : (
-              <>
-                <Pin className="shrink-0" />
-                <p>Pinned</p>
-              </>
-            )}
-          </button>
-          <button
-            className={
-              activeTab == APP_CONSTANTS.RECENT_ITEMS
-                ? `btn btn-wide btn-primary mt-2 ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-                : `btn btn-wide mt-2 bg-transparent ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-            }
+            isActive={activeTab === APP_CONSTANTS.PINNED_ITEMS}
+            sideBarCollapsed={sideBarCollapsed}
+          />
+          <SideBarButton
+            icon={Clock}
+            label="Recent"
             onClick={handleRecentClick}
-          >
-            {sideBarCollapsed ? (
-              <Clock className="shrink-0" />
-            ) : (
-              <>
-                <Clock className="shrink-0" />
-                <p>Recent</p>
-              </>
-            )}
-          </button>
-          <button
-            className={
-              activeTab == APP_CONSTANTS.TAGGED_ITEMS
-                ? `btn btn-wide btn-primary mt-2 ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-                : `btn btn-wide mt-2 bg-transparent ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-            }
+            isActive={activeTab === APP_CONSTANTS.RECENT_ITEMS}
+            sideBarCollapsed={sideBarCollapsed}
+            addTopMargin
+          />
+          <SideBarButton
+            icon={Tag}
+            label="Tagged"
             onClick={handleTaggedClick}
-          >
-            {sideBarCollapsed ? (
-              <Tag className="shrink-0" />
-            ) : (
-              <>
-                <Tag className="shrink-0" />
-                <p>Tagged</p>
-              </>
-            )}
-          </button>
-
-          <button
-            className={
-              activeTab == APP_CONSTANTS.UNTAGGED_ITEMS
-                ? `btn btn-wide btn-primary mt-2 ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-                : `btn btn-wide mt-2 bg-transparent ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-            }
+            isActive={activeTab === APP_CONSTANTS.TAGGED_ITEMS}
+            sideBarCollapsed={sideBarCollapsed}
+            addTopMargin
+          />
+          <SideBarButton
+            icon={UntaggedIcon}
+            label="Untagged"
             onClick={handleUntaggedClick}
-          >
-            {sideBarCollapsed ? (
-              <UntaggedIcon className={"shrink-0"} />
-            ) : (
-              <>
-                <UntaggedIcon className={"shrink-0"} />
-                <p>Untagged</p>
-              </>
-            )}
-          </button>
+            isActive={activeTab === APP_CONSTANTS.UNTAGGED_ITEMS}
+            sideBarCollapsed={sideBarCollapsed}
+            addTopMargin
+          />
         </div>
-        <div className="bottomButtons flex flex-col justify-between px-4">
-          <div className="divider"></div>
 
-          <button
-            className={
-              activeTab == APP_CONSTANTS.SETTINGS_PAGE
-                ? `btn btn-wide btn-primary ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-                : `btn btn-wide bg-transparent ${
-                    sideBarCollapsed ? "justify-center" : "justify-start"
-                  } flex items-center`
-            }
+        <div className="bottomButtons flex flex-col justify-between px-4">
+          <div className="divider" />
+          <SideBarButton
+            icon={Settings}
+            label="Settings"
             onClick={handleSettingsButtonClick}
-          >
-            {sideBarCollapsed ? (
-              <Settings className="shrink-0" />
-            ) : (
-              <>
-                <Settings className="shrink-0" />
-                <p>Settings</p>
-              </>
-            )}
-          </button>
+            isActive={activeTab === APP_CONSTANTS.SETTINGS_PAGE}
+            sideBarCollapsed={sideBarCollapsed}
+          />
         </div>
       </div>
       <div className="divider divider-horizontal m-0"></div>
