@@ -68,6 +68,7 @@ function EditorMenuTopBar() {
   const [exporting, setExporting] = useState(false);
 
   function handleNoteNameChange(e) {
+    setNoteName(e.target.value);
     if (e.target.value !== editTargetNote.name) {
       setNoteNameDelta(true);
     } else {
