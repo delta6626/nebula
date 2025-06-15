@@ -57,7 +57,7 @@ function EditorMenuTopBar() {
   const { setMessage } = useMessageStore();
   const { toolBarVisible, setToolBarVisible } = useToolBarVisibilityStore();
 
-  const [noteName, setNoteName] = useState();
+  const [noteName, setNoteName] = useState("");
   const [noteContentDelta, setnoteContentDelta] = useState(false);
   const [noteNameDelta, setNoteNameDelta] = useState(false);
   const [editorWidth, setEditorWidth] = useState();
