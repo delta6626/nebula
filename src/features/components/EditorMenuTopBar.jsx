@@ -433,13 +433,12 @@ function EditorMenuTopBar() {
 
           <div className="min-w-fit">
             {!noteContentDelta && !noteNameDelta && !editorWidthDelta ? (
-              <p className="flex items-center gap-2">
-                Up to date <MemoizedCheckCircle2 className="text-primary" />
+              <p className="flex items-center gap-2 text-primary">
+                Up to date <MemoizedCheckCircle2 />
               </p>
             ) : (
-              <p className="flex items-center gap-2">
-                Unsaved changes{" "}
-                <MemoizedFileWarning className="animate-pulse text-warning" />
+              <p className="flex items-center gap-2 animate-pulse text-warning">
+                Unsaved changes <MemoizedFileWarning className="" />
               </p>
             )}
           </div>
