@@ -6,7 +6,6 @@ import {
   Ellipsis,
   FileUp,
   FileWarning,
-  HelpCircle,
   Layout,
   PencilLine,
   RectangleEllipsis,
@@ -32,7 +31,6 @@ const MemoizedFileWarning = memo(FileWarning);
 const MemoizedSave = memo(Save);
 const MemoizedX = memo(X);
 const MemoizedFileUp = memo(FileUp);
-const MemoizedHelp = memo(HelpCircle);
 const MemoizedEllipsis = memo(Ellipsis);
 const MemoizedCheckCircle2 = memo(CheckCircle2);
 const MemoizedLayout = memo(Layout);
@@ -411,10 +409,6 @@ function EditorMenuTopBar() {
               >
                 <MemoizedFileUp className="shrink-0" size={20} />
                 Export MD
-              </button>
-              <button className="btn flex justify-start" size={20}>
-                <MemoizedHelp size={20} />
-                Shortcuts
               </button>
             </ul>
           </div>
