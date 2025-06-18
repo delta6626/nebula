@@ -516,18 +516,32 @@ html[data-theme="light"] .tiptap {
 
 .topFadeInAnimation {
   opacity: 0;
-  transform: translateY(-40px);
+  transform: translateY(-60px);
   transition: 0.5s ease-in-out;
 }
 
 .bottomFadeInAnimation {
   opacity: 0;
-  transform: translateY(40px);
-  transition: 0.5s ease-in-out;
+  transform: translateY(60px);
+  transition: 1s ease-in-out;
+}
+
+.rightFadeInAnimation {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: 1.5s ease-in-out;
+}
+
+.leftFadeInAnimation {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: 1.5s ease-in-out;
 }
 
 .topFadeInAnimation.isVisible,
-.bottomFadeInAnimation.isVisible {
+.bottomFadeInAnimation.isVisible,
+.rightFadeInAnimation.isVisible,
+.leftFadeInAnimation.isVisible {
   opacity: 1;
   transform: none;
 }

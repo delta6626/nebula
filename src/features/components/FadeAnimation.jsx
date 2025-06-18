@@ -20,7 +20,7 @@ function FadeAnimation({ applyMinimumHeight, from, children }) {
   return (
     <div
       ref={domRef}
-      className={`${applyMinimumHeight ? "grid min-h-[100%]" : ""} ${from === "top" ? "topFadeInAnimation" : "bottomFadeInAnimation"} ${isVisible ? "isVisible" : ""}`}
+      className={`${applyMinimumHeight ? "grid min-h-[100%]" : ""} ${from === "top" ? "topFadeInAnimation" : from === "right" ? "rightFadeInAnimation" : from === "left" ? "leftFadeInAnimation" : "bottomFadeInAnimation"} ${isVisible ? "isVisible" : ""}`}
     >
       {children}
     </div>

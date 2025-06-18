@@ -232,233 +232,278 @@ function HomePage({ redirect }) {
 
           <div className="mt-20 md:mt-40 flex flex-row-reverse items-center justify-between">
             <div className="">
-              <h1 className="text-center md:text-left text-3xl md:text-4xl font-bold">
-                Cloud based & Secure
-              </h1>
-              <div className="mt-10">
-                <p className="md:max-w-110 lg:max-w-150 text-xl text-secondary">
-                  Nebula securely backs up your notes to the cloud whenever you
-                  hit save, giving you full control while keeping your work
-                  safe. Cloud storage is completely free* for all users, made
-                  possible by community donations. *Terms and conditions apply.
-                </p>
+              <FadeAnimation from={"right"}>
+                <h1 className="text-center md:text-left text-3xl md:text-4xl font-bold">
+                  Cloud based & Secure
+                </h1>
+              </FadeAnimation>
+              <FadeAnimation>
+                <div className="mt-10">
+                  <p className="md:max-w-110 lg:max-w-150 text-xl text-secondary">
+                    Nebula securely backs up your notes to the cloud whenever
+                    you hit save, giving you full control while keeping your
+                    work safe. Cloud storage is completely free* for all users,
+                    made possible by community donations. *Terms and conditions
+                    apply.
+                  </p>
+                </div>
+              </FadeAnimation>
+            </div>
+            <FadeAnimation from={"left"}>
+              <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300">
+                <Cloud size={120} />
               </div>
-            </div>
-            <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300">
-              <Cloud size={120} />
-            </div>
+            </FadeAnimation>
           </div>
 
           <div className="mt-20 md:mt-40 flex items-center justify-between">
             <div className="">
-              <h1 className="text-center md:text-left text-3xl md:text-4xl font-bold">
-                Open Source
-              </h1>
+              <FadeAnimation from={"left"}>
+                <h1 className="text-center md:text-left text-3xl md:text-4xl font-bold">
+                  Open Source
+                </h1>
+              </FadeAnimation>
               <div className="mt-10">
-                <p className="md:max-w-110 lg:max-w-150 text-xl text-secondary">
-                  Nebula is built for the community — no subscriptions, no
-                  paywalls. You can view, use, and contribute to the entire
-                  codebase on GitHub.
-                </p>
-                <Link
-                  className="btn mt-4 border-1 border-accent w-full sm:w-fit"
-                  to={"https://github.com/delta6626/nebula"}
-                  target="_blank"
-                >
-                  Star on GitHub <Star size={20} />
-                </Link>
+                <FadeAnimation>
+                  <p className="md:max-w-110 lg:max-w-150 text-xl text-secondary">
+                    Nebula is built for the community — no subscriptions, no
+                    paywalls. You can view, use, and contribute to the entire
+                    codebase on GitHub.
+                  </p>
+                  <Link
+                    className="btn mt-4 border-1 border-accent w-full sm:w-fit"
+                    to={"https://github.com/delta6626/nebula"}
+                    target="_blank"
+                  >
+                    Star on GitHub <Star size={20} />
+                  </Link>
+                </FadeAnimation>
               </div>
             </div>
-            <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300">
-              <Code2 size={120} />
-            </div>
+            <FadeAnimation from={"right"}>
+              <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300">
+                <Code2 size={120} />
+              </div>
+            </FadeAnimation>
           </div>
 
           <div className="mt-20 md:mt-40 flex flex-row-reverse items-center justify-between">
             <div className="">
-              <h1 className="text-center md:text-left text-3xl md:text-4xl font-bold">
-                Free Cloud Storage
-              </h1>
-              <div className="mt-10">
-                <p className="md:max-w-110 lg:max-w-150 text-xl text-secondary">
-                  Nebula offers free cloud storage for your notes — no
-                  subscriptions, no hidden fees. Just hit save and your work is
-                  securely backed up. This is possible thanks to a
-                  donation-supported model. We don’t charge for storage, but
-                  running servers isn't free — your support helps keep Nebula
-                  open and sustainable for everyone.
-                </p>
-                <Link
-                  className="btn mt-4 border-1 border-accent w-full sm:w-fit"
-                  to={"https://ko-fi.com/hasan04"}
-                  target="_blank"
-                >
-                  Support Nebula <HeartHandshake size={20} />
-                </Link>
+              <FadeAnimation from={"right"}>
+                <h1 className="text-center md:text-left text-3xl md:text-4xl font-bold">
+                  Free Cloud Storage
+                </h1>
+              </FadeAnimation>
+              <FadeAnimation>
+                <div className="mt-10">
+                  <p className="md:max-w-110 lg:max-w-150 text-xl text-secondary">
+                    Nebula offers free cloud storage for your notes — no
+                    subscriptions, no hidden fees. Just hit save and your work
+                    is securely backed up. This is possible thanks to a
+                    donation-supported model. We don’t charge for storage, but
+                    running servers isn't free — your support helps keep Nebula
+                    open and sustainable for everyone.
+                  </p>
+                  <Link
+                    className="btn mt-4 border-1 border-accent w-full sm:w-fit"
+                    to={"https://ko-fi.com/hasan04"}
+                    target="_blank"
+                  >
+                    Support Nebula <HeartHandshake size={20} />
+                  </Link>
+                </div>
+              </FadeAnimation>
+            </div>
+            <FadeAnimation from={"left"}>
+              <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300">
+                <DollarSign size={120} />
               </div>
-            </div>
-            <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300">
-              <DollarSign size={120} />
-            </div>
+            </FadeAnimation>
           </div>
 
           <div id="faq" className="mt-20 md:mt-40 flex flex-col items-center">
-            <h1 className="text-3xl md:text-4xl font-bold">
-              Frequently Asked Questions
-            </h1>
+            <FadeAnimation>
+              <h1 className="text-3xl md:text-4xl font-bold">
+                Frequently Asked Questions
+              </h1>
+            </FadeAnimation>
             <div className="mt-10 w-full flex flex-col gap-4">
-              <div className="collapse collapse-arrow border border-accent">
-                <input type="radio" name="my-accordion-2" defaultChecked />
-                <div className="collapse-title font-semibold text-xl">
-                  1. What platforms does Nebula support?
+              <FadeAnimation>
+                <div className="collapse collapse-arrow border border-accent">
+                  <input type="radio" name="my-accordion-2" defaultChecked />
+                  <div className="collapse-title font-semibold text-xl">
+                    1. What platforms does Nebula support?
+                  </div>
+                  <div className="collapse-content text-secondary">
+                    Nebula is currently optimized for desktop browsers. Mobile
+                    support is coming soon!
+                  </div>
                 </div>
-                <div className="collapse-content text-secondary">
-                  Nebula is currently optimized for desktop browsers. Mobile
-                  support is coming soon!
+              </FadeAnimation>
+              <FadeAnimation>
+                <div className="collapse collapse-arrow border border-accent">
+                  <input type="radio" name="my-accordion-2" />
+                  <div className="collapse-title font-semibold text-xl">
+                    2. Is Nebula really free to use?
+                  </div>
+                  <div className="collapse-content text-secondary">
+                    Yes! Nebula offers completely free cloud storage for your
+                    notes with no subscriptions or hidden fees. While the app
+                    remains free to use, unusually heavy usage may be subject to
+                    limits to keep things sustainable for everyone.You can read
+                    more about this on our{" "}
+                    <Link className="text-primary" to={"terms-of-service"}>
+                      Terms of Service
+                    </Link>
+                    .
+                  </div>
                 </div>
-              </div>
-              <div className="collapse collapse-arrow border border-accent">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title font-semibold text-xl">
-                  2. Is Nebula really free to use?
+              </FadeAnimation>
+              <FadeAnimation>
+                <div className="collapse collapse-arrow border border-accent">
+                  <input type="radio" name="my-accordion-2" />
+                  <div className="collapse-title font-semibold text-xl">
+                    3. Can I export my notes?
+                  </div>
+                  <div className="collapse-content text-secondary">
+                    Absolutely! You can export your notes as Markdown files,
+                    perfect for sharing or integrating with other tools.
+                  </div>
                 </div>
-                <div className="collapse-content text-secondary">
-                  Yes! Nebula offers completely free cloud storage for your
-                  notes with no subscriptions or hidden fees. While the app
-                  remains free to use, unusually heavy usage may be subject to
-                  limits to keep things sustainable for everyone.You can read
-                  more about this on our{" "}
-                  <Link className="text-primary" to={"terms-of-service"}>
-                    Terms of Service
-                  </Link>
-                  .
+              </FadeAnimation>
+              <FadeAnimation>
+                <div className="collapse collapse-arrow border border-accent">
+                  <input type="radio" name="my-accordion-2" />
+                  <div className="collapse-title font-semibold text-xl">
+                    4. Is my data safe and private?
+                  </div>
+                  <div className="collapse-content text-secondary">
+                    Yes. Nebula prioritizes your privacy and security. Your
+                    notes are stored securely in the cloud. We never view or
+                    share your notes. Our{" "}
+                    <Link className="text-primary" to={"terms-of-service"}>
+                      Terms of Service
+                    </Link>{" "}
+                    strictly forbid it. We believe in trust, transparency, and
+                    respecting your space.
+                  </div>
                 </div>
-              </div>
-              <div className="collapse collapse-arrow border border-accent">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title font-semibold text-xl">
-                  3. Can I export my notes?
+              </FadeAnimation>
+              <FadeAnimation>
+                <div className="collapse collapse-arrow border border-accent">
+                  <input type="radio" name="my-accordion-2" />
+                  <div className="collapse-title font-semibold text-xl">
+                    5. What happens if I don't donate?
+                  </div>
+                  <div className="collapse-content text-secondary">
+                    Donations help keep Nebula free and running smoothly. While
+                    the app remains free to use, unusually heavy usage may be
+                    subject to limits to keep things sustainable for everyone.
+                  </div>
                 </div>
-                <div className="collapse-content text-secondary">
-                  Absolutely! You can export your notes as Markdown files,
-                  perfect for sharing or integrating with other tools.
+              </FadeAnimation>
+              <FadeAnimation>
+                <div className="collapse collapse-arrow border border-accent">
+                  <input type="radio" name="my-accordion-2" />
+                  <div className="collapse-title font-semibold text-xl">
+                    6. Are there plans to offer a paid model?
+                  </div>
+                  <div className="collapse-content text-secondary">
+                    Not right now. If the community loves Nebula and there's
+                    clear demand for more advanced features, we may explore a
+                    paid version in the future. But for now, everything is
+                    completely free.
+                  </div>
                 </div>
-              </div>
-              <div className="collapse collapse-arrow border border-accent">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title font-semibold text-xl">
-                  4. Is my data safe and private?
+              </FadeAnimation>
+              <FadeAnimation>
+                <div className="collapse collapse-arrow border border-accent">
+                  <input type="radio" name="my-accordion-2" />
+                  <div className="collapse-title font-semibold text-xl">
+                    7. Who's the developer?
+                  </div>
+                  <div className="collapse-content text-secondary">
+                    Hi! My name is Hasan, and I'm the developer. Nebula is a
+                    personal project crafted with care to help others think
+                    better and write more freely. You can learn more about me{" "}
+                    <Link
+                      className="text-primary"
+                      target="_blank"
+                      to={"https://github.com/delta6626"}
+                    >
+                      here.
+                    </Link>
+                  </div>
                 </div>
-                <div className="collapse-content text-secondary">
-                  Yes. Nebula prioritizes your privacy and security. Your notes
-                  are stored securely in the cloud. We never view or share your
-                  notes. Our{" "}
-                  <Link className="text-primary" to={"terms-of-service"}>
-                    Terms of Service
-                  </Link>{" "}
-                  strictly forbid it. We believe in trust, transparency, and
-                  respecting your space.
+              </FadeAnimation>
+              <FadeAnimation>
+                <div className="collapse collapse-arrow border border-accent">
+                  <input type="radio" name="my-accordion-2" />
+                  <div className="collapse-title font-semibold text-xl">
+                    8. How can I contact Nebula?
+                  </div>
+                  <div className="collapse-content text-secondary">
+                    You can reach out anytime via{" "}
+                    <Link
+                      className="text-primary"
+                      to={"mailto:hasan04.asm@gmail.com"}
+                      target={"_blank"}
+                    >
+                      email
+                    </Link>
+                    ,{" "}
+                    <Link
+                      className="text-primary"
+                      to={"https://x.com/delta6626"}
+                      target={"_blank"}
+                    >
+                      X / twitter
+                    </Link>
+                    , or{" "}
+                    <Link
+                      className="text-primary"
+                      to={"https://github.com/delta6626"}
+                      target={"_blank"}
+                    >
+                      GitHub
+                    </Link>
+                    .
+                  </div>
                 </div>
-              </div>
-              <div className="collapse collapse-arrow border border-accent">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title font-semibold text-xl">
-                  5. What happens if I don't donate?
-                </div>
-                <div className="collapse-content text-secondary">
-                  Donations help keep Nebula free and running smoothly. While
-                  the app remains free to use, unusually heavy usage may be
-                  subject to limits to keep things sustainable for everyone.
-                </div>
-              </div>
-              <div className="collapse collapse-arrow border border-accent">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title font-semibold text-xl">
-                  6. Are there plans to offer a paid model?
-                </div>
-                <div className="collapse-content text-secondary">
-                  Not right now. If the community loves Nebula and there's clear
-                  demand for more advanced features, we may explore a paid
-                  version in the future. But for now, everything is completely
-                  free.
-                </div>
-              </div>
-              <div className="collapse collapse-arrow border border-accent">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title font-semibold text-xl">
-                  7. Who's the developer?
-                </div>
-                <div className="collapse-content text-secondary">
-                  Hi! My name is Hasan, and I'm the developer. Nebula is a
-                  personal project crafted with care to help others think better
-                  and write more freely. You can learn more about me{" "}
-                  <Link
-                    className="text-primary"
-                    target="_blank"
-                    to={"https://github.com/delta6626"}
-                  >
-                    here.
-                  </Link>
-                </div>
-              </div>
-              <div className="collapse collapse-arrow border border-accent">
-                <input type="radio" name="my-accordion-2" />
-                <div className="collapse-title font-semibold text-xl">
-                  8. How can I contact Nebula?
-                </div>
-                <div className="collapse-content text-secondary">
-                  You can reach out anytime via{" "}
-                  <Link
-                    className="text-primary"
-                    to={"mailto:hasan04.asm@gmail.com"}
-                    target={"_blank"}
-                  >
-                    email
-                  </Link>
-                  ,{" "}
-                  <Link
-                    className="text-primary"
-                    to={"https://x.com/delta6626"}
-                    target={"_blank"}
-                  >
-                    X / twitter
-                  </Link>
-                  , or{" "}
-                  <Link
-                    className="text-primary"
-                    to={"https://github.com/delta6626"}
-                    target={"_blank"}
-                  >
-                    GitHub
-                  </Link>
-                  .
-                </div>
-              </div>
+              </FadeAnimation>
             </div>
           </div>
 
           <div className="mt-20 md:mt-40 flex flex-col items-center sm:text-center">
-            <h1 className="text-3xl md:text-4xl font-bold">
-              Ready to get organized?
-            </h1>
-            <p className="max-w-150 mt-10 text-xl text-secondary">
-              Take control of your notes with Nebula — free, simple and fully
-              yours. Start creating, organizing, and finding your ideas
-              effortlessly today.
-            </p>
-            <Link
-              className="btn btn-primary mt-10 border-1 border-accent w-full sm:w-fit"
-              to={"/signup"}
-            >
-              Get started <ArrowRight size={20} />
-            </Link>
+            <FadeAnimation>
+              <h1 className="text-3xl md:text-4xl font-bold">
+                Ready to get organized?
+              </h1>
+            </FadeAnimation>
+            <FadeAnimation from={"right"}>
+              <p className="max-w-150 mt-10 text-xl text-secondary">
+                Take control of your notes with Nebula — free, simple and fully
+                yours. Start creating, organizing, and finding your ideas
+                effortlessly today.
+              </p>
+            </FadeAnimation>
+            <FadeAnimation from={"left"}>
+              <Link
+                className="btn btn-primary mt-10 border-1 border-accent w-full sm:w-fit"
+                to={"/signup"}
+              >
+                Get started <ArrowRight size={20} />
+              </Link>
+            </FadeAnimation>
           </div>
         </div>
       </div>
 
       {/* Footer */}
       <div className="mt-20 md:mt-40">
-        <Footer></Footer>
+        <FadeAnimation>
+          <Footer></Footer>
+        </FadeAnimation>
       </div>
     </div>
   );
