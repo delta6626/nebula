@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-function FadeInAnimation({ children }) {
+function FadeAnimation({ applyMinimumHeight, from, children }) {
   const [isVisible, setIsVisible] = useState(false);
   const domRef = useRef();
 
@@ -20,11 +20,11 @@ function FadeInAnimation({ children }) {
   return (
     <div
       ref={domRef}
-      className={`fadeInAnimation ${isVisible ? "isVisible" : ""}`}
+      className={`${applyMinimumHeight ? "grid min-h-[100%]" : ""} ${from === "top" ? "topFadeInAnimation" : "bottomFadeInAnimation"} ${isVisible ? "isVisible" : ""}`}
     >
       {children}
     </div>
   );
 }
 
-export default FadeInAnimation;
+export default FadeAnimation;

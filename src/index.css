@@ -514,15 +514,20 @@ html[data-theme="light"] .tiptap {
 
 /* Fade in animation */
 
-.fadeInAnimation {
+.topFadeInAnimation {
   opacity: 0;
-  transform: translateY(50px);
-  transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
+  transform: translateY(-40px);
+  transition: 0.5s ease-in-out;
 }
 
-.fadeInAnimation.isVisible {
+.bottomFadeInAnimation {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.5s ease-in-out;
+}
+
+.topFadeInAnimation.isVisible,
+.bottomFadeInAnimation.isVisible {
   opacity: 1;
   transform: none;
 }

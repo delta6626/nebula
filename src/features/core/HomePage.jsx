@@ -27,6 +27,7 @@ import { useThemeStore } from "../../store/themeStore";
 import FeatureCard from "../components/FeatureCard";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
+import FadeAnimation from "../components/FadeAnimation";
 
 function HomePage({ redirect }) {
   const navigate = useNavigate();
@@ -47,45 +48,55 @@ function HomePage({ redirect }) {
 
   return (
     <div className="overflow-x-hidden font-jakarta h-[100vh] overflow-y-scroll scroll-smooth scrollbar-thin">
-      <NavBar></NavBar>
+      <FadeAnimation from={"top"}>
+        <NavBar></NavBar>
+      </FadeAnimation>
       <div className="px-10 md:px-20 lg:px-30 xl:px-40 2xl:px-50">
         <div className="mt-20 md:mt-40 flex flex-col">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-            Bring clarity to your thoughts.
-          </h1>
-          <p className="max-w-120 mt-10 text-xl text-secondary">
-            Craft and organize your thoughts in a space built for clarity,
-            speed, and creativity. Free. Cloud-based. Feature-packed. Fully
-            yours.
-          </p>
-          <div className="mt-10 flex gap-4 flex-col sm:flex-row">
-            <Link
-              className="btn btn-primary border-1 border-accent"
-              to={"/signup"}
-            >
-              Start taking notes <ArrowRight size={20} />
-            </Link>
-            <Link
-              className="btn border-1 border-accent"
-              onClick={() => {
-                const el = document.getElementById("features");
-                el.scrollIntoView({ behavior: "smooth" });
-              }}
-              to={"#features"}
-            >
-              <Sparkles size={20} />
-              Explore features
-            </Link>
-          </div>
-
-          <div className="mt-20 md:mt-40 flex flex-col items-center text-center">
-            <div className="">
-              <img
-                className="rounded-lg"
-                src={theme == "dark" ? "/dark.png" : "/light.png"}
-              />
+          <FadeAnimation>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+              Bring clarity to your thoughts.
+            </h1>
+          </FadeAnimation>
+          <FadeAnimation>
+            <p className="max-w-120 mt-10 text-xl text-secondary">
+              Craft and organize your thoughts in a space built for clarity,
+              speed, and creativity. Free. Cloud-based. Feature-packed. Fully
+              yours.
+            </p>
+          </FadeAnimation>
+          <FadeAnimation>
+            <div className="mt-10 flex gap-4 flex-col sm:flex-row">
+              <Link
+                className="btn btn-primary border-1 border-accent"
+                to={"/signup"}
+              >
+                Start taking notes <ArrowRight size={20} />
+              </Link>
+              <Link
+                className="btn border-1 border-accent"
+                onClick={() => {
+                  const el = document.getElementById("features");
+                  el.scrollIntoView({ behavior: "smooth" });
+                }}
+                to={"#features"}
+              >
+                <Sparkles size={20} />
+                Explore features
+              </Link>
             </div>
-          </div>
+          </FadeAnimation>
+
+          <FadeAnimation>
+            <div className="mt-20 md:mt-40 flex flex-col items-center text-center">
+              <div className="">
+                <img
+                  className="rounded-lg"
+                  src={theme == "dark" ? "/dark.png" : "/light.png"}
+                />
+              </div>
+            </div>
+          </FadeAnimation>
 
           {/* Features */}
 
@@ -93,94 +104,129 @@ function HomePage({ redirect }) {
             id="features"
             className="mt-20 md:mt-40 flex flex-col items-center text-center"
           >
-            <h1 className="text-3xl md:text-4xl font-bold">
-              Packed with features
-            </h1>
+            <FadeAnimation>
+              <h1 className="text-3xl md:text-4xl font-bold">
+                Packed with features
+              </h1>
+            </FadeAnimation>
             <div className="mt-10 grid xl:grid-cols-2 2xl:grid-cols-3 gap-6">
-              <FeatureCard
-                title={"Rich Text Formatting"}
-                body={
-                  "Create structured notes with support for headings, bold, underline, quotes, code blocks, tables, and more — all accessible via intuitive controls and shortcuts."
-                }
-                icon={<Type />}
-              />
-              <FeatureCard
-                title={"Smart Speech Recognition"}
-                body={
-                  "Convert your spoken words into text effortlessly with Nebula’s built-in speech recognition, perfect for capturing ideas quickly without typing."
-                }
-                icon={<Mic />}
-              />
-              <FeatureCard
-                title={"Markdown Support"}
-                body={
-                  "Write with Markdown for quick, clean formatting and export your notes as Markdown files with perfect styling, ready for sharing or publishing anywhere."
-                }
-                icon={<FileText />}
-              />
-              <FeatureCard
-                title={"Beautiful Math"}
-                body={
-                  "Use LaTeX-style math rendering to add complex equations and formulas to your notes, ideal for students, researchers, and professionals."
-                }
-                icon={<Sigma />}
-              />
-              <FeatureCard
-                title={"Auto Formatting"}
-                body={
-                  "Nebula automatically formats lists, spacing, and indentation as you type, keeping your notes clean and well-structured without extra effort. Manual formatting supported as well."
-                }
-                icon={<Settings2 />}
-              />
-              <FeatureCard
-                title={"Notebook System"}
-                body={
-                  "Organize notes by grouping them into notebooks with tags and filters, and switch between grid and table views for easy management."
-                }
-                icon={<Book />}
-              />
-              <FeatureCard
-                title={"Powerful Organization"}
-                body={
-                  "Pin notes, tag them, and sort your notebooks effortlessly to keep your important information front and center at all times."
-                }
-                icon={<Grid />}
-              />
-              <FeatureCard
-                title={"Fast Search"}
-                body={
-                  "Quickly find notes using advanced search with support for tags and notebook filters, delivering precise results blazingly fast."
-                }
-                icon={<Search />}
-              />
-              <FeatureCard
-                title={"Beautiful Themes"}
-                body={
-                  "Choose from multiple themes designed for comfort and focus, including light and dark modes for different working environments."
-                }
-                icon={<Palette />}
-              />
-              <FeatureCard
-                title={"Handy Keyboard Shortcuts"}
-                body={
-                  "Work faster with customizable keyboard shortcuts for creating, editing, navigating, and saving notes, designed to keep your workflow smooth."
-                }
-                icon={<Keyboard />}
-              />
-              <FeatureCard
-                title={"Real-Time Word Count"}
-                body={
-                  "Track your writing progress with live word count, perfect for staying on top of writing goals."
-                }
-                icon={<LetterText />}
-              />
-              <FeatureCard
-                title={"Quick Actions"}
-                body={
-                  "Access common tasks like creating notes or viewing recent activity instantly from your dashboard with one-click quick actions."
-                }
-                icon={<Zap />}
-              />
+              <FadeAnimation applyMinimumHeight={true}>
+                <FeatureCard
+                  title={"Rich Text Formatting"}
+                  body={
+                    "Create structured notes with support for headings, bold, underline, quotes, code blocks, tables, and more — all accessible via intuitive controls and shortcuts."
+                  }
+                  icon={<Type />}
+                />
+              </FadeAnimation>
+              <FadeAnimation applyMinimumHeight={true}>
+                <FeatureCard
+                  title={"Smart Speech Recognition"}
+                  body={
+                    "Convert your spoken words into text effortlessly with Nebula’s built-in speech recognition, perfect for capturing ideas quickly without typing."
+                  }
+                  icon={<Mic />}
+                />
+              </FadeAnimation>
+              <FadeAnimation applyMinimumHeight={true}>
+                <FeatureCard
+                  title={"Markdown Support"}
+                  body={
+                    "Write with Markdown for quick, clean formatting and export your notes as Markdown files with perfect styling, ready for sharing or publishing anywhere."
+                  }
+                  icon={<FileText />}
+                />
+              </FadeAnimation>
+
+              <FadeAnimation applyMinimumHeight={true}>
+                <FeatureCard
+                  title={"Beautiful Math"}
+                  body={
+                    "Use LaTeX-style math rendering to add complex equations and formulas to your notes, ideal for students, researchers, and professionals."
+                  }
+                  icon={<Sigma />}
+                />
+              </FadeAnimation>
+
+              <FadeAnimation applyMinimumHeight={true}>
+                <FeatureCard
+                  title={"Auto Formatting"}
+                  body={
+                    "Nebula automatically formats lists, spacing, and indentation as you type, keeping your notes clean and well-structured without extra effort. Manual formatting supported as well."
+                  }
+                  icon={<Settings2 />}
+                />
+              </FadeAnimation>
+
+              <FadeAnimation applyMinimumHeight={true}>
+                <FeatureCard
+                  title={"Notebook System"}
+                  body={
+                    "Organize notes by grouping them into notebooks with tags and filters, and switch between grid and table views for easy management."
+                  }
+                  icon={<Book />}
+                />
+              </FadeAnimation>
+
+              <FadeAnimation applyMinimumHeight={true}>
+                <FeatureCard
+                  title={"Powerful Organization"}
+                  body={
+                    "Pin notes, tag them, and sort your notebooks effortlessly to keep your important information front and center at all times."
+                  }
+                  icon={<Grid />}
+                />
+              </FadeAnimation>
+
+              <FadeAnimation applyMinimumHeight={true}>
+                <FeatureCard
+                  title={"Fast Search"}
+                  body={
+                    "Quickly find notes using advanced search with support for tags and notebook filters, delivering precise results blazingly fast."
+                  }
+                  icon={<Search />}
+                />
+              </FadeAnimation>
+
+              <FadeAnimation applyMinimumHeight={true}>
+                <FeatureCard
+                  title={"Beautiful Themes"}
+                  body={
+                    "Choose from multiple themes designed for comfort and focus, including light and dark modes for different working environments."
+                  }
+                  icon={<Palette />}
+                />
+              </FadeAnimation>
+
+              <FadeAnimation applyMinimumHeight={true}>
+                <FeatureCard
+                  title={"Handy Keyboard Shortcuts"}
+                  body={
+                    "Work faster with customizable keyboard shortcuts for creating, editing, navigating, and saving notes, designed to keep your workflow smooth."
+                  }
+                  icon={<Keyboard />}
+                />
+              </FadeAnimation>
+
+              <FadeAnimation applyMinimumHeight={true}>
+                <FeatureCard
+                  title={"Real-Time Word Count"}
+                  body={
+                    "Track your writing progress with live word count, perfect for staying on top of writing goals."
+                  }
+                  icon={<LetterText />}
+                />
+              </FadeAnimation>
+
+              <FadeAnimation applyMinimumHeight={true}>
+                <FeatureCard
+                  title={"Quick Actions"}
+                  body={
+                    "Access common tasks like creating notes or viewing recent activity instantly from your dashboard with one-click quick actions."
+                  }
+                  icon={<Zap />}
+                />
+              </FadeAnimation>
             </div>
           </div>
 
