@@ -6,6 +6,7 @@ import LogInPage from "./features/auth/LogInPage";
 import TermsOfService from "./features/misc/TermsOfService";
 import PrivacyPolicy from "./features/misc/PrivacyPolicy";
 import Layout from "./features/core/Layout";
+import ResourceNotFound from "./features/core/ResourceNotFound";
 
 function App() {
   return (
@@ -35,6 +36,10 @@ function App() {
           ></Route>
           <Route path="/signup" element={<SignUpPage></SignUpPage>}></Route>
           <Route path="/login" element={<LogInPage></LogInPage>}></Route>
+          <Route
+            path="*"
+            elemen={<ResourceNotFound></ResourceNotFound>}
+          ></Route>
         </Route>
       </Routes>
     </Router>

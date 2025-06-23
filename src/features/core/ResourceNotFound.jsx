@@ -2,4 +2,4 @@ function ResourceNotFound() {
   return <div className=""></div>;
 }
 
-return ResourceNotFound;
+export default ResourceNotFound;
