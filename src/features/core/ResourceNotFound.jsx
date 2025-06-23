@@ -3,11 +3,15 @@ import NavBar from "../components/NavBar";
 
 function ResourceNotFound() {
   return (
-    <div className="font-jakarta min-h-screen flex flex-col">
+    <div className="font-jakarta w-screen min-h-screen flex flex-col">
       <NavBar />
-      <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex gap-10 items-center justify-center">
-        <h1 className="font-extrabold mb-6 text-9xl">404</h1>
-        <div className="text-left max-w-xl text-2xl">
+      <div
+        className="px-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+              flex flex-col items-center justify-center gap-8 sm:gap-10 lg:flex-row 
+              min-w-[250px] w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] max-w-[800px]"
+      >
+        <h1 className="font-extrabold text-9xl">404</h1>
+        <div className="text-left text-2xl">
           <p>
             Well, this is awkward. The page you’re looking for isn’t here
             anymore—or maybe it never was. Try checking the URL, or head back
