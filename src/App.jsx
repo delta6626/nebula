@@ -38,7 +38,7 @@ function App() {
           <Route path="/login" element={<LogInPage></LogInPage>}></Route>
           <Route
             path="*"
-            elemen={<ResourceNotFound></ResourceNotFound>}
+            element={<ResourceNotFound></ResourceNotFound>}
           ></Route>
         </Route>
       </Routes>
