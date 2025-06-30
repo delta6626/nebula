@@ -106,9 +106,9 @@ function HomePage({ redirect }) {
             className="mt-20 md:mt-40 flex flex-col items-center text-center"
           >
             <FadeAnimation>
-              <h1 className="text-3xl md:text-4xl font-bold">
+              <h2 className="text-3xl md:text-4xl font-bold">
                 Packed with features
-              </h1>
+              </h2>
             </FadeAnimation>
             <div className="mt-10 grid xl:grid-cols-2 2xl:grid-cols-3 gap-6">
               <FadeAnimation applyMinimumHeight={true}>
@@ -234,9 +234,9 @@ function HomePage({ redirect }) {
           <div className="mt-20 md:mt-40 flex flex-row-reverse items-center justify-between">
             <div className="">
               <FadeAnimation from={"right"}>
-                <h1 className="text-center md:text-left text-3xl md:text-4xl font-bold">
+                <h2 className="text-center md:text-left text-3xl md:text-4xl font-bold">
                   Cloud based & Secure
-                </h1>
+                </h2>
               </FadeAnimation>
               <FadeAnimation>
                 <div className="mt-10">
@@ -260,9 +260,9 @@ function HomePage({ redirect }) {
           <div className="mt-20 md:mt-40 flex items-center justify-between">
             <div className="">
               <FadeAnimation from={"left"}>
-                <h1 className="text-center md:text-left text-3xl md:text-4xl font-bold">
+                <h2 className="text-center md:text-left text-3xl md:text-4xl font-bold">
                   Open Source
-                </h1>
+                </h2>
               </FadeAnimation>
               <div className="mt-10">
                 <FadeAnimation>
@@ -291,9 +291,9 @@ function HomePage({ redirect }) {
           <div className="mt-20 md:mt-40 flex flex-row-reverse items-center justify-between">
             <div className="">
               <FadeAnimation from={"right"}>
-                <h1 className="text-center md:text-left text-3xl md:text-4xl font-bold">
+                <h2 className="text-center md:text-left text-3xl md:text-4xl font-bold">
                   Free Cloud Storage
-                </h1>
+                </h2>
               </FadeAnimation>
               <FadeAnimation>
                 <div className="mt-10">
@@ -324,9 +324,9 @@ function HomePage({ redirect }) {
 
           <div id="faq" className="mt-20 md:mt-40 flex flex-col items-center">
             <FadeAnimation>
-              <h1 className="text-3xl md:text-4xl font-bold">
+              <h2 className="text-3xl md:text-4xl font-bold">
                 Frequently Asked Questions
-              </h1>
+              </h2>
             </FadeAnimation>
             <div className="mt-10 w-full flex flex-col gap-4">
               <FadeAnimation>
@@ -477,9 +477,9 @@ function HomePage({ redirect }) {
 
           <div className="mt-20 md:mt-40 flex flex-col items-center sm:text-center">
             <FadeAnimation>
-              <h1 className="text-3xl md:text-4xl font-bold">
+              <h2 className="text-3xl md:text-4xl font-bold">
                 Ready to get organized?
-              </h1>
+              </h2>
             </FadeAnimation>
             <FadeAnimation from={"right"}>
               <p className="max-w-150 mt-10 text-xl text-secondary">
