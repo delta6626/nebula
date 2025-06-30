@@ -93,6 +93,7 @@ function HomePage({ redirect }) {
                 <img
                   className="rounded-lg"
                   src={theme == "dark" ? "/dark.png" : "/light.png"}
+                  alt="A screenshot of Nebula's user interface"
                 />
               </div>
             </div>
