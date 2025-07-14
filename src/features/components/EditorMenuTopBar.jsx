@@ -258,6 +258,7 @@ function EditorMenuTopBar() {
   }, [editor]);
 
   useEffect(() => {
+    document.title = editTargetNote.name + " - Nebula Notes";
     setNoteName(editTargetNote.name);
     setEditorWidth(editTargetNote.editorWidth.toLowerCase());
     document
@@ -268,6 +269,10 @@ function EditorMenuTopBar() {
     editTargetNote.name,
     user.preferences.autoSpacing,
   ]);
+
+  useEffect(() => {
+    document.title = noteName + " - Nebula Notes";
+  }, [noteName]);
 
   useEffect(() => {
     document
