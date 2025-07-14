@@ -167,6 +167,7 @@ function EditorMenuTopBar() {
   function handleCloseButtonClick() {
     if (!noteContentDelta && !noteNameDelta && !editorWidthDelta) {
       setNotesView(APP_CONSTANTS.VIEW_GRID);
+      document.title = "Nebula Notes";
     } else {
       setMessage({
         title: APP_CONSTANTS.UNSAVED_CHANGES,
@@ -181,6 +182,7 @@ function EditorMenuTopBar() {
         },
         secondButtonOnClick: function () {
           setNotesView(APP_CONSTANTS.VIEW_GRID);
+          document.title = "Nebula Notes";
           document.getElementById(APP_CONSTANTS.GENERIC_MODAL).close();
         },
       });
