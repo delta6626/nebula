@@ -98,7 +98,7 @@ function DashboardArea() {
                 <QuickActions />
                 <PinnedNotes />
               </div>
-              <div className="right">
+              <div className="right ml-8">
                 <DigitalClock />
                 <UserStatistics />
                 <Quote />
