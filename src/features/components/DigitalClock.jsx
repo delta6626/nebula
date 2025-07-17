@@ -36,7 +36,7 @@ function DigitalClock() {
   }, []);
 
   return (
-    <div className="bg-transparent border-1 border-accent mt-4 w-sm mx-auto h-[10rem] rounded-lg p-4">
+    <div className="bg-transparent border-1 border-accent mt-4 w-80 2xl:w-sm mx-auto h-[10rem] rounded-lg p-4">
       <h1 className="flex items-center gap-2 font-semibold text-secondary">
         <MemoizedClock />
         Now
