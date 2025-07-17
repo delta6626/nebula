@@ -27,7 +27,7 @@ function QuickActions() {
         data-tip={APP_CONSTANTS.VERIFY_EMAIL}
       >
         <button
-          className="btn w-sm h-[10rem] flex flex-col"
+          className="btn w-80 2xl:w-sm h-[10rem] flex flex-col"
           disabled={!userVerified}
           onClick={handleNewNoteClick}
         >
@@ -44,7 +44,7 @@ function QuickActions() {
         data-tip={APP_CONSTANTS.VERIFY_EMAIL}
       >
         <button
-          className="btn w-sm h-[10rem] flex flex-col"
+          className="btn w-80 2xl:w-sm h-[10rem] flex flex-col"
           disabled={!userVerified}
           onClick={handleNewNotebookClick}
         >
@@ -57,7 +57,7 @@ function QuickActions() {
       </div>
 
       <button
-        className="btn w-sm h-[10rem] flex flex-col"
+        className="btn w-80 2xl:w-sm h-[10rem] flex flex-col"
         onClick={handleRecentClick}
       >
         <Clock size={30} />
