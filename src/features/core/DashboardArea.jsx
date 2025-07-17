@@ -39,22 +39,6 @@ function DashboardArea() {
 
   return (
     <div className="flex-1 bg-base-300 h-[100vh] font-jakarta overflow-y-scroll scroll-smooth scrollbar-thin py-4">
-      <GenericModal
-        id={APP_CONSTANTS.GENERIC_MODAL}
-        title={message.title}
-        textContent={message.textContent}
-        firstButtonClassName={message.firstButtonClassName}
-        secondButtonClassName={message.secondButtonClassName}
-        firstButtonOnClick={message.firstButtonOnClick}
-        secondButtonOnClick={message.secondButtonOnClick}
-        firstButtonText={message.firstButtonText}
-        secondButtonText={message.secondButtonText}
-      />
-      <EditNoteModal />
-      <EditNotebookModal></EditNotebookModal>
-      <CreateNoteModal></CreateNoteModal>
-      <CreateNotebookModal></CreateNotebookModal>
-
       {notesView === APP_CONSTANTS.VIEW_NOTE_EDITOR ? (
         <NoteEditor></NoteEditor>
       ) : (
