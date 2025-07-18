@@ -63,7 +63,7 @@ function UntaggedArea() {
           <div className="flex items-center justify-between px-8 relative">
             <h1 className="text-2xl font-bold">Untagged</h1>
             <div className="flex absolute left-1/2 -translate-x-1/2">
-              <div className="w-2xl input focus-within:input-primary">
+              <div className="md:w-sm lg:w-lg xl:w-xl 2xl:w-2xl input focus-within:input-primary">
                 <Search className="text-secondary" />
                 <input
                   className=""
