@@ -385,7 +385,7 @@ function SettingsArea() {
   return (
     <div className="flex-1 bg-base-300 h-[100vh] py-4 font-jakarta overflow-y-scroll scroll-smooth scrollbar-thin">
       <div className="flex items-center justify-between px-8">
-        <h1 className="text-3xl font-bold">Settings</h1>
+        <h1 className="text-2xl font-bold">Settings</h1>
         <button
           className={"btn btn-primary"}
           onClick={handleUpdate}
