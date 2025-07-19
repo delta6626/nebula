@@ -312,7 +312,7 @@ function DashboardPage() {
       <EditNotebookModal></EditNotebookModal>
       <div
         className={
-          "sideBar h-[100vh] bg-base-300 py-4 flex flex-col ease-in-out duration-200" +
+          "hidden sideBar h-[100vh] bg-base-300 py-4 xl:flex flex-col ease-in-out duration-200" +
           (sideBarCollapsed ? " w-20" : " w-60")
         }
       >
