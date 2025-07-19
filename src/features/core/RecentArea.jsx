@@ -1,4 +1,4 @@
-import { Search } from "lucide-react";
+import { MenuIcon, Search } from "lucide-react";
 import { useState } from "react";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
@@ -149,7 +149,12 @@ function RecentArea() {
         <>
           {/* Header */}
           <div className="flex items-center justify-between px-8 relative">
-            <h1 className="text-2xl font-bold">Recent</h1>
+            <div className="flex items-center text-2xl font-bold gap-2">
+              <button className="xl:hidden btn btn-square">
+                <MenuIcon />
+              </button>
+              Recent
+            </div>
             <div className="flex gap-2 absolute left-1/2 -translate-x-1/2">
               <div className="md:w-sm lg:w-lg xl:w-xl 2xl:w-2xl input focus-within:input-primary">
                 <Search className="text-secondary" />
