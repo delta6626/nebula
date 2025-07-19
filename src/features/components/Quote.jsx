@@ -22,7 +22,7 @@ function Quote() {
   }, [getRandomQuote]);
 
   return (
-    <div className="bg-transparent border-1 border-accent mt-4 w-80 2xl:w-sm mx-auto rounded-lg p-4">
+    <div className="bg-transparent border-1 border-accent mt-4 w-70 2xl:w-90 mx-auto rounded-lg p-4">
       <div className="flex justify-between text-secondary">
         <h1 className="flex items-center gap-2 font-semibold">
           <Feather />
