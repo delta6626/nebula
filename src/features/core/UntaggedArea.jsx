@@ -1,7 +1,7 @@
 import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import { useState } from "react";
-import { Search } from "lucide-react";
+import { MenuIcon, Search } from "lucide-react";
 import { useNotesStore } from "../../store/notesStore";
 import { useNotebooksStore } from "../../store/notebooksStore";
 import GridNote from "../components/GridNote";
@@ -61,7 +61,12 @@ function UntaggedArea() {
         <>
           {/* Header */}
           <div className="flex items-center justify-between px-8 relative">
-            <h1 className="text-2xl font-bold">Untagged</h1>
+            <div className="flex items-center text-2xl font-bold gap-2">
+              <button className="xl:hidden btn btn-square">
+                <MenuIcon />
+              </button>
+              Untagged
+            </div>
             <div className="flex absolute left-1/2 -translate-x-1/2">
               <div className="md:w-sm lg:w-lg xl:w-xl 2xl:w-2xl input focus-within:input-primary">
                 <Search className="text-secondary" />
