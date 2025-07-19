@@ -1,4 +1,4 @@
-import { Search } from "lucide-react";
+import { MenuIcon, Search } from "lucide-react";
 import { useEffect, useState } from "react";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
@@ -44,7 +44,12 @@ function DashboardArea() {
       ) : (
         <div className="">
           <div className="flex items-center justify-between px-8 relative">
-            <h1 className="text-2xl font-bold">Dashboard</h1>
+            <div className="flex items-center text-2xl font-bold gap-2">
+              <button className="xl:hidden btn btn-square">
+                <MenuIcon />
+              </button>
+              Dashboard
+            </div>
             <div className="flex justify-center">
               <div className="md:w-sm lg:w-lg xl:w-xl 2xl:w-2xl input focus-within:input-primary">
                 <Search className="text-secondary"></Search>
