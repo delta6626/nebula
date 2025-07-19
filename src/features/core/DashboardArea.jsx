@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
 import { useMessageStore } from "../../store/messageStore";
+import { useDashboardHamburgerStore } from "../../store/dashboardHamburgerStore";
 import CreateNotebookModal from "../components/CreateNotebookModal";
 import CreateNoteModal from "../components/CreateNoteModal";
 import DigitalClock from "../components/DigitalClock";
@@ -21,11 +22,16 @@ import ViewSwitcher from "../components/ViewSwitcher";
 function DashboardArea() {
   const { message } = useMessageStore();
   const { notesView, setNotesView } = useCurrentNotesViewStore();
+  const { setDashboardHamburgerOpen } = useDashboardHamburgerStore();
 
   const [searchTerm, setSearchTerm] = useState("");
 
   function handleSearch(e) {
     setSearchTerm(e.target.value);
+  }
+
+  function handleMenuOpen() {
+    setDashboardHamburgerOpen(true);
   }
 
   // These functions were moved to the dashboard page
@@ -45,7 +51,10 @@ function DashboardArea() {
         <div className="">
           <div className="flex items-center justify-between px-8 relative">
             <div className="flex items-center text-2xl font-bold gap-2">
-              <button className="xl:hidden btn btn-square">
+              <button
+                className="xl:hidden btn btn-square"
+                onClick={handleMenuOpen}
+              >
                 <MenuIcon />
               </button>
               Dashboard
