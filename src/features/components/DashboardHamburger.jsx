@@ -29,13 +29,7 @@ function DashboardHamburger() {
       className={`absolute ${!dashboardHamburgerOpen ? "hidden" : ""} w-full z-10 h-90 bg-base-100 px-8 py-4`}
     >
       <div className="">
-        <div className="flex items-center text-2xl font-bold gap-2">
-          <button className="btn btn-square" onClick={handleMenuClose}>
-            <XIcon />
-          </button>
-          Menu
-        </div>
-        <div className="mt-4">
+        <div className="flex items-center justify-between text-2xl font-bold gap-2">
           <Link
             className="flex items-center gap-2 text-xl font-jakarta font-bold text-center"
             to={"/home"}
@@ -44,7 +38,11 @@ function DashboardHamburger() {
             <Logo />
             Nebula
           </Link>
+          <button className="btn btn-square" onClick={handleMenuClose}>
+            <XIcon />
+          </button>
         </div>
+        <div className="mt-4"></div>
       </div>
     </div>
   );
