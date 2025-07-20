@@ -1,5 +1,16 @@
-import { XIcon } from "lucide-react";
+import {
+  XIcon,
+  LayoutPanelTop,
+  File,
+  Book,
+  Pin,
+  Clock,
+  Tag,
+} from "lucide-react";
+import UntaggedIcon from "../../assets/UntaggedIcon";
 import { useDashboardHamburgerStore } from "../../store/dashboardHamburgerStore";
+import { Link } from "react-router-dom";
+import Logo from "../../assets/Logo";
 
 function DashboardHamburger() {
   const { dashboardHamburgerOpen, setDashboardHamburgerOpen } =
@@ -7,6 +18,10 @@ function DashboardHamburger() {
 
   function handleMenuClose() {
     setDashboardHamburgerOpen(false);
+  }
+
+  function handleLogoClick() {
+    handleMenuClose();
   }
 
   return (
@@ -19,6 +34,16 @@ function DashboardHamburger() {
             <XIcon />
           </button>
           Menu
+        </div>
+        <div className="mt-4">
+          <Link
+            className="flex items-center gap-2 text-xl font-jakarta font-bold text-center"
+            to={"/home"}
+            onClick={handleLogoClick}
+          >
+            <Logo />
+            Nebula
+          </Link>
         </div>
       </div>
     </div>
