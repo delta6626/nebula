@@ -11,7 +11,6 @@ import UntaggedIcon from "../../assets/UntaggedIcon";
 import { useDashboardHamburgerStore } from "../../store/dashboardHamburgerStore";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo";
-import { useEffect } from "react";
 import { useHotkeys } from "react-hotkeys-hook";
 
 function DashboardHamburger() {
@@ -48,7 +47,7 @@ function DashboardHamburger() {
             <XIcon />
           </button>
         </div>
-        <div className="mt-4"></div>
+        <div className="mt-4">Under construction</div>
       </div>
     </div>
   );
