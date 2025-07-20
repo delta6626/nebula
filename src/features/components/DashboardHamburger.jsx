@@ -11,6 +11,8 @@ import UntaggedIcon from "../../assets/UntaggedIcon";
 import { useDashboardHamburgerStore } from "../../store/dashboardHamburgerStore";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo";
+import { useEffect } from "react";
+import { useHotkeys } from "react-hotkeys-hook";
 
 function DashboardHamburger() {
   const { dashboardHamburgerOpen, setDashboardHamburgerOpen } =
@@ -23,6 +25,10 @@ function DashboardHamburger() {
   function handleLogoClick() {
     handleMenuClose();
   }
+
+  useHotkeys("esc", handleMenuClose, {
+    enableOnFormTags: false,
+  });
 
   return (
     <div
