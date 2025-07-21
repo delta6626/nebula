@@ -312,7 +312,7 @@ function DashboardPage() {
       <EditNoteModal></EditNoteModal>
       <EditNotebookModal></EditNotebookModal>
       <DashboardHamburger></DashboardHamburger>
-      <div className="flex">
+      <div className="flex w-full">
         <div
           className={
             "hidden sideBar h-[100vh] bg-base-300 py-4 xl:flex flex-col ease-in-out duration-200" +
