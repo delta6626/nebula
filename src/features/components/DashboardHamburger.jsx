@@ -25,6 +25,20 @@ function DashboardHamburger() {
     handleMenuClose();
   }
 
+  function handleDashboardClick() {}
+
+  function handleNotesClick() {}
+
+  function handleNotebooksClick() {}
+
+  function handlePinnedClick() {}
+
+  function handleRecentClick() {}
+
+  function handleTaggedClick() {}
+
+  function handleUntaggedClick() {}
+
   useHotkeys("esc", handleMenuClose, {
     enableOnFormTags: false,
   });
@@ -47,14 +61,49 @@ function DashboardHamburger() {
             <XIcon />
           </button>
         </div>
-        <div className="mt-4 flex flex-col items-start">
-          <button className="">Dashboard</button>
-          <button className="">Notes</button>
-          <button className="">Notebooks</button>
-          <button className="">Pinned</button>
-          <button className="">Recent</button>
-          <button className="">Tagged</button>
-          <button className="">Untagged</button>
+        <div className="mt-4">
+          <button
+            className="flex mb-2 font-semibold"
+            onClick={handleDashboardClick}
+          >
+            Dashboard
+          </button>
+          <button
+            className="flex mb-2 font-semibold"
+            onClick={handleNotesClick}
+          >
+            Notes
+          </button>
+          <button
+            className="flex mb-2 font-semibold"
+            onClick={handleNotebooksClick}
+          >
+            Notebooks
+          </button>
+          <button
+            className="flex mb-2 font-semibold"
+            onClick={handlePinnedClick}
+          >
+            Pinned
+          </button>
+          <button
+            className="flex mb-2 font-semibold"
+            onClick={handleRecentClick}
+          >
+            Recent
+          </button>
+          <button
+            className="flex mb-2 font-semibold"
+            onClick={handleTaggedClick}
+          >
+            Tagged
+          </button>
+          <button
+            className="flex mb-2 font-semibold"
+            onClick={handleUntaggedClick}
+          >
+            Untagged
+          </button>
         </div>
       </div>
     </div>
