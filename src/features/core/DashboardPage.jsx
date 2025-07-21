@@ -444,7 +444,7 @@ function DashboardPage() {
           </div>
         </div>
         <div className="divider divider-horizontal m-0"></div>
-        <div className="">
+        <div className="w-full">
           {activeTab == APP_CONSTANTS.DASHBOARD_PAGE ? (
             <DashboardArea></DashboardArea>
           ) : activeTab == APP_CONSTANTS.NOTES_PAGE ? (
