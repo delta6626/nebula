@@ -9,13 +9,16 @@ import {
 } from "lucide-react";
 import UntaggedIcon from "../../assets/UntaggedIcon";
 import { useDashboardHamburgerStore } from "../../store/dashboardHamburgerStore";
+import { useActiveTabStore } from "../../store/activeTabStore";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo";
 import { useHotkeys } from "react-hotkeys-hook";
+import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 
 function DashboardHamburger() {
   const { dashboardHamburgerOpen, setDashboardHamburgerOpen } =
     useDashboardHamburgerStore();
+  const { setActiveTab } = useActiveTabStore();
 
   function handleMenuClose() {
     setDashboardHamburgerOpen(false);
@@ -25,19 +28,40 @@ function DashboardHamburger() {
     handleMenuClose();
   }
 
-  function handleDashboardClick() {}
+  function handleDashboardClick() {
+    setActiveTab(APP_CONSTANTS.DASHBOARD_PAGE);
+    handleMenuClose();
+  }
 
-  function handleNotesClick() {}
+  function handleNotesClick() {
+    setActiveTab(APP_CONSTANTS.NOTES_PAGE);
+    handleMenuClose();
+  }
 
-  function handleNotebooksClick() {}
+  function handleNotebooksClick() {
+    setActiveTab(APP_CONSTANTS.NOTEBOOKS_PAGE);
+    handleMenuClose();
+  }
 
-  function handlePinnedClick() {}
+  function handlePinnedClick() {
+    setActiveTab(APP_CONSTANTS.PINNED_ITEMS);
+    handleMenuClose();
+  }
 
-  function handleRecentClick() {}
+  function handleRecentClick() {
+    setActiveTab(APP_CONSTANTS.RECENT_ITEMS);
+    handleMenuClose();
+  }
 
-  function handleTaggedClick() {}
+  function handleTaggedClick() {
+    setActiveTab(APP_CONSTANTS.TAGGED_ITEMS);
+    handleMenuClose();
+  }
 
-  function handleUntaggedClick() {}
+  function handleUntaggedClick() {
+    setActiveTab(APP_CONSTANTS.UNTAGGED_ITEMS);
+    handleMenuClose();
+  }
 
   useHotkeys("esc", handleMenuClose, {
     enableOnFormTags: false,
