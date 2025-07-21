@@ -30,6 +30,7 @@ import { useNotesStore } from "../../store/notesStore";
 import { useQuoteStore } from "../../store/quoteStore";
 import { useUserStore } from "../../store/userStore";
 import { useUserVerifiedStore } from "../../store/userVerifiedStore";
+import { useDashboardHamburgerStore } from "../../store/dashboardHamburgerStore";
 import fetchAllQuotes from "../../utils/fetchAllQuotes";
 import CreateNoteModal from "../components/CreateNoteModal";
 import CreateNotebookModal from "../components/CreateNotebookModal";
@@ -58,6 +59,8 @@ function DashboardPage() {
   const { message } = useMessageStore();
   const { setQuotes } = useQuoteStore();
   const { setNotesView } = useCurrentNotesViewStore();
+  const { dashboardHamburgerOpen, setDashboardHamburgerOpen } =
+    useDashboardHamburgerStore();
 
   const [sideBarCollapsed, setSideBarCollapsed] = useState(false);
 
@@ -253,6 +256,14 @@ function DashboardPage() {
       }
     });
   }, [setUser]);
+
+  useEffect(() => {
+    return () => {
+      if (dashboardHamburgerOpen) {
+        setDashboardHamburgerOpen(false);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     getAllNotebooks().then((notebooksSnapshot) => {
