@@ -63,6 +63,11 @@ function DashboardHamburger() {
     handleMenuClose();
   }
 
+  function handleSettingsClick() {
+    setActiveTab(APP_CONSTANTS.SETTINGS_PAGE);
+    handleMenuClose();
+  }
+
   useHotkeys("esc", handleMenuClose, {
     enableOnFormTags: false,
   });
@@ -127,6 +132,12 @@ function DashboardHamburger() {
             onClick={handleUntaggedClick}
           >
             Untagged
+          </button>
+          <button
+            className="flex mb-2 font-semibold"
+            onClick={handleSettingsClick}
+          >
+            Settings
           </button>
         </div>
       </div>
