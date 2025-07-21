@@ -47,7 +47,15 @@ function DashboardHamburger() {
             <XIcon />
           </button>
         </div>
-        <div className="mt-4">Under construction</div>
+        <div className="mt-4 flex flex-col items-start">
+          <button className="">Dashboard</button>
+          <button className="">Notes</button>
+          <button className="">Notebooks</button>
+          <button className="">Pinned</button>
+          <button className="">Recent</button>
+          <button className="">Tagged</button>
+          <button className="">Untagged</button>
+        </div>
       </div>
     </div>
   );
