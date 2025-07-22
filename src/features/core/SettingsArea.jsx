@@ -25,6 +25,7 @@ import { useNotebooksStore } from "../../store/notebooksStore";
 import { useNotesStore } from "../../store/notesStore";
 import { useUserStore } from "../../store/userStore";
 import { useUserVerifiedStore } from "../../store/userVerifiedStore";
+import { useDashboardHamburgerStore } from "../../store/dashboardHamburgerStore";
 import { hasEmptyStringValue } from "../../utils/hasEmptyStringValue";
 
 function SettingsArea() {
@@ -36,6 +37,7 @@ function SettingsArea() {
   const { setNotebooks } = useNotebooksStore();
   const { setNotes } = useNotesStore();
   const { setActiveTab } = useActiveTabStore();
+  const { setDashboardHamburgerOpen } = useDashboardHamburgerStore();
 
   // State variables
   const [name, setName] = useState(user?.name);
@@ -389,11 +391,15 @@ function SettingsArea() {
       });
   }
 
+  function handleMenuOpen() {
+    setDashboardHamburgerOpen(true);
+  }
+
   return (
     <div className="flex-1 bg-base-300 h-[100vh] py-4 font-jakarta overflow-y-scroll scroll-smooth scrollbar-thin">
       <div className="flex items-center justify-between px-8">
         <div className="flex items-center text-2xl font-bold gap-2">
-          <button className="xl:hidden btn btn-square">
+          <button className="xl:hidden btn btn-square" onClick={handleMenuOpen}>
             <MenuIcon />
           </button>
           Settings
