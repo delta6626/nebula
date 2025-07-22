@@ -5,6 +5,7 @@ import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
 import { useNotebooksStore } from "../../store/notebooksStore";
 import { useNotesStore } from "../../store/notesStore";
 import { useUserStore } from "../../store/userStore";
+import { useDashboardHamburgerStore } from "../../store/dashboardHamburgerStore";
 import { objectToDate } from "../../utils/objectToDate";
 import GridNote from "../components/GridNote";
 import GridNotebook from "../components/GridNotebook";
@@ -18,6 +19,7 @@ function RecentArea() {
   const { notes } = useNotesStore();
   const { notebooks } = useNotebooksStore();
   const { user } = useUserStore();
+  const { setDashboardHamburgerOpen } = useDashboardHamburgerStore();
 
   const timeRangeOptions = [
     { label: "Last hour", value: 60 * 60 * 1000 }, // 1 hour
@@ -141,6 +143,10 @@ function RecentArea() {
     setCurrentTimeRange(e.target.value);
   }
 
+  function handleMenuOpen() {
+    setDashboardHamburgerOpen(true);
+  }
+
   return (
     <div className="flex-1 bg-base-300 h-[100vh] py-4 font-jakarta overflow-y-scroll scroll-smooth scrollbar-thin">
       {notesView == APP_CONSTANTS.VIEW_NOTE_EDITOR ? (
@@ -150,7 +156,10 @@ function RecentArea() {
           {/* Header */}
           <div className="flex items-center justify-between px-8 relative">
             <div className="flex items-center text-2xl font-bold gap-2">
-              <button className="xl:hidden btn btn-square">
+              <button
+                className="xl:hidden btn btn-square"
+                onClick={handleMenuOpen}
+              >
                 <MenuIcon />
               </button>
               Recent
