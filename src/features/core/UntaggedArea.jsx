@@ -4,6 +4,7 @@ import { useState } from "react";
 import { MenuIcon, Search } from "lucide-react";
 import { useNotesStore } from "../../store/notesStore";
 import { useNotebooksStore } from "../../store/notebooksStore";
+import { useDashboardHamburgerStore } from "../../store/dashboardHamburgerStore";
 import GridNote from "../components/GridNote";
 import GridNotebook from "../components/GridNotebook";
 import TableNote from "../components/TableNote";
@@ -15,6 +16,8 @@ function UntaggedArea() {
   const { notesView } = useCurrentNotesViewStore();
   const { notes } = useNotesStore();
   const { notebooks } = useNotebooksStore();
+  const { setDashboardHamburgerOpen } = useDashboardHamburgerStore();
+
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredUntaggedNotes = notes.filter((note) => {
@@ -53,6 +56,10 @@ function UntaggedArea() {
     setSearchTerm(e.target.value);
   }
 
+  function handleMenuOpen() {
+    setDashboardHamburgerOpen(true);
+  }
+
   return (
     <div className="flex-1 bg-base-300 h-[100vh] py-4 font-jakarta overflow-y-scroll scroll-smooth scrollbar-thin">
       {notesView == APP_CONSTANTS.VIEW_NOTE_EDITOR ? (
@@ -62,7 +69,10 @@ function UntaggedArea() {
           {/* Header */}
           <div className="flex items-center justify-between px-8 relative">
             <div className="flex items-center text-2xl font-bold gap-2">
-              <button className="xl:hidden btn btn-square">
+              <button
+                className="xl:hidden btn btn-square"
+                onClick={handleMenuOpen}
+              >
                 <MenuIcon />
               </button>
               Untagged
