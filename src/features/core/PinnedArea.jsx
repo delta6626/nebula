@@ -5,6 +5,7 @@ import { MenuIcon, Search } from "lucide-react";
 import { useNotesStore } from "../../store/notesStore";
 import { useNotebooksStore } from "../../store/notebooksStore";
 import { useUserStore } from "../../store/userStore";
+import { useDashboardHamburgerStore } from "../../store/dashboardHamburgerStore";
 import GridNote from "../components/GridNote";
 import GridNotebook from "../components/GridNotebook";
 import TableNote from "../components/TableNote";
@@ -17,6 +18,7 @@ function PinnedArea() {
   const { notes } = useNotesStore();
   const { notebooks } = useNotebooksStore();
   const { user } = useUserStore();
+  const { setDashboardHamburgerOpen } = useDashboardHamburgerStore();
 
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -105,6 +107,10 @@ function PinnedArea() {
     }
   });
 
+  function handleMenuOpen() {
+    setDashboardHamburgerOpen(true);
+  }
+
   return (
     <div className="flex-1 bg-base-300 h-[100vh] py-4 font-jakarta overflow-y-scroll scroll-smooth scrollbar-thin">
       {notesView == APP_CONSTANTS.VIEW_NOTE_EDITOR ? (
@@ -114,7 +120,10 @@ function PinnedArea() {
           {/* Header */}
           <div className="flex items-center justify-between px-8 relative">
             <div className="flex items-center text-2xl font-bold gap-2">
-              <button className="xl:hidden btn btn-square">
+              <button
+                className="xl:hidden btn btn-square"
+                onClick={handleMenuOpen}
+              >
                 <MenuIcon />
               </button>
               Pinned
