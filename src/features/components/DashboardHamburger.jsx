@@ -6,6 +6,7 @@ import {
   Pin,
   Clock,
   Tag,
+  Settings,
 } from "lucide-react";
 import UntaggedIcon from "../../assets/UntaggedIcon";
 import { useDashboardHamburgerStore } from "../../store/dashboardHamburgerStore";
@@ -74,7 +75,7 @@ function DashboardHamburger() {
 
   return (
     <div
-      className={`absolute ${!dashboardHamburgerOpen ? "hidden" : ""} w-full z-10 h-90 bg-base-100 px-8 py-4`}
+      className={`absolute ${!dashboardHamburgerOpen ? "hidden" : ""} w-full z-10 h-70 bg-base-100 px-8 py-4`}
     >
       <div className="">
         <div className="flex items-center justify-between text-2xl font-bold gap-2">
@@ -90,53 +91,61 @@ function DashboardHamburger() {
             <XIcon />
           </button>
         </div>
-        <div className="mt-4">
+        <div className="grid grid-cols-2 place-items-start mt-4">
           <button
-            className="flex mb-2 font-semibold"
+            className="flex gap-2 mb-4 font-semibold cursor-pointer "
             onClick={handleDashboardClick}
           >
+            <LayoutPanelTop />
             Dashboard
           </button>
           <button
-            className="flex mb-2 font-semibold"
+            className="flex gap-2 mb-4 font-semibold cursor-pointer "
             onClick={handleNotesClick}
           >
+            <File />
             Notes
           </button>
           <button
-            className="flex mb-2 font-semibold"
+            className="flex gap-2 mb-4 font-semibold cursor-pointer "
             onClick={handleNotebooksClick}
           >
+            <Book />
             Notebooks
           </button>
           <button
-            className="flex mb-2 font-semibold"
+            className="flex gap-2 mb-4 font-semibold cursor-pointer "
             onClick={handlePinnedClick}
           >
+            <Pin />
             Pinned
           </button>
           <button
-            className="flex mb-2 font-semibold"
+            className="flex gap-2 mb-4 font-semibold cursor-pointer "
             onClick={handleRecentClick}
           >
+            <Clock />
             Recent
           </button>
           <button
-            className="flex mb-2 font-semibold"
+            className="flex gap-2 mb-4 font-semibold cursor-pointer "
             onClick={handleTaggedClick}
           >
+            <Tag />
             Tagged
           </button>
           <button
-            className="flex mb-2 font-semibold"
+            className="flex gap-2 mb-4 font-semibold cursor-pointer "
             onClick={handleUntaggedClick}
           >
+            <UntaggedIcon />
             Untagged
           </button>
           <button
-            className="flex mb-2 font-semibold"
+            className="flex gap-2 mb-4 font-semibold cursor-pointer "
             onClick={handleSettingsClick}
           >
+            <Settings />
             Settings
           </button>
         </div>
