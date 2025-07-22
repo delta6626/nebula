@@ -77,78 +77,77 @@ function DashboardHamburger() {
     <div
       className={`absolute ${!dashboardHamburgerOpen ? "hidden" : ""} w-full z-10 h-70 bg-base-100 px-8 py-4`}
     >
-      <div className="">
-        <div className="flex items-center justify-between text-2xl font-bold gap-2">
-          <Link
-            className="flex items-center gap-2 text-xl font-jakarta font-bold text-center"
-            to={"/home"}
-            onClick={handleLogoClick}
-          >
-            <Logo />
-            Nebula
-          </Link>
-          <button className="btn btn-square" onClick={handleMenuClose}>
-            <XIcon />
-          </button>
-        </div>
-        <div className="grid grid-cols-2 place-items-start mt-4">
-          <button
-            className="flex gap-2 mb-4 font-semibold cursor-pointer "
-            onClick={handleDashboardClick}
-          >
-            <LayoutPanelTop />
-            Dashboard
-          </button>
-          <button
-            className="flex gap-2 mb-4 font-semibold cursor-pointer "
-            onClick={handleNotesClick}
-          >
-            <File />
-            Notes
-          </button>
-          <button
-            className="flex gap-2 mb-4 font-semibold cursor-pointer "
-            onClick={handleNotebooksClick}
-          >
-            <Book />
-            Notebooks
-          </button>
-          <button
-            className="flex gap-2 mb-4 font-semibold cursor-pointer "
-            onClick={handlePinnedClick}
-          >
-            <Pin />
-            Pinned
-          </button>
-          <button
-            className="flex gap-2 mb-4 font-semibold cursor-pointer "
-            onClick={handleRecentClick}
-          >
-            <Clock />
-            Recent
-          </button>
-          <button
-            className="flex gap-2 mb-4 font-semibold cursor-pointer "
-            onClick={handleTaggedClick}
-          >
-            <Tag />
-            Tagged
-          </button>
-          <button
-            className="flex gap-2 mb-4 font-semibold cursor-pointer "
-            onClick={handleUntaggedClick}
-          >
-            <UntaggedIcon />
-            Untagged
-          </button>
-          <button
-            className="flex gap-2 mb-4 font-semibold cursor-pointer "
-            onClick={handleSettingsClick}
-          >
-            <Settings />
-            Settings
-          </button>
-        </div>
+      <div className="flex items-center justify-between text-2xl font-bold gap-2">
+        <Link
+          className="flex items-center gap-2 text-xl font-jakarta font-bold text-center"
+          to={"/home"}
+          onClick={handleLogoClick}
+        >
+          <Logo />
+          Nebula
+        </Link>
+        <button className="btn btn-square" onClick={handleMenuClose}>
+          <XIcon />
+        </button>
+      </div>
+      <div className="divider"></div>
+      <div className="grid grid-cols-2 place-items-start mt-4">
+        <button
+          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          onClick={handleDashboardClick}
+        >
+          <LayoutPanelTop />
+          Dashboard
+        </button>
+        <button
+          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          onClick={handleNotesClick}
+        >
+          <File />
+          Notes
+        </button>
+        <button
+          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          onClick={handleNotebooksClick}
+        >
+          <Book />
+          Notebooks
+        </button>
+        <button
+          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          onClick={handlePinnedClick}
+        >
+          <Pin />
+          Pinned
+        </button>
+        <button
+          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          onClick={handleRecentClick}
+        >
+          <Clock />
+          Recent
+        </button>
+        <button
+          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          onClick={handleTaggedClick}
+        >
+          <Tag />
+          Tagged
+        </button>
+        <button
+          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          onClick={handleUntaggedClick}
+        >
+          <UntaggedIcon />
+          Untagged
+        </button>
+        <button
+          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          onClick={handleSettingsClick}
+        >
+          <Settings />
+          Settings
+        </button>
       </div>
     </div>
   );
