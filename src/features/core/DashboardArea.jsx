@@ -118,7 +118,7 @@ function DashboardArea() {
               />
             </div>
             <div className="flex justify-between">
-              <div className="">
+              <div className="w-full">
                 <QuickActions />
                 <PinnedNotes />
               </div>
