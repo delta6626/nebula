@@ -60,7 +60,7 @@ function DashboardArea() {
               Dashboard
             </div>
             <div className="flex justify-center">
-              <div className="md:w-sm lg:w-lg xl:w-xl 2xl:w-2xl input focus-within:input-primary">
+              <div className="hidden lg:flex lg:w-lg xl:w-xl 2xl:w-2xl input focus-within:input-primary">
                 <Search className="text-secondary"></Search>
                 <input
                   className=""
