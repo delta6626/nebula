@@ -107,12 +107,22 @@ function DashboardArea() {
           <div className="divider" />
           <div className="px-8">
             <GreetingSection />
+            <div className="flex mt-2 w-full lg:hidden input focus-within:input-primary">
+              <Search className="text-secondary"></Search>
+              <input
+                className=""
+                placeholder="Search anything"
+                type="text"
+                value={searchTerm}
+                onChange={handleSearch}
+              />
+            </div>
             <div className="flex justify-between">
               <div className="">
                 <QuickActions />
                 <PinnedNotes />
               </div>
-              <div className="ml-8">
+              <div className="hidden lg:block ml-8">
                 <DigitalClock />
                 <UserStatistics />
                 <Quote />
