@@ -108,11 +108,11 @@ function DashboardArea() {
           <div className="px-8">
             <GreetingSection />
             <div className="flex justify-between">
-              <div className="left">
+              <div className="">
                 <QuickActions />
                 <PinnedNotes />
               </div>
-              <div className="right ml-8">
+              <div className="ml-8">
                 <DigitalClock />
                 <UserStatistics />
                 <Quote />
