@@ -14,7 +14,7 @@ function PinnedNotes() {
   });
 
   return (
-    <div className="pr-8">
+    <div className="lg:pr-8">
       <h1 className="text-xl font-semibold mt-8">Pinned notes</h1>
       {notesView === APP_CONSTANTS.VIEW_NOTE_EDITOR ? (
         <NoteEditor />
