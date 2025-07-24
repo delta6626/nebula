@@ -131,7 +131,7 @@ function GridNote({ noteObject }) {
 
   return (
     <div
-      className="w-70 2xl:w-90 bg-base-100 rounded-lg p-4 select-none cursor-pointer"
+      className="w-full lg:w-70 2xl:w-90 bg-base-100 rounded-lg p-4 select-none cursor-pointer"
       onClick={handleNoteClick}
     >
       <div className="flex gap-2 items-center justify-between">
