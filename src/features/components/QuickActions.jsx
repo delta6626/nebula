@@ -33,7 +33,7 @@ function QuickActions() {
           {user ? `Shift + ${user.shortcuts.NEW_NOTE}` : ""}
         </div>
 
-        {userVerified ? (
+        {!userVerified ? (
           <div className="flex items-center gap-2 text-warning">
             <Info />
             <p>{APP_CONSTANTS.VERIFY_EMAIL}</p>
@@ -53,7 +53,7 @@ function QuickActions() {
         <div className="flex flex-row items-center text-secondary">
           {user ? `Shift + ${user.shortcuts.NEW_NOTE_BOOK}` : ""}
         </div>
-        {userVerified ? (
+        {!userVerified ? (
           <div className="flex items-center gap-2 text-warning">
             <Info />
             <p>{APP_CONSTANTS.VERIFY_EMAIL}</p>
