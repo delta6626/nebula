@@ -121,6 +121,10 @@ function DashboardArea() {
               <div className="w-full">
                 <QuickActions />
                 <PinnedNotes />
+                <div className="lg:hidden">
+                  <Quote />
+                  <Donation />
+                </div>
               </div>
               <div className="hidden lg:block ml-8">
                 <DigitalClock />
