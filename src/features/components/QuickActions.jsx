@@ -23,14 +23,21 @@ function QuickActions() {
   return (
     <div className="min-w-fit flex md:flex-col lg:flex-row flex-wrap gap-5 mt-4">
       <button
-        className="btn w-full lg:w-70 2xl:w-90 md:h-20 lg:h-[10rem] flex flex-col"
+        className="btn w-full h-[5rem] lg:w-70 2xl:w-90 lg:h-[10rem] flex flex-col items-start lg:items-center"
         disabled={!userVerified}
         onClick={handleNewNoteClick}
       >
-        <FilePlus size={30} />
-        <p className="text-xl">New note</p>
-        <div className="flex flex-row items-center text-secondary">
-          {user ? `Shift + ${user.shortcuts.NEW_NOTE}` : ""}
+        <div className="flex gap-4 lg:flex-col lg:gap-0 items-center">
+          <FilePlus size={30} />
+
+          <div className="flex flex-col items-start lg:items-center">
+            <p className="text-xl">New note</p>
+            {user ? (
+              <p className="text-secondary">{`Shift + ${user.shortcuts.NEW_NOTE}`}</p>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
 
         {!userVerified ? (
@@ -44,15 +51,23 @@ function QuickActions() {
       </button>
 
       <button
-        className="btn w-full lg:w-70 2xl:w-90 md:h-20 lg:h-[10rem] flex flex-col"
+        className="btn w-full h-[5rem] lg:w-70 2xl:w-90 lg:h-[10rem] flex flex-col items-start lg:items-center"
         disabled={!userVerified}
         onClick={handleNewNotebookClick}
       >
-        <BookPlus size={30} />
-        <p className="text-xl">New notebook</p>
-        <div className="flex flex-row items-center text-secondary">
-          {user ? `Shift + ${user.shortcuts.NEW_NOTE_BOOK}` : ""}
+        <div className="flex gap-4 lg:flex-col lg:gap-0 items-center">
+          <BookPlus size={30} />
+
+          <div className="flex flex-col items-start lg:items-center">
+            <p className="text-xl">New notebook</p>
+            {user ? (
+              <p className="text-secondary">{`Shift + ${user.shortcuts.NEW_NOTE_BOOK}`}</p>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
+
         {!userVerified ? (
           <div className="flex items-center gap-2 text-warning">
             <Info />
@@ -64,13 +79,20 @@ function QuickActions() {
       </button>
 
       <button
-        className="btn w-full lg:w-70 2xl:w-90 md:h-20 lg:h-[10rem] flex flex-col"
+        className="btn w-full h-[5rem] lg:w-70 2xl:w-90 lg:h-[10rem] flex flex-col items-start lg:items-center"
         onClick={handleRecentClick}
       >
-        <Clock size={30} />
-        <p className="text-xl">Recent</p>
-        <div className="flex flex-row items-center text-secondary">
-          {user ? `Shift + ${user.shortcuts.RECENT_PAGE}` : ""}
+        <div className="flex gap-4 lg:flex-col lg:gap-0 items-center">
+          <Clock size={30} />
+
+          <div className="flex flex-col items-start lg:items-center">
+            <p className="text-xl">Recent</p>
+            {user ? (
+              <p className="text-secondary">{`Shift + ${user.shortcuts.RECENT_PAGE}`}</p>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
       </button>
     </div>
