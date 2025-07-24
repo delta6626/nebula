@@ -76,7 +76,7 @@ export const APP_CONSTANTS = {
   EMAIL_VERIFICATION_MODAL_SUCCESS: "Check your inbox",
   EMAIL_VERIFICATION_MODAL_SUCCESS_TEXT_CONTENT:
     "We've sent a verification link to your email. Please check your inbox to complete the verification. Refresh the page once you're done.",
-  VERIFY_EMAIL: "Please go to settings and verify your email first.",
+  VERIFY_EMAIL: "Verify email from settings",
   FIELD_EMPTY: "One or more fields are empty. Please fill them and try again.",
   UNSAVED_CHANGES: "Unsaved changes",
   UNSAVED_CHANGES_TEXT_CONTENT:
