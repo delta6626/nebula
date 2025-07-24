@@ -1,9 +1,10 @@
-import { Search } from "lucide-react";
+import { MenuIcon, Search } from "lucide-react";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import { useNotesStore } from "../../store/notesStore";
 import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
 import { useUserStore } from "../../store/userStore";
 import { useNoteSearchTermStore } from "../../store/noteSearchTermStore";
+import { useDashboardHamburgerStore } from "../../store/dashboardHamburgerStore";
 import GridNote from "../components/GridNote";
 import TableNote from "../components/TableNote";
 import NoteEditor from "../components/NoteEditor";
@@ -14,6 +15,7 @@ function NotesArea() {
   const { notesView } = useCurrentNotesViewStore();
   const { user } = useUserStore();
   const { noteSearchTerm, setNoteSearchTerm } = useNoteSearchTermStore();
+  const { setDashboardHamburgerOpen } = useDashboardHamburgerStore();
 
   const filteredNotes = notes.filter((note) => {
     if (noteSearchTerm === "") {
@@ -64,6 +66,10 @@ function NotesArea() {
     setNoteSearchTerm(e.target.value);
   }
 
+  function handleMenuOpen() {
+    setDashboardHamburgerOpen(true);
+  }
+
   // This feature was moved to the sidebar
 
   // function handleNewNoteButtonClick() {
@@ -77,9 +83,17 @@ function NotesArea() {
       ) : (
         <>
           <div className="flex items-center justify-between px-8 relative">
-            <h1 className="text-3xl font-bold">Notes</h1>
+            <div className="flex items-center text-2xl font-bold gap-2">
+              <button
+                className="xl:hidden btn btn-square"
+                onClick={handleMenuOpen}
+              >
+                <MenuIcon />
+              </button>
+              Notes
+            </div>
             <div className="flex absolute left-1/2 -translate-x-1/2">
-              <div className="w-2xl input focus-within:input-primary">
+              <div className="md:w-sm lg:w-lg xl:w-xl 2xl:w-2xl input focus-within:input-primary">
                 <Search className="text-secondary"></Search>
                 <input
                   className=""

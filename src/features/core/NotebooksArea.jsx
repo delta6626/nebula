@@ -1,10 +1,11 @@
-import { Search } from "lucide-react";
+import { MenuIcon, Search } from "lucide-react";
 import { useEffect } from "react";
 import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
 import { useNotebookSearchTermStore } from "../../store/notebookSearchTermStore";
 import { useNotebooksStore } from "../../store/notebooksStore";
 import { useUserStore } from "../../store/userStore";
+import { useDashboardHamburgerStore } from "../../store/dashboardHamburgerStore";
 import GridNotebook from "../components/GridNotebook";
 import TableNotebook from "../components/TableNotebook";
 import ViewSwitcher from "../components/ViewSwitcher";
@@ -15,6 +16,7 @@ function NotebooksArea() {
   const { user } = useUserStore();
   const { notebookSearchTerm, setNotebookSearchTerm } =
     useNotebookSearchTermStore();
+  const { setDashboardHamburgerOpen } = useDashboardHamburgerStore();
 
   const filteredNotebooks = notebooks.filter((notebook) => {
     if (
@@ -51,6 +53,10 @@ function NotebooksArea() {
     setNotebookSearchTerm(e.target.value);
   }
 
+  function handleMenuOpen() {
+    setDashboardHamburgerOpen(true);
+  }
+
   // This feature was moved to the sidebar
 
   // function handleNewNotebookButtonClick() {
@@ -66,9 +72,14 @@ function NotebooksArea() {
   return (
     <div className="flex-1 bg-base-300 h-[100vh] font-jakarta overflow-y-scroll scroll-smooth scrollbar-thin py-4">
       <div className="flex items-center justify-between px-8 relative">
-        <h1 className="text-3xl font-bold">Notebooks</h1>
+        <div className="flex items-center text-2xl font-bold gap-2">
+          <button className="xl:hidden btn btn-square" onClick={handleMenuOpen}>
+            <MenuIcon />
+          </button>
+          Notebooks
+        </div>
         <div className="flex absolute left-1/2 -translate-x-1/2">
-          <div className="w-2xl input focus-within:input-primary">
+          <div className="md:w-sm lg:w-lg xl:w-xl 2xl:w-2xl input focus-within:input-primary">
             <Search className="text-secondary" />
             <input
               className=""

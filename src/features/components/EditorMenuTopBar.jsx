@@ -165,6 +165,7 @@ function EditorMenuTopBar() {
   function handleCloseButtonClick() {
     if (!noteContentDelta && !noteNameDelta && !editorWidthDelta) {
       setNotesView(APP_CONSTANTS.VIEW_GRID);
+      document.title = "Nebula Notes";
     } else {
       setMessage({
         title: APP_CONSTANTS.UNSAVED_CHANGES,
@@ -179,6 +180,7 @@ function EditorMenuTopBar() {
         },
         secondButtonOnClick: function () {
           setNotesView(APP_CONSTANTS.VIEW_GRID);
+          document.title = "Nebula Notes";
           document.getElementById(APP_CONSTANTS.GENERIC_MODAL).close();
         },
       });
@@ -256,6 +258,7 @@ function EditorMenuTopBar() {
   }, [editor]);
 
   useEffect(() => {
+    document.title = editTargetNote.name + " - Nebula Notes";
     setNoteName(editTargetNote.name);
     setEditorWidth(editTargetNote.editorWidth.toLowerCase());
     document
@@ -266,6 +269,10 @@ function EditorMenuTopBar() {
     editTargetNote.name,
     user.preferences.autoSpacing,
   ]);
+
+  useEffect(() => {
+    document.title = noteName + " - Nebula Notes";
+  }, [noteName]);
 
   useEffect(() => {
     document

@@ -25,8 +25,8 @@ Nebula is a powerful, minimalistic, and open-source note-taking app that helps y
 
 ## 📷 Screenshots
 
-- [Dark mode](public/dark.png)
-- [Light mode](public/light.png)
+![Dark mode](public/dark.png)
+![Light mode](public/light.png)
 
 ## 🌟 Contributing
 

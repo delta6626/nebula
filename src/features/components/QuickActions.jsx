@@ -21,13 +21,13 @@ function QuickActions() {
   }
 
   return (
-    <div className="min-w-fit flex flex-wrap gap-5 mt-4">
+    <div className="min-w-fit flex md:flex-col lg:flex-row flex-wrap gap-5 mt-4">
       <div
         className={!userVerified ? "tooltip tooltip-bottom" : ""}
         data-tip={APP_CONSTANTS.VERIFY_EMAIL}
       >
         <button
-          className="btn w-sm h-[10rem] flex flex-col"
+          className="btn md:w-full lg:w-70 2xl:w-90 md:h-20 lg:h-[10rem] flex flex-col"
           disabled={!userVerified}
           onClick={handleNewNoteClick}
         >
@@ -44,7 +44,7 @@ function QuickActions() {
         data-tip={APP_CONSTANTS.VERIFY_EMAIL}
       >
         <button
-          className="btn w-sm h-[10rem] flex flex-col"
+          className="btn md:w-full lg:w-70 2xl:w-90 md:h-20 lg:h-[10rem] flex flex-col"
           disabled={!userVerified}
           onClick={handleNewNotebookClick}
         >
@@ -57,7 +57,7 @@ function QuickActions() {
       </div>
 
       <button
-        className="btn w-sm h-[10rem] flex flex-col"
+        className="btn md:w-full lg:w-70 2xl:w-90 md:h-20 lg:h-[10rem] flex flex-col"
         onClick={handleRecentClick}
       >
         <Clock size={30} />
