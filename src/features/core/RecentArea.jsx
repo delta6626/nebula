@@ -164,8 +164,8 @@ function RecentArea() {
               </button>
               Recent
             </div>
-            <div className="flex gap-2 absolute left-1/2 -translate-x-1/2">
-              <div className="md:w-sm lg:w-lg xl:w-xl 2xl:w-2xl input focus-within:input-primary">
+            <div className="hidden lg:flex gap-2 absolute left-1/2 -translate-x-1/2">
+              <div className="lg:w-lg xl:w-xl 2xl:w-2xl input focus-within:input-primary">
                 <Search className="text-secondary" />
                 <input
                   className=""
@@ -199,6 +199,31 @@ function RecentArea() {
 
           {/* Content */}
           <div className="px-8">
+            <div className="w-full lg:hidden mb-2 input focus-within:input-primary">
+              <Search className="text-secondary" />
+              <input
+                className=""
+                placeholder="Search tagged items"
+                type="text"
+                value={searchTerm}
+                onChange={handleSearch}
+              />
+            </div>
+            <div className="w-full lg:hidden">
+              <select
+                className="select w-full"
+                value={currentTimeRange}
+                onChange={handleSelectChange}
+              >
+                {timeRangeOptions.map((range, id) => {
+                  return (
+                    <option key={id} value={JSON.stringify(range)}>
+                      {range.label}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
             {filteredRecentNotes.length === 0 &&
             filteredRecentNotebooks.length === 0 ? (
               <div className="flex justify-center items-center h-[calc(100vh-8rem)] text-secondary mt-4 select-none">
