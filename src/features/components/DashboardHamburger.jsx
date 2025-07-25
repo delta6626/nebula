@@ -75,7 +75,7 @@ function DashboardHamburger() {
 
   return (
     <div
-      className={`absolute ${!dashboardHamburgerOpen ? "hidden" : ""} w-full z-10 bg-base-100 px-8 py-4`}
+      className={`absolute ${!dashboardHamburgerOpen ? "hidden" : ""} w-full border-b-1 border-accent z-10 bg-base-100 px-8 py-4`}
     >
       <div className="flex items-center justify-between text-2xl font-bold gap-2">
         <Link
