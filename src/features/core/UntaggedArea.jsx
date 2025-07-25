@@ -77,8 +77,8 @@ function UntaggedArea() {
               </button>
               Untagged
             </div>
-            <div className="flex absolute left-1/2 -translate-x-1/2">
-              <div className="md:w-sm lg:w-lg xl:w-xl 2xl:w-2xl input focus-within:input-primary">
+            <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2">
+              <div className="lg:w-lg xl:w-xl 2xl:w-2xl input focus-within:input-primary">
                 <Search className="text-secondary" />
                 <input
                   className=""
@@ -97,6 +97,16 @@ function UntaggedArea() {
 
           {/* Content */}
           <div className="px-8">
+            <div className="w-full lg:hidden input focus-within:input-primary">
+              <Search className="text-secondary" />
+              <input
+                className=""
+                placeholder="Search untagged items"
+                type="text"
+                value={searchTerm}
+                onChange={handleSearch}
+              />
+            </div>
             {filteredUntaggedNotes.length === 0 &&
             filteredUntaggedNotebooks.length === 0 ? (
               <div className="flex justify-center items-center h-[calc(100vh-8rem)] text-secondary mt-4 select-none">
