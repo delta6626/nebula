@@ -92,8 +92,8 @@ function NotesArea() {
               </button>
               Notes
             </div>
-            <div className="flex absolute left-1/2 -translate-x-1/2">
-              <div className="md:w-sm lg:w-lg xl:w-xl 2xl:w-2xl input focus-within:input-primary">
+            <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2">
+              <div className="lg:w-lg xl:w-xl 2xl:w-2xl input focus-within:input-primary">
                 <Search className="text-secondary"></Search>
                 <input
                   className=""
@@ -139,6 +139,19 @@ function NotesArea() {
             ) : (
               ""
             )}
+
+            <div className="block w-full lg:hidden">
+              <div className="w-full mt-2 input focus-within:input-primary">
+                <Search className="text-secondary"></Search>
+                <input
+                  className=""
+                  placeholder="Search notes"
+                  type="text"
+                  value={noteSearchTerm}
+                  onChange={handleSearch}
+                />
+              </div>
+            </div>
 
             {notesView === APP_CONSTANTS.VIEW_GRID ? (
               filteredNotes.length > 0 ? (
