@@ -133,7 +133,7 @@ function PinnedArea() {
                 <Search className="text-secondary" />
                 <input
                   className=""
-                  placeholder="Search tagged items"
+                  placeholder="Search pinned items"
                   type="text"
                   value={searchTerm}
                   onChange={handleSearch}
@@ -152,7 +152,7 @@ function PinnedArea() {
               <Search className="text-secondary" />
               <input
                 className=""
-                placeholder="Search tagged items"
+                placeholder="Search pinned items"
                 type="text"
                 value={searchTerm}
                 onChange={handleSearch}
