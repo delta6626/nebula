@@ -331,10 +331,22 @@ function EditorMenuTopBar() {
                 <MemoizedEllipsis />
               )}
             </div>
+
             <ul
               tabIndex={0}
               className="dropdown-content menu bg-base-200 rounded-box z-1 w-44 p-2 shadow-sm mt-2"
             >
+              <button
+                className="md:hidden btn flex justify-start"
+                onClick={() => {
+                  handleSaveButtonClick(false);
+                }}
+                disabled={saving}
+              >
+                <MemoizedSave />
+                Save
+              </button>
+
               <div className="dropdown dropdown-bottom sm:dropdown-left dropdown-hover">
                 <div
                   tabIndex={0}
