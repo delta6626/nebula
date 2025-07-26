@@ -332,7 +332,7 @@ function EditorMenuTopBar() {
               tabIndex={0}
               className="dropdown-content menu bg-base-200 rounded-box z-1 w-44 p-2 shadow-sm mt-2"
             >
-              <div className="dropdown dropdown-left dropdown-hover">
+              <div className="dropdown dropdown-bottom sm:dropdown-left dropdown-hover">
                 <div
                   tabIndex={0}
                   role="button"
