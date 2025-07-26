@@ -327,6 +327,8 @@ function EditorMenuTopBar() {
             <div tabIndex={0} role="button" className="btn btn-square">
               {exporting ? (
                 <span className="loading loading-spinner"></span>
+              ) : saving ? (
+                <span className="loading loading-spinner md:hidden"></span>
               ) : (
                 <MemoizedEllipsis />
               )}
