@@ -303,7 +303,7 @@ function EditorMenuTopBar() {
         </div>
         <div className="flex gap-2">
           <button
-            className="btn btn-square"
+            className="hidden md:flex btn btn-square"
             onClick={() => {
               handleSaveButtonClick(false);
             }}
@@ -316,7 +316,10 @@ function EditorMenuTopBar() {
             )}
           </button>
 
-          <button className="btn btn-square" onClick={handleCloseButtonClick}>
+          <button
+            className="hidden md:flex btn btn-square"
+            onClick={handleCloseButtonClick}
+          >
             <MemoizedX />
           </button>
 
