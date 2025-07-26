@@ -275,15 +275,33 @@ html[data-theme="light"] .tiptap {
 }
 
 .tiptap.large {
-  padding-inline: 4rem;
+  padding-inline: 3rem;
 }
 
 .tiptap.medium {
-  padding-inline: 8rem;
+  padding-inline: 4rem;
 }
 
 .tiptap.compact {
-  padding-inline: 16rem;
+  padding-inline: 6rem;
+}
+
+@media (min-width: 1024px) {
+  .tiptap.ultra-large {
+    padding-inline: 2rem;
+  }
+
+  .tiptap.large {
+    padding-inline: 4rem;
+  }
+
+  .tiptap.medium {
+    padding-inline: 8rem;
+  }
+
+  .tiptap.compact {
+    padding-inline: 16rem;
+  }
 }
 
 .tiptap blockquote p::after,
