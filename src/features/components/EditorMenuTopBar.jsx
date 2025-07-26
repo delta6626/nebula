@@ -434,6 +434,14 @@ function EditorMenuTopBar() {
                 <MemoizedFileUp className="shrink-0" size={20} />
                 Export MD
               </button>
+
+              <button
+                className="md:hidden btn flex justify-start"
+                onClick={handleCloseButtonClick}
+              >
+                <MemoizedX />
+                Exit
+              </button>
             </ul>
           </div>
         </div>
