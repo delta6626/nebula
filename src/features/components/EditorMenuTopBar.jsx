@@ -403,7 +403,7 @@ function EditorMenuTopBar() {
               </div>
 
               <button
-                className="btn flex justify-start"
+                className="btn hidden lg:flex justify-start"
                 onClick={() => {
                   setToolBarVisible(!toolBarVisible);
                 }}
