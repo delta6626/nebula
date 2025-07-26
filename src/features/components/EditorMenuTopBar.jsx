@@ -366,7 +366,7 @@ function EditorMenuTopBar() {
                 </ul>
               </div>
 
-              <div className="dropdown dropdown-left dropdown-hover">
+              <div className="dropdown dropdown-bottom sm:dropdown-left dropdown-hover">
                 <div
                   tabIndex={0}
                   role="button"
