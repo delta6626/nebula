@@ -282,8 +282,10 @@ function EditorMenuTopBar() {
 
   useEffect(() => {
     const editor = document.querySelectorAll(".tiptap")[0];
-    editor.classList.remove("compact", "medium", "large");
-    editor.classList.add(editorWidth);
+    editor.classList.remove("compact", "medium", "large", "ultra-large");
+    if (editorWidth != undefined) {
+      editor.classList.add(editorWidth);
+    }
   }, [editorWidth]);
 
   return (
