@@ -183,7 +183,7 @@ function EditorMenu() {
       <div
         className={
           toolBarVisible
-            ? "flex flex-wrap gap-5 justify-between w-full select-none px-8"
+            ? "hidden lg:flex flex-wrap gap-5 justify-between w-full select-none px-8"
             : "hidden"
         }
       >
@@ -761,7 +761,9 @@ function EditorMenu() {
           </div>
         </Section>
       </div>
-      <div className={toolBarVisible ? "divider" : "hidden"}></div>
+      <div
+        className={toolBarVisible ? "hidden lg:flex divider" : "hidden"}
+      ></div>
     </div>
   );
 }
