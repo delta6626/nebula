@@ -3,6 +3,8 @@ import { APP_CONSTANTS } from "../../constants/APP_CONSTANTS";
 import { useNotesStore } from "../../store/notesStore";
 import { useMessageStore } from "../../store/messageStore";
 import { useNotebooksStore } from "../../store/notebooksStore";
+import { useEditTargetNoteStore } from "../../store/editTargetNoteStore";
+import { useCurrentNotesViewStore } from "../../store/currentNotesViewStore";
 import { addNoteToDatabase } from "../../firebase/services";
 import { toTimestamp } from "../../utils/toTimestamp";
 import Tag from "../components/Tag";
@@ -11,6 +13,8 @@ function CreateNoteModal() {
   const { notebooks } = useNotebooksStore();
   const { notes, setNotes } = useNotesStore();
   const { setMessage } = useMessageStore();
+  const { setEditTargetNote } = useEditTargetNoteStore();
+  const { setNotesView } = useCurrentNotesViewStore();
 
   const [noteName, setNoteName] = useState("");
   const [selectedNotebook, setSelectedNotebook] = useState("");
@@ -81,6 +85,8 @@ function CreateNoteModal() {
         setNotes([...notes, noteObject]);
         setCreatingNote(false);
         document.getElementById(APP_CONSTANTS.CREATE_NOTE_MODAL).close();
+        setEditTargetNote(noteObject);
+        setNotesView(APP_CONSTANTS.VIEW_NOTE_EDITOR);
       })
       .catch((error) => {
         setCreatingNote(false);
