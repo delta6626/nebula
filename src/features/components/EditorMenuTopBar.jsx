@@ -323,6 +323,18 @@ function EditorMenuTopBar() {
             <MemoizedX />
           </button>
 
+          <div className="flex md:hidden min-w-fit">
+            {!noteContentDelta && !noteNameDelta && !editorWidthDelta ? (
+              <p className="flex items-center gap-2 text-primary">
+                Up to date <MemoizedCheckCircle2 />
+              </p>
+            ) : (
+              <p className="flex items-center gap-2 animate-pulse text-warning">
+                Unsaved changes <MemoizedFileWarning className="" />
+              </p>
+            )}
+          </div>
+
           <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-square">
               {exporting ? (
