@@ -450,11 +450,13 @@ function EditorMenuTopBar() {
       </div>
       <div className="flex justify-between px-8">
         <div className="text-secondary flex items-center gap-4 mt-2 max-w-2xl">
-          <MemoizedNotebookChip
-            bookIcon={true}
-            notebookName={editTargetNote.assignedTo[1]}
-            source={APP_CONSTANTS.VIEW_NOTE_EDITOR}
-          ></MemoizedNotebookChip>
+          <div className="">
+            <MemoizedNotebookChip
+              bookIcon={true}
+              notebookName={editTargetNote.assignedTo[1]}
+              source={APP_CONSTANTS.VIEW_NOTE_EDITOR}
+            ></MemoizedNotebookChip>
+          </div>
 
           <p className="hidden md:block"> • </p>
 
