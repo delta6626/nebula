@@ -463,9 +463,9 @@ function EditorMenuTopBar() {
               dateDistanceFromNow(objectToDate(editTargetNote.lastEditDate))}
           </p>
 
-          <p className="hidden md:block"> • </p>
+          <p className=""> • </p>
 
-          <div className="hidden md:block min-w-fit">
+          <div className="min-w-fit">
             {!noteContentDelta && !noteNameDelta && !editorWidthDelta ? (
               <p className="flex items-center gap-2 text-primary">
                 Up to date <MemoizedCheckCircle2 />
