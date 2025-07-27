@@ -450,7 +450,7 @@ function EditorMenuTopBar() {
       </div>
       <div className="flex justify-between px-8">
         <div className="text-secondary flex items-center gap-4 mt-2 max-w-2xl">
-          <div className="">
+          <div className="hidden xs:block">
             <MemoizedNotebookChip
               bookIcon={true}
               notebookName={editTargetNote.assignedTo[1]}
@@ -465,7 +465,7 @@ function EditorMenuTopBar() {
               dateDistanceFromNow(objectToDate(editTargetNote.lastEditDate))}
           </p>
 
-          <p className=""> • </p>
+          <p className="hidden xs:block"> • </p>
 
           <div className="min-w-fit">
             {!noteContentDelta && !noteNameDelta && !editorWidthDelta ? (
