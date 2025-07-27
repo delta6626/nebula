@@ -456,16 +456,16 @@ function EditorMenuTopBar() {
             source={APP_CONSTANTS.VIEW_NOTE_EDITOR}
           ></MemoizedNotebookChip>
 
-          <p> • </p>
+          <p className="hidden md:block"> • </p>
 
-          <p className="min-w-fit">
+          <p className="hidden md:block min-w-fit">
             {"Last edited " +
               dateDistanceFromNow(objectToDate(editTargetNote.lastEditDate))}
           </p>
 
-          <p> • </p>
+          <p className="hidden md:block"> • </p>
 
-          <div className="min-w-fit">
+          <div className="hidden md:block min-w-fit">
             {!noteContentDelta && !noteNameDelta && !editorWidthDelta ? (
               <p className="flex items-center gap-2 text-primary">
                 Up to date <MemoizedCheckCircle2 />
