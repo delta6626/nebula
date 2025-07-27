@@ -2,6 +2,10 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@theme {
+  --breakpoint-xs: 500px;
+}
+
 @plugin "daisyui" {
   themes:
     light --default,
