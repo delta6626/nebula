@@ -183,14 +183,14 @@ function EditorMenu() {
       <div
         className={
           toolBarVisible
-            ? "hidden lg:flex flex-wrap gap-5 justify-between w-full select-none px-8"
+            ? "flex flex-nowrap overflow-x-scroll lg:flex lg:flex-wrap gap-5 justify-between w-full select-none px-8 mb-6 pb-6 border-b-1 border-base-200"
             : "hidden"
         }
       >
         {/* Headings */}
         <Section
           title="Headings"
-          className={"grid grid-cols-3 grid-rows-2 gap-1"}
+          className={"flex lg:grid grid-cols-3 grid-rows-2 gap-1"}
         >
           <div className="tooltip tooltip-top" data-tip="Cmd + Alt + 1">
             <button
@@ -309,7 +309,7 @@ function EditorMenu() {
         {/* Text Formatting */}
         <Section
           title="Text Formatting"
-          className={"grid grid-cols-4 grid-rows-2 gap-1"}
+          className={"flex lg:grid grid-cols-4 grid-rows-2 gap-1"}
         >
           <div className="tooltip tooltip-top" data-tip="Cmd + B">
             <button
@@ -429,7 +429,10 @@ function EditorMenu() {
         </Section>
 
         {/* Lists */}
-        <Section title="Lists" className={"grid grid-cols-2 grid-rows-1 gap-1"}>
+        <Section
+          title="Lists"
+          className={"flex lg:grid grid-cols-2 grid-rows-1 gap-1"}
+        >
           <div className="tooltip tooltip-top" data-tip="Cmd + Shift + 7">
             <button
               onMouseDown={(e) => e.preventDefault()}
@@ -480,7 +483,7 @@ function EditorMenu() {
         {/* Alignment */}
         <Section
           title="Alignment"
-          className={"grid grid-cols-2 grid-rows-2 gap-1"}
+          className={"flex lg:grid grid-cols-2 grid-rows-2 gap-1"}
         >
           <div className="tooltip tooltip-top" data-tip="Cmd + Shift + L">
             <button
@@ -545,7 +548,10 @@ function EditorMenu() {
         </Section>
 
         {/* Table */}
-        <Section title="Table" className={"grid grid-cols-4 grid-rows-2 gap-1"}>
+        <Section
+          title="Table"
+          className={"flex lg:grid grid-cols-4 grid-rows-2 gap-1"}
+        >
           <button
             onMouseDown={(e) => e.preventDefault()}
             onClick={() => {
@@ -636,7 +642,10 @@ function EditorMenu() {
         </Section>
 
         {/* Embeds */}
-        <Section title="Links" className={"grid grid-cols-2 grid-rows-1 gap-1"}>
+        <Section
+          title="Links"
+          className={"flex lg:grid grid-cols-2 grid-rows-1 gap-1"}
+        >
           <button
             onMouseDown={(e) => e.preventDefault()}
             onClick={() => {
@@ -670,7 +679,10 @@ function EditorMenu() {
         </Section>
 
         {/* Code, Math*/}
-        <Section title="Other" className={"grid grid-cols-2 grid-rows-2 gap-1"}>
+        <Section
+          title="Other"
+          className={"flex lg:grid grid-cols-2 grid-rows-2 gap-1"}
+        >
           <div className="tooltip tooltip-top" data-tip="Cmd + E">
             <button
               onMouseDown={(e) => e.preventDefault()}
@@ -733,7 +745,7 @@ function EditorMenu() {
         {/* History */}
         <Section
           title="History"
-          className={"grid grid-cols-2 grid-rows-1 gap-1"}
+          className={"flex lg:grid grid-cols-2 grid-rows-1 gap-1"}
         >
           <div className="tooltip tooltip-top" data-tip="Cmd + Z">
             <button
@@ -764,19 +776,6 @@ function EditorMenu() {
       <div
         className={toolBarVisible ? "hidden lg:flex divider" : "hidden"}
       ></div>
-      <div className="lg:hidden px-8 overflow-x-auto flex gap-2 flex-nowrap whitespace-nowrap pb-6 mb-6 border-b-1 border-base-200">
-        <button
-          onMouseDown={(e) => e.preventDefault()}
-          onClick={() => {
-            editor.chain().focus().toggleHeading({ level: 1 }).run();
-          }}
-          className={
-            editorState.isH1 ? "btn btn-primary btn-square" : "btn btn-square"
-          }
-        >
-          <Heading1></Heading1>
-        </button>
-      </div>
     </div>
   );
 }
