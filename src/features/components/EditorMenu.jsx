@@ -183,7 +183,7 @@ function EditorMenu() {
       <div
         className={
           toolBarVisible
-            ? "flex flex-nowrap overflow-x-scroll lg:flex lg:flex-wrap gap-5 justify-between w-full select-none px-8 mb-6 pb-6 border-b-1 border-base-200"
+            ? "flex flex-nowrap overflow-x-scroll mb-6 pb-6 border-b-1 border-base-200 lg:mb-0 lg:pb-0 lg:border-b-0 lg:overflow-hidden lg:flex lg:flex-wrap gap-5 justify-between w-full select-none px-8"
             : "hidden"
         }
       >
