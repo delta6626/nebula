@@ -764,6 +764,19 @@ function EditorMenu() {
       <div
         className={toolBarVisible ? "hidden lg:flex divider" : "hidden"}
       ></div>
+      <div className="lg:hidden px-8 overflow-x-auto flex gap-2 flex-nowrap whitespace-nowrap pb-6 mb-6 border-b-1 border-base-200">
+        <button
+          onMouseDown={(e) => e.preventDefault()}
+          onClick={() => {
+            editor.chain().focus().toggleHeading({ level: 1 }).run();
+          }}
+          className={
+            editorState.isH1 ? "btn btn-primary btn-square" : "btn btn-square"
+          }
+        >
+          <Heading1></Heading1>
+        </button>
+      </div>
     </div>
   );
 }
