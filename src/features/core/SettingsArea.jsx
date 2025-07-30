@@ -543,9 +543,9 @@ function SettingsArea() {
           </div>
 
           {/* Auto spacing */}
-          <div className="flex justify-between mt-4">
+          <div className="flex justify-between mt-4 sm:flex-row xs:flex-col">
             <p className="font-medium">Auto spacing</p>
-            <div className="flex items-center">
+            <div className="flex items-center sm:mt-0 xs:mt-2">
               <p>On</p>
               <input
                 type="radio"
