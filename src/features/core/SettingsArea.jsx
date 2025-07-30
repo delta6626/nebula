@@ -863,10 +863,10 @@ function SettingsArea() {
           <p className="mt-4 text-neutral-400">You're walking on thin ice</p>
           <div className="divider"></div>
 
-          <div className="flex justify-between">
+          <div className="flex justify-between 2xs:flex-row flex-col">
             <p className="font-medium">Delete my notes</p>
             <button
-              className="btn btn-error text-error-content"
+              className="btn btn-error text-error-content 2xs:mt-0 mt-2"
               onClick={() => {
                 setMessage({
                   title: APP_CONSTANTS.DELETE_NOTES_MODAL_TITLE,
@@ -903,10 +903,10 @@ function SettingsArea() {
             </button>
           </div>
 
-          <div className="flex justify-between mt-4">
+          <div className="flex justify-between mt-4 2xs:flex-row flex-col">
             <p className="font-medium">Delete my notebooks</p>
             <button
-              className="btn btn-error text-error-content"
+              className="btn btn-error text-error-content 2xs:mt-0 mt-2"
               onClick={() => {
                 setMessage({
                   title: APP_CONSTANTS.DELETE_NOTEBOOKS_MODAL_TITLE,
@@ -944,10 +944,10 @@ function SettingsArea() {
             </button>
           </div>
 
-          <div className="flex justify-between mt-4">
+          <div className="flex justify-between mt-4 2xs:flex-row flex-col">
             <p className="font-medium">Delete my account</p>
             <button
-              className="btn btn-error text-error-content"
+              className="btn btn-error text-error-content 2xs:mt-0 mt-2"
               disabled={deletingAccount}
               onClick={() => {
                 setMessage({
