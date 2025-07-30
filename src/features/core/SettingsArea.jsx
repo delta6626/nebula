@@ -798,10 +798,10 @@ function SettingsArea() {
           <p className="text-xl font-semibold">Account</p>
           <p className="mt-4 text-neutral-400">Manage your account</p>
           <div className="divider"></div>
-          <div className="flex justify-between">
+          <div className="flex justify-between xs:flex-row flex-col">
             <p className="font-medium">Send verification mail</p>
             <button
-              className="btn btn-primary"
+              className="btn btn-primary xs:mt-0 mt-2"
               disabled={userVerified ? true : false}
               onClick={handleSendVerificationMail}
             >
@@ -814,10 +814,10 @@ function SettingsArea() {
               )}
             </button>
           </div>
-          <div className="flex justify-between mt-4">
+          <div className="flex justify-between mt-4 xs:flex-row flex-col">
             <p className="font-medium">Sign out</p>
             <button
-              className="btn btn-primary"
+              className="btn btn-primary xs:mt-0 mt-2"
               disabled={signingOut}
               onClick={() => {
                 setMessage({
