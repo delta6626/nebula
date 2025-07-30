@@ -502,12 +502,12 @@ function SettingsArea() {
           */}
 
           {/* Theme */}
-          <div className="flex items-center justify-between mt-4">
+          <div className="flex md:flex-row md:items-center flex-col justify-between mt-4">
             <p className="font-medium">Preferred theme</p>
             <select
               value={theme}
               onChange={(e) => setTheme(e.target.value)}
-              className="select focus:select-primary"
+              className="select focus:select-primary mt-2 w-full md:mt-0 md:w-fit"
             >
               {THEMES.map((theme, id) => {
                 return (
@@ -520,9 +520,9 @@ function SettingsArea() {
           </div>
 
           {/* Strict tag matching */}
-          <div className="flex justify-between mt-4">
+          <div className="flex justify-between mt-4 sm:flex-row xs:flex-col">
             <p className="font-medium">Strict tag matching</p>
-            <div className="flex items-center">
+            <div className="flex items-center sm:mt-0 xs:mt-2">
               <p>On</p>
               <input
                 type="radio"
