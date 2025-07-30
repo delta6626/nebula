@@ -4,6 +4,7 @@
 
 @theme {
   --breakpoint-xs: 500px;
+  --breakpoint-2xs: 425px;
 }
 
 @plugin "daisyui" {
