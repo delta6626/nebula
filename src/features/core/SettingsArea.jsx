@@ -520,9 +520,9 @@ function SettingsArea() {
           </div>
 
           {/* Strict tag matching */}
-          <div className="flex justify-between mt-4 sm:flex-row xs:flex-col">
+          <div className="flex justify-between mt-4 sm:flex-row flex-col">
             <p className="font-medium">Strict tag matching</p>
-            <div className="flex items-center sm:mt-0 xs:mt-2">
+            <div className="flex items-center sm:mt-0 mt-2">
               <p>On</p>
               <input
                 type="radio"
@@ -543,9 +543,9 @@ function SettingsArea() {
           </div>
 
           {/* Auto spacing */}
-          <div className="flex justify-between mt-4 sm:flex-row xs:flex-col">
+          <div className="flex justify-between mt-4 sm:flex-row flex-col">
             <p className="font-medium">Auto spacing</p>
-            <div className="flex items-center sm:mt-0 xs:mt-2">
+            <div className="flex items-center sm:mt-0 mt-2">
               <p>On</p>
               <input
                 type="radio"
@@ -566,12 +566,12 @@ function SettingsArea() {
           </div>
 
           {/* Email Subscription */}
-          <div className="flex justify-between mt-4">
+          <div className="flex justify-between mt-4 sm:flex-row flex-col">
             <p className="font-medium">
               Keep me informed with occasional emails about new features,
               updates, helpful tips, and special offers.
             </p>
-            <div className="flex items-center">
+            <div className="flex items-center sm:mt-0 mt-2">
               <p>Yes</p>
               <input
                 type="radio"
