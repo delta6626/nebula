@@ -599,7 +599,7 @@ function SettingsArea() {
           <p className="text-xl font-semibold">Shortcuts</p>
           <p className="mt-4 text-neutral-400">Configure your shortcuts </p>
           <div className="text-warning flex mt-2 items-center">
-            <Info size={20}></Info>
+            <Info className="shrink-0" size={20}></Info>
             <p className="ml-2">
               Your custom shortcut might not work due to existing browser
               shortcuts
@@ -613,21 +613,24 @@ function SettingsArea() {
             "NOTEBOOKS_PAGE",
             "SETTINGS_PAGE",
           ].map((page) => (
-            <div key={page} className="flex items-center justify-between mt-4">
+            <div
+              key={page}
+              className="flex justify-between mt-4 sm:flex-row sm:items-center flex-col items-start"
+            >
               <p className="font-medium">
                 Navigate to {page.replace("_", " ").toLowerCase()}
               </p>
-              <div className="flex items-center">
+              <div className="w-full sm:w-fit flex items-center sm:mt-0 mt-2">
                 <button className="btn" disabled>
                   <Command />
                 </button>
-                <Plus />
+                <Plus className="shrink-0" />
                 <button className="btn" disabled>
                   <ArrowBigUp />
                 </button>
-                <Plus />
+                <Plus className="shrink-0" />
                 <input
-                  className="input focus:input-primary w-20 uppercase"
+                  className="input focus:input-primary sm:w-20 w-full uppercase"
                   maxLength={1}
                   value={shortcuts[page]}
                   onChange={(e) =>
