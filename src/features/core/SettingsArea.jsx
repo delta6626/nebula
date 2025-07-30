@@ -665,15 +665,15 @@ function SettingsArea() {
             </div>
           </div>
 
-          <div className="flex items-center justify-between mt-4">
+          <div className="flex justify-between mt-4 sm:flex-row sm:items-center flex-col items-start">
             <p className="font-medium">Navigate to Recent page</p>
-            <div className="flex items-center">
+            <div className="w-full sm:w-fit flex items-center sm:mt-0 mt-2">
               <button className="btn" disabled>
                 <ArrowBigUp />
               </button>
               <Plus className="shrink-0" />
               <input
-                className="input focus:input-primary w-20 uppercase"
+                className="input focus:input-primary sm:w-20 w-full uppercase"
                 maxLength={1}
                 value={shortcuts["RECENT_PAGE"]}
                 onChange={(e) =>
@@ -686,15 +686,15 @@ function SettingsArea() {
             </div>
           </div>
 
-          <div className="flex items-center justify-between mt-4">
+          <div className="flex justify-between mt-4 sm:flex-row sm:items-center flex-col items-start">
             <p className="font-medium">Navigate to Tagged page</p>
-            <div className="flex items-center">
+            <div className="w-full sm:w-fit flex items-center sm:mt-0 mt-2">
               <button className="btn" disabled>
                 <ArrowBigUp />
               </button>
               <Plus className="shrink-0" />
               <input
-                className="input focus:input-primary w-20 uppercase"
+                className="input focus:input-primary sm:w-20 w-full uppercase"
                 maxLength={1}
                 value={shortcuts["TAGGED_PAGE"]}
                 onChange={(e) =>
@@ -707,15 +707,15 @@ function SettingsArea() {
             </div>
           </div>
 
-          <div className="flex items-center justify-between mt-4">
+          <div className="flex justify-between mt-4 sm:flex-row sm:items-center flex-col items-start">
             <p className="font-medium">Navigate to Untagged page</p>
-            <div className="flex items-center">
+            <div className="w-full sm:w-fit flex items-center sm:mt-0 mt-2">
               <button className="btn" disabled>
                 <ArrowBigUp />
               </button>
               <Plus className="shrink-0" />
               <input
-                className="input focus:input-primary w-20 uppercase"
+                className="input focus:input-primary sm:w-20 w-full uppercase"
                 maxLength={1}
                 value={shortcuts["UNTAGGED_PAGE"]}
                 onChange={(e) =>
@@ -728,15 +728,15 @@ function SettingsArea() {
             </div>
           </div>
 
-          <div className="flex items-center justify-between mt-4">
+          <div className="flex justify-between mt-4 sm:flex-row sm:items-center flex-col items-start">
             <p className="font-medium">New note</p>
-            <div className="flex items-center">
+            <div className="w-full sm:w-fit flex items-center sm:mt-0 mt-2">
               <button className="btn" disabled>
                 <ArrowBigUp />
               </button>
               <Plus className="shrink-0" />
               <input
-                className="input focus:input-primary w-20 uppercase"
+                className="input focus:input-primary sm:w-20 w-full uppercase"
                 maxLength={1}
                 value={shortcuts["NEW_NOTE"]}
                 onChange={(e) =>
@@ -749,15 +749,15 @@ function SettingsArea() {
             </div>
           </div>
 
-          <div className="flex items-center justify-between mt-4">
+          <div className="flex justify-between mt-4 sm:flex-row sm:items-center flex-col items-start">
             <p className="font-medium">New notebook</p>
-            <div className="flex items-center">
+            <div className="w-full sm:w-fit flex items-center sm:mt-0 mt-2">
               <button className="btn" disabled>
                 <ArrowBigUp />
               </button>
               <Plus className="shrink-0" />
               <input
-                className="input focus:input-primary w-20 uppercase"
+                className="input focus:input-primary sm:w-20 w-full uppercase"
                 maxLength={1}
                 value={shortcuts["NEW_NOTE_BOOK"]}
                 onChange={(e) =>
@@ -769,15 +769,15 @@ function SettingsArea() {
               />
             </div>
           </div>
-          <div className="flex items-center justify-between mt-4">
+          <div className="flex justify-between mt-4 sm:flex-row sm:items-center flex-col items-start">
             <p className="font-medium">Close note</p>
-            <div className="flex items-center">
+            <div className="w-full sm:w-fit flex items-center sm:mt-0 mt-2">
               <button className="btn" disabled>
                 <Option />
               </button>
               <Plus className="shrink-0" />
               <input
-                className="input focus:input-primary w-20 uppercase"
+                className="input focus:input-primary sm:w-20 w-full uppercase"
                 maxLength={1}
                 value={shortcuts["CLOSE"]}
                 onChange={(e) =>
