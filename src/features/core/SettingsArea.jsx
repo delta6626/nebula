@@ -671,7 +671,7 @@ function SettingsArea() {
               <button className="btn" disabled>
                 <ArrowBigUp />
               </button>
-              <Plus />
+              <Plus className="shrink-0" />
               <input
                 className="input focus:input-primary w-20 uppercase"
                 maxLength={1}
@@ -692,7 +692,7 @@ function SettingsArea() {
               <button className="btn" disabled>
                 <ArrowBigUp />
               </button>
-              <Plus />
+              <Plus className="shrink-0" />
               <input
                 className="input focus:input-primary w-20 uppercase"
                 maxLength={1}
@@ -713,7 +713,7 @@ function SettingsArea() {
               <button className="btn" disabled>
                 <ArrowBigUp />
               </button>
-              <Plus />
+              <Plus className="shrink-0" />
               <input
                 className="input focus:input-primary w-20 uppercase"
                 maxLength={1}
@@ -734,7 +734,7 @@ function SettingsArea() {
               <button className="btn" disabled>
                 <ArrowBigUp />
               </button>
-              <Plus />
+              <Plus className="shrink-0" />
               <input
                 className="input focus:input-primary w-20 uppercase"
                 maxLength={1}
@@ -755,7 +755,7 @@ function SettingsArea() {
               <button className="btn" disabled>
                 <ArrowBigUp />
               </button>
-              <Plus />
+              <Plus className="shrink-0" />
               <input
                 className="input focus:input-primary w-20 uppercase"
                 maxLength={1}
@@ -775,7 +775,7 @@ function SettingsArea() {
               <button className="btn" disabled>
                 <Option />
               </button>
-              <Plus />
+              <Plus className="shrink-0" />
               <input
                 className="input focus:input-primary w-20 uppercase"
                 maxLength={1}
