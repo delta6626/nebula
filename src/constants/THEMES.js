@@ -5,4 +5,5 @@ export const THEMES = [
   "synthwave",
   "caramel",
   "coffee",
+  "abyss",
 ];
