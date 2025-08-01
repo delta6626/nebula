@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Donation() {
   return (
-    <button className="bg-transparent text-left border-1 border-accent mt-4 md:w-full lg:w-70 2xl:w-90 mx-auto p-4">
+    <button className="rounded-lg bg-transparent text-left border-1 border-accent mt-4 md:w-full lg:w-70 2xl:w-90 mx-auto p-4">
       <div className="flex justify-between text-secondary">
         <h1 className="flex items-center gap-2 font-semibold">
           <DollarSign />
