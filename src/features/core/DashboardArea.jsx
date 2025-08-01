@@ -34,11 +34,6 @@ function DashboardArea() {
     setDashboardHamburgerOpen(true);
   }
 
-  // These functions were moved to the dashboard page
-
-  // function handleNewNotebookButtonClick() {}
-  // function handleNewNoteButtonClick() {}
-
   useEffect(() => {
     setNotesView(APP_CONSTANTS.VIEW_GRID);
   }, [setNotesView]);
