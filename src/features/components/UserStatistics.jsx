@@ -30,7 +30,7 @@ function UserStatistics() {
   uniqueTags = new Set(allTags);
 
   return (
-    <div className="bg-transparent border-1 border-accent mt-4 w-full lg:w-70 2xl:w-90 mx-auto rounded-lg p-4">
+    <button className="bg-transparent text-left border-1 border-accent mt-4 w-full lg:w-70 2xl:w-90 mx-auto p-4">
       <h1 className="flex items-center gap-2 font-semibold text-secondary">
         <ActivitySquare />
         Your stats
@@ -62,7 +62,7 @@ function UserStatistics() {
           }`}</li>
         </ul>
       </div>
-    </div>
+    </button>
   );
 }
 
