@@ -6,4 +6,5 @@ export const THEMES = [
   "caramel",
   "coffee",
   "abyss",
+  "classic",
 ];
