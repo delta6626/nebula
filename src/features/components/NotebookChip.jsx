@@ -24,7 +24,7 @@ function NotebookChip({ bookIcon, notebookName, source }) {
   }
 
   return (
-    <div
+    <button
       className="btn bg-base-200 text-secondary flex gap-2 items-center max-w-full"
       onClick={handleNotebookChipClick}
     >
@@ -36,7 +36,7 @@ function NotebookChip({ bookIcon, notebookName, source }) {
       <span className="overflow-hidden whitespace-nowrap text-ellipsis block w-full">
         {notebookName}
       </span>
-    </div>
+    </button>
   );
 }
 
