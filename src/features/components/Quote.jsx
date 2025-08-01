@@ -22,7 +22,7 @@ function Quote() {
   }, [getRandomQuote]);
 
   return (
-    <div className="bg-transparent border-1 border-accent mt-4 md:w-full lg:w-70 2xl:w-90 mx-auto rounded-lg p-4">
+    <button className="bg-transparent text-left border-1 border-accent mt-4 md:w-full lg:w-70 2xl:w-90 mx-auto p-4">
       <div className="flex justify-between text-secondary">
         <h1 className="flex items-center gap-2 font-semibold">
           <Feather />
@@ -40,7 +40,7 @@ function Quote() {
         <h1>{currentQuote?.quote}</h1>
         <p className="mt-2 text-secondary">— {currentQuote?.author}</p>
       </div>
-    </div>
+    </button>
   );
 }
 

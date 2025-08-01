@@ -89,7 +89,7 @@ function DashboardArea() {
                   <Donation />
                 </div>
               </div>
-              <div className="hidden lg:block ml-8">
+              <div className="hidden lg:flex flex-col ml-8">
                 <DigitalClock />
                 <UserStatistics />
                 <Quote />
