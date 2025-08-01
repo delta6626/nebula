@@ -15,7 +15,6 @@ import UserStatistics from "../components/UserStatistics";
 import ViewSwitcher from "../components/ViewSwitcher";
 
 function DashboardArea() {
-  const { message } = useMessageStore();
   const { notesView, setNotesView } = useCurrentNotesViewStore();
   const { setDashboardHamburgerOpen } = useDashboardHamburgerStore();
 
