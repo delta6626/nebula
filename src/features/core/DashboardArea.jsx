@@ -65,35 +65,6 @@ function DashboardArea() {
                   onChange={handleSearch}
                 />
               </div>
-
-              {/* This feature was moved to the sidebar */}
-
-              {/* <div
-                className={!userVerified ? "tooltip tooltip-right" : ""}
-                data-tip={APP_CONSTANTS.VERIFY_EMAIL}
-              >
-                <div className="tooltip tooltip-bottom" data-tip={"New note"}>
-                  <button
-                    className="btn btn-primary btn-square ml-2"
-                    disabled={!userVerified}
-                    onClick={handleNewNoteButtonClick}
-                  >
-                    <FilePlus></FilePlus>
-                  </button>
-                </div>
-                <div
-                  className="tooltip tooltip-bottom"
-                  data-tip={"New notebook"}
-                >
-                  <button
-                    className="btn btn-primary btn-square ml-2"
-                    disabled={!userVerified}
-                    onClick={handleNewNotebookButtonClick}
-                  >
-                    <BookPlus></BookPlus>
-                  </button>
-                </div>
-              </div> */}
             </div>
 
             <ViewSwitcher />
