@@ -130,8 +130,8 @@ function GridNote({ noteObject }) {
   }
 
   return (
-    <div
-      className="w-full lg:w-70 2xl:w-90 bg-base-100 rounded-lg p-4 select-none cursor-pointer"
+    <button
+      className="w-full lg:w-70 2xl:w-90 bg-base-100 p-4 select-none cursor-pointer"
       onClick={handleNoteClick}
     >
       <div className="flex gap-2 items-center justify-between">
@@ -278,7 +278,7 @@ function GridNote({ noteObject }) {
         </p>
       </div>
       <div className="divider"></div>
-      <div className="text-secondary">
+      <div className="text-secondary text-left">
         <p
           className={
             noteObject.tags.length != 0 ? "line-clamp-3" : "line-clamp-3 mb-4"
@@ -299,7 +299,9 @@ function GridNote({ noteObject }) {
       ) : (
         <div className="">
           <div className="divider"></div>
-          <p className="text-secondary mb-4">{APP_CONSTANTS.NO_TAGS}</p>
+          <p className="text-secondary text-left mb-4">
+            {APP_CONSTANTS.NO_TAGS}
+          </p>
         </div>
       )}
       <div className="flex gap-2">
@@ -321,7 +323,7 @@ function GridNote({ noteObject }) {
           )}
         </div>
       </div>
-    </div>
+    </button>
   );
 }
 
