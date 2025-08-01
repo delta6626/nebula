@@ -48,10 +48,10 @@ function Tag({
   }
 
   return (
-    <div
+    <button
       className={
         (darkBackground ? "bg-base-200 " : "bg-base-200 ") +
-        "btn rounded-lg flex text-secondary items-center gap-2 px-4 py-2 max-w-[200px] cursor-pointer"
+        "btn flex text-secondary items-center gap-2 px-4 py-2 max-w-[200px] cursor-pointer"
       }
       title={tagText}
       onClick={handleTagClick}
@@ -75,7 +75,7 @@ function Tag({
       ) : (
         ""
       )}
-    </div>
+    </button>
   );
 }
 
