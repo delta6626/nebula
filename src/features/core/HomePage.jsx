@@ -233,7 +233,7 @@ function HomePage({ redirect }) {
 
           <div className="mt-20 md:mt-40 flex flex-row-reverse items-center justify-between">
             <div className="">
-              <FadeAnimation from={"right"}>
+              <FadeAnimation>
                 <h2 className="text-center md:text-left text-3xl md:text-4xl font-bold">
                   Cloud based & Secure
                 </h2>
@@ -250,7 +250,7 @@ function HomePage({ redirect }) {
                 </div>
               </FadeAnimation>
             </div>
-            <FadeAnimation from={"left"}>
+            <FadeAnimation>
               <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300">
                 <Cloud size={120} />
               </div>
@@ -259,7 +259,7 @@ function HomePage({ redirect }) {
 
           <div className="mt-20 md:mt-40 flex items-center justify-between">
             <div className="">
-              <FadeAnimation from={"left"}>
+              <FadeAnimation>
                 <h2 className="text-center md:text-left text-3xl md:text-4xl font-bold">
                   Open Source
                 </h2>
@@ -281,7 +281,7 @@ function HomePage({ redirect }) {
                 </FadeAnimation>
               </div>
             </div>
-            <FadeAnimation from={"right"}>
+            <FadeAnimation>
               <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300">
                 <Code2 size={120} />
               </div>
@@ -290,7 +290,7 @@ function HomePage({ redirect }) {
 
           <div className="mt-20 md:mt-40 flex flex-row-reverse items-center justify-between">
             <div className="">
-              <FadeAnimation from={"right"}>
+              <FadeAnimation>
                 <h2 className="text-center md:text-left text-3xl md:text-4xl font-bold">
                   Free Cloud Storage
                 </h2>
@@ -315,7 +315,7 @@ function HomePage({ redirect }) {
                 </div>
               </FadeAnimation>
             </div>
-            <FadeAnimation from={"left"}>
+            <FadeAnimation>
               <div className="hidden md:flex items-center p-0 xl:p-15 2xl:p-20 xl:border-1 border-accent rounded-lg xl:bg-base-300">
                 <DollarSign size={120} />
               </div>
@@ -481,14 +481,14 @@ function HomePage({ redirect }) {
                 Ready to get organized?
               </h2>
             </FadeAnimation>
-            <FadeAnimation from={"right"}>
+            <FadeAnimation>
               <p className="max-w-150 mt-10 text-xl text-secondary">
                 Take control of your notes with Nebula — free, simple and fully
                 yours. Start creating, organizing, and finding your ideas
                 effortlessly today.
               </p>
             </FadeAnimation>
-            <FadeAnimation from={"left"}>
+            <FadeAnimation>
               <Link
                 className="btn btn-primary mt-10 border-1 border-accent w-full sm:w-fit"
                 to={"/signup"}
