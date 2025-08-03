@@ -502,9 +502,7 @@ function HomePage({ redirect }) {
 
       {/* Footer */}
       <div className="mt-20 md:mt-40">
-        <FadeAnimation>
-          <Footer></Footer>
-        </FadeAnimation>
+        <Footer></Footer>
       </div>
     </div>
   );
