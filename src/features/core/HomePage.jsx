@@ -336,8 +336,10 @@ function HomePage({ redirect }) {
                     1. What platforms does Nebula support?
                   </div>
                   <div className="collapse-content text-secondary">
-                    Nebula is currently optimized for desktop browsers. Mobile
-                    support is coming soon!
+                    Nebula is fully optimized for desktop, mobile, and
+                    everything in between. Whether you're working on a phone,
+                    tablet, or large screen, you’ll get a seamless, consistent
+                    experience.
                   </div>
                 </div>
               </FadeAnimation>
