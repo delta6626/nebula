@@ -289,6 +289,12 @@ function EditorMenuTopBar() {
     }
   }, [editorWidth]);
 
+  useEffect(() => {
+    if (!editable) {
+      setEditable(true);
+    }
+  }, []);
+
   return (
     <div className="">
       <div className="flex justify-between px-8">
