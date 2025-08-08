@@ -26,6 +26,7 @@ import { dateDistanceFromNow } from "../../utils/dateDistanceFromNow";
 import { objectToDate } from "../../utils/objectToDate";
 import { toTimestamp } from "../../utils/toTimestamp";
 import NotebookChip from "./NotebookChip";
+import { useEditableStore } from "../../store/editableStore";
 
 const MemoizedFileWarning = memo(FileWarning);
 const MemoizedSave = memo(Save);
@@ -54,13 +55,13 @@ function EditorMenuTopBar() {
   const { user } = useUserStore();
   const { setMessage } = useMessageStore();
   const { toolBarVisible, setToolBarVisible } = useToolBarVisibilityStore();
+  const { editable, setEditable } = useEditableStore();
 
   const [noteName, setNoteName] = useState("");
   const [noteContentDelta, setnoteContentDelta] = useState(false);
   const [noteNameDelta, setNoteNameDelta] = useState(false);
   const [editorWidth, setEditorWidth] = useState();
   const [editorWidthDelta, setEditorWidthDelta] = useState(false);
-  const [editable, setEditable] = useState(true);
   const [wordCount, setWordCount] = useState(0);
   const [saving, setSaving] = useState(false);
   const [exporting, setExporting] = useState(false);
