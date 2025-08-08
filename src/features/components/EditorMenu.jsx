@@ -585,6 +585,7 @@ function EditorMenu() {
                 .insertTable({ rows: 2, cols: 2, withHeaderRow: false })
                 .run();
             }}
+            disabled={!editable}
             className={
               editorState.isTable
                 ? "btn btn-primary btn-square"
@@ -599,7 +600,7 @@ function EditorMenu() {
               editor.chain().focus().addRowAfter().run();
             }}
             className={"btn btn-square"}
-            disabled={!editorState.isTable}
+            disabled={!editorState.isTable || !editable}
           >
             <AddRowIcon></AddRowIcon>
           </button>
@@ -609,7 +610,7 @@ function EditorMenu() {
               editor.chain().focus().addColumnAfter().run();
             }}
             className={"btn btn-square"}
-            disabled={!editorState.isTable}
+            disabled={!editorState.isTable || !editable}
           >
             <AddColumnIcon></AddColumnIcon>
           </button>
@@ -619,7 +620,7 @@ function EditorMenu() {
               editor.chain().focus().deleteRow().run();
             }}
             className={"btn btn-square"}
-            disabled={!editorState.isTable}
+            disabled={!editorState.isTable || !editable}
           >
             <DeleteRowIcon></DeleteRowIcon>
           </button>
@@ -629,7 +630,7 @@ function EditorMenu() {
               editor.chain().focus().deleteColumn().run();
             }}
             className={"btn btn-square"}
-            disabled={!editorState.isTable}
+            disabled={!editorState.isTable || !editable}
           >
             <DeleteColumnIcon></DeleteColumnIcon>
           </button>
@@ -639,7 +640,7 @@ function EditorMenu() {
               editor.chain().focus().mergeCells().run();
             }}
             className={"btn btn-square"}
-            disabled={!editorState.isTable}
+            disabled={!editorState.isTable || !editable}
           >
             <TableCellsMerge></TableCellsMerge>
           </button>
@@ -649,7 +650,7 @@ function EditorMenu() {
               editor.chain().focus().splitCell().run();
             }}
             className={"btn btn-square"}
-            disabled={!editorState.isTable}
+            disabled={!editorState.isTable || !editable}
           >
             <TableCellsSplit></TableCellsSplit>
           </button>
@@ -659,7 +660,7 @@ function EditorMenu() {
               editor.chain().focus().deleteTable().run();
             }}
             className={"btn btn-square"}
-            disabled={!editorState.isTable}
+            disabled={!editorState.isTable || !editable}
           >
             <SquareX></SquareX>
           </button>
