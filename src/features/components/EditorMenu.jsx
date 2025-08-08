@@ -716,6 +716,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleCode().run();
               }}
+              disabled={!editable}
               className={
                 editorState.isCode
                   ? "btn btn-primary btn-square"
@@ -731,6 +732,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleCodeBlock().run();
               }}
+              disabled={!editable}
               className={
                 editorState.isCodeBlock
                   ? "btn btn-primary btn-square"
@@ -747,6 +749,7 @@ function EditorMenu() {
                 .getElementById(APP_CONSTANTS.MATH_EQUATION_MODAL)
                 .showModal();
             }}
+            disabled={!editable}
             className={
               editorState.isMath
                 ? "btn btn-primary btn-square"
@@ -763,6 +766,7 @@ function EditorMenu() {
                 .getElementById(APP_CONSTANTS.SPEECH_RECOGNITION_MODAL)
                 .showModal();
             }}
+            disabled={!editable}
             className="btn btn-square"
           >
             <Mic />
