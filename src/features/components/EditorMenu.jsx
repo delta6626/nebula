@@ -200,6 +200,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleHeading({ level: 1 }).run();
               }}
+              disabled={!editable}
               className={
                 editorState.isH1
                   ? "btn btn-primary btn-square"
@@ -215,6 +216,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleHeading({ level: 2 }).run();
               }}
+              disabled={!editable}
               className={
                 editorState.isH2
                   ? "btn btn-primary btn-square"
@@ -230,6 +232,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleHeading({ level: 3 }).run();
               }}
+              disabled={!editable}
               className={
                 editorState.isH3
                   ? "btn btn-primary btn-square"
@@ -245,6 +248,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleHeading({ level: 4 }).run();
               }}
+              disabled={!editable}
               className={
                 editorState.isH4
                   ? "btn btn-primary btn-square"
@@ -260,6 +264,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleHeading({ level: 5 }).run();
               }}
+              disabled={!editable}
               className={
                 editorState.isH5
                   ? "btn btn-primary btn-square"
@@ -275,6 +280,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleHeading({ level: 6 }).run();
               }}
+              disabled={!editable}
               className={
                 editorState.isH6
                   ? "btn btn-primary btn-square"
