@@ -678,6 +678,7 @@ function EditorMenu() {
                 .getElementById(APP_CONSTANTS.EDITOR_LINK_MODAL)
                 .showModal();
             }}
+            disabled={!editable}
             className={
               editorState.isLink
                 ? "btn btn-primary btn-square"
@@ -693,6 +694,7 @@ function EditorMenu() {
                 .getElementById(APP_CONSTANTS.EDITOR_YOUTUBE_LINK_MODAL)
                 .showModal();
             }}
+            disabled={!editable}
             className={
               editorState.isYouTube
                 ? "btn btn-primary btn-square"
