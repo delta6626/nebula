@@ -326,6 +326,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleBold().run();
               }}
+              disabled={!editable}
               className={
                 editorState.isBold
                   ? "btn btn-primary btn-square"
@@ -341,6 +342,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleItalic().run();
               }}
+              disabled={!editable}
               className={
                 editorState.isItalic
                   ? "btn btn-primary btn-square"
@@ -356,6 +358,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleUnderline().run();
               }}
+              disabled={!editable}
               className={
                 editorState.isUnderline
                   ? "btn btn-primary btn-square"
@@ -371,6 +374,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleStrike().run();
               }}
+              disabled={!editable}
               className={
                 editorState.isStrike
                   ? "btn btn-primary btn-square"
@@ -386,6 +390,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleSubscript().run();
               }}
+              disabled={!editable}
               className={
                 editorState.isSubscript
                   ? "btn btn-primary btn-square"
@@ -401,6 +406,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleSuperscript().run();
               }}
+              disabled={!editable}
               className={
                 editorState.isSuperscript
                   ? "btn btn-primary btn-square"
@@ -416,6 +422,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleBlockquote().run();
               }}
+              disabled={!editable}
               className={
                 editorState.isBlockquote
                   ? "btn btn-primary btn-square"
@@ -431,6 +438,7 @@ function EditorMenu() {
             onClick={() => {
               editor.chain().focus().setHorizontalRule().run();
             }}
+            disabled={!editable}
             className={"btn btn-square"}
           >
             <Minus />
