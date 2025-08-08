@@ -297,6 +297,7 @@ function EditorMenu() {
           <select
             className="select w-fit bg-base-200"
             value={editorState.activeFont}
+            disabled={!editable}
             onChange={(e) => {
               editor.chain().focus().setFontFamily(e.target.value).run();
             }}
