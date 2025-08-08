@@ -511,6 +511,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().setTextAlign("left").run();
               }}
+              disabled={!editable}
               className={
                 editorState.isAlignLeft
                   ? "btn btn-primary btn-square"
@@ -526,6 +527,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().setTextAlign("center").run();
               }}
+              disabled={!editable}
               className={
                 editorState.isAlignCenter
                   ? "btn btn-primary btn-square"
@@ -541,6 +543,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().setTextAlign("right").run();
               }}
+              disabled={!editable}
               className={
                 editorState.isAlignRight
                   ? "btn btn-primary btn-square"
@@ -556,6 +559,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().setTextAlign("justify").run();
               }}
+              disabled={!editable}
               className={
                 editorState.isAlignJustify
                   ? "btn btn-primary btn-square"
