@@ -456,6 +456,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleOrderedList().run();
               }}
+              disabled={!editable}
               className={
                 editorState.isOrderedList
                   ? "btn btn-primary btn-square"
@@ -471,6 +472,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleBulletList().run();
               }}
+              disabled={!editable}
               className={
                 editorState.isBulletList
                   ? "btn btn-primary btn-square"
@@ -486,6 +488,7 @@ function EditorMenu() {
               onClick={() => {
                 editor.chain().focus().toggleTaskList().run();
               }}
+              disabled={!editable}
               className={
                 editorState.isTaskList
                   ? "btn btn-primary btn-square"
