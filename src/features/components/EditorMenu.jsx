@@ -47,6 +47,7 @@ import GenericModal from "../components/GenericModal";
 import EditorMenuTopBar from "./EditorMenuTopBar";
 import MathEquationModal from "./MathEquationModal";
 import SpeechRecognitionModal from "./SpeechRecognitionModal";
+import { useEditableStore } from "../../store/editableStore";
 
 function EditorMenu() {
   const fonts = [
@@ -65,6 +66,7 @@ function EditorMenu() {
 
   const { editor } = useCurrentEditor();
   const { toolBarVisible } = useToolBarVisibilityStore();
+  const { editable } = useEditableStore();
 
   // Editor optimization
   const editorState = useEditorState({
@@ -183,7 +185,7 @@ function EditorMenu() {
       <div
         className={
           toolBarVisible
-            ? "flex flex-nowrap overflow-x-scroll mb-6 pb-6 border-b-1 border-base-200 lg:mb-0 lg:pb-0 lg:border-b-0 lg:overflow-hidden lg:flex lg:flex-wrap gap-5 justify-between w-full select-none px-8"
+            ? `flex flex-nowrap overflow-x-scroll mb-6 pb-6 border-b-1 border-base-200 lg:mb-0 lg:pb-0 lg:border-b-0 lg:overflow-hidden lg:flex lg:flex-wrap gap-5 justify-between w-full select-none px-8 ${!editable ? "opacity-30" : ""}`
             : "hidden"
         }
       >
