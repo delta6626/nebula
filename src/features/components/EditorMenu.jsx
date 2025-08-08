@@ -785,7 +785,7 @@ function EditorMenu() {
                 editor.chain().focus().undo().run();
               }}
               className={"btn btn-square"}
-              disabled={!editorState.canUndo}
+              disabled={!editorState.canUndo || !editable}
             >
               <Undo />
             </button>
@@ -797,7 +797,7 @@ function EditorMenu() {
                 editor.chain().focus().redo().run();
               }}
               className={"btn btn-square"}
-              disabled={!editorState.canRedo}
+              disabled={!editorState.canRedo || !editable}
             >
               <Redo />
             </button>
