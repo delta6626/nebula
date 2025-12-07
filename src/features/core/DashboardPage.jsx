@@ -63,6 +63,9 @@ function DashboardPage() {
     useDashboardHamburgerStore();
 
   const [sideBarCollapsed, setSideBarCollapsed] = useState(false);
+  const [userLoading, setUserLoading] = useState(true);
+  const [notebooksLoading, setNotebooksLoading] = useState(true);
+  const [notesLoading, setNotesLoading] = useState(true);
 
   function handleCollapse() {
     setSideBarCollapsed(!sideBarCollapsed);
@@ -253,6 +256,7 @@ function DashboardPage() {
         // Handle this error later
       } else {
         setUser(userData);
+        setUserLoading(false);
       }
     });
   }, [setUser]);
@@ -274,6 +278,7 @@ function DashboardPage() {
         }
       });
       setNotebooks(allNotebooksData);
+      setNotebooksLoading(false);
     });
   }, [setNotebooks]);
 
@@ -286,6 +291,7 @@ function DashboardPage() {
         }
       });
       setNotes(allNotesData);
+      setNotesLoading(false);
     });
   }, [setNotes]);
 
