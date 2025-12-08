@@ -91,7 +91,7 @@ function DashboardHamburger() {
         </button>
       </div>
       <div className="divider"></div>
-      <div className="grid grid-cols-2 gap-x-4 place-items-start mt-4">
+      <div className="grid grid-cols-1 2xs:grid-cols-2 gap-x-4 place-items-start mt-4">
         <button
           className="min-w-full btn flex gap-2 mb-4 font-semibold cursor-pointer "
           onClick={handleDashboardClick}
