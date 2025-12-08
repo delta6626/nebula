@@ -91,58 +91,58 @@ function DashboardHamburger() {
         </button>
       </div>
       <div className="divider"></div>
-      <div className="grid grid-cols-2 place-items-start mt-4">
+      <div className="grid grid-cols-2 gap-x-4 place-items-start mt-4">
         <button
-          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          className="min-w-full btn flex gap-2 mb-4 font-semibold cursor-pointer "
           onClick={handleDashboardClick}
         >
           <LayoutPanelTop />
           Dashboard
         </button>
         <button
-          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          className="min-w-full btn flex gap-2 mb-4 font-semibold cursor-pointer "
           onClick={handleNotesClick}
         >
           <File />
           Notes
         </button>
         <button
-          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          className="min-w-full btn flex gap-2 mb-4 font-semibold cursor-pointer "
           onClick={handleNotebooksClick}
         >
           <Book />
           Notebooks
         </button>
         <button
-          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          className="min-w-full btn flex gap-2 mb-4 font-semibold cursor-pointer "
           onClick={handlePinnedClick}
         >
           <Pin />
           Pinned
         </button>
         <button
-          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          className="min-w-full btn flex gap-2 mb-4 font-semibold cursor-pointer "
           onClick={handleRecentClick}
         >
           <Clock />
           Recent
         </button>
         <button
-          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          className="min-w-full btn flex gap-2 mb-4 font-semibold cursor-pointer "
           onClick={handleTaggedClick}
         >
           <Tag />
           Tagged
         </button>
         <button
-          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          className="min-w-full btn flex gap-2 mb-4 font-semibold cursor-pointer "
           onClick={handleUntaggedClick}
         >
           <UntaggedIcon />
           Untagged
         </button>
         <button
-          className="flex gap-2 mb-4 font-semibold cursor-pointer "
+          className="min-w-full btn flex gap-2 mb-4 font-semibold cursor-pointer "
           onClick={handleSettingsClick}
         >
           <Settings />
