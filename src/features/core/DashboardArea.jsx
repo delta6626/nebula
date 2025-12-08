@@ -48,35 +48,12 @@ function DashboardArea() {
               </button>
               Dashboard
             </div>
-            <div className="flex justify-center">
-              <div className="hidden lg:flex lg:w-lg xl:w-xl 2xl:w-2xl input focus-within:input-primary">
-                <Search className="text-secondary"></Search>
-                <input
-                  className=""
-                  placeholder="Search anything"
-                  type="text"
-                  value={searchTerm}
-                  onChange={handleSearch}
-                />
-              </div>
-            </div>
-
             <ViewSwitcher />
           </div>
 
           <div className="divider" />
           <div className="px-8">
             <GreetingSection />
-            <div className="flex mt-2 w-full lg:hidden input focus-within:input-primary">
-              <Search className="text-secondary"></Search>
-              <input
-                className=""
-                placeholder="Search anything"
-                type="text"
-                value={searchTerm}
-                onChange={handleSearch}
-              />
-            </div>
             <div className="flex justify-between">
               <div className="w-full">
                 <QuickActions />
