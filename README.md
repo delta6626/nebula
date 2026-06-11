@@ -1,5 +1,9 @@
 # 🌌 Nebula
 
+
+<!-- AUTO-PACKAGE-BADGES:START -->
+
+<!-- AUTO-PACKAGE-BADGES:END -->
 Nebula is a powerful, minimalistic, and open-source note-taking app that helps you stay organized and focused. With a clean interface, support for multiple notebooks, and a beautiful editing experience, Nebula is designed for productivity and peace of mind.
 
 ## 🚀 Features
@@ -20,7 +24,7 @@ Nebula is a powerful, minimalistic, and open-source note-taking app that helps y
 
 ## 🌍 Production Version
 
-- The fully deployed, production-ready Nebula app is available at:  
+- The fully deployed, production-ready Nebula app is available at:
 [https://trynebulanotes.vercel.app](https://trynebulanotes.vercel.app)
 
 ## 📷 Screenshots
@@ -35,3 +39,4 @@ Nebula is a powerful, minimalistic, and open-source note-taking app that helps y
 ## 💸 Support
 
 - Nebula is free and open source, but it does cost to run. If you'd like to support us, you can do so [here](https://ko-fi.com/hasan04)
+
