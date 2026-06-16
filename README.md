@@ -21,7 +21,7 @@ Nebula is a powerful, minimalistic, and open-source note-taking app that helps y
 ## 🌍 Production Version
 
 - The fully deployed, production-ready Nebula app is available at:  
-[https://nebulaNotes.live](https://nebulanotes.live)
+[https://trynebulanotes.vercel.app](https://trynebulanotes.vercel.app)
 
 ## 📷 Screenshots
 
