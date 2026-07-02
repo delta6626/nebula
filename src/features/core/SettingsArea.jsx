@@ -806,7 +806,7 @@ function SettingsArea() {
               onClick={handleSendVerificationMail}
             >
               {userVerified ? (
-                "Already verified"
+                "Verified"
               ) : !sendingMail ? (
                 APP_CONSTANTS.SEND
               ) : (
