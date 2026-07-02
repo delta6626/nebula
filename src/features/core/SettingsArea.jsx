@@ -422,9 +422,7 @@ function SettingsArea() {
       <div className="px-8">
         <div className="bg-base-200 rounded-lg p-4">
           <p className="text-xl font-semibold">Profile</p>
-          <p className="mt-4 text-neutral-400">
-            Update your personal information
-          </p>
+          <p className="text-neutral-400">Update your personal information</p>
           <div className="divider"></div>
           <div className="flex flex-col">
             <p className="font-medium">Name</p>
@@ -454,7 +452,7 @@ function SettingsArea() {
       <div className="px-8">
         <div className="bg-base-200 rounded-lg p-4 mt-4">
           <p className="text-xl font-semibold">Preferences</p>
-          <p className="mt-4 text-neutral-400">Manage your preferences</p>
+          <p className="text-neutral-400">Manage your preferences</p>
           <div className="divider"></div>
 
           {/* Autosave */}
@@ -597,7 +595,7 @@ function SettingsArea() {
       <div className="px-8">
         <div className="bg-base-200 rounded-lg p-4 mt-4">
           <p className="text-xl font-semibold">Shortcuts</p>
-          <p className="mt-4 text-neutral-400">Configure your shortcuts </p>
+          <p className="text-neutral-400">Configure your shortcuts </p>
           <div className="text-warning flex mt-2 items-center">
             <Info className="shrink-0" size={20}></Info>
             <p className="ml-2">
@@ -796,7 +794,7 @@ function SettingsArea() {
       <div className="px-8">
         <div className={"bg-base-200 rounded-lg p-4 mt-4"}>
           <p className="text-xl font-semibold">Account</p>
-          <p className="mt-4 text-neutral-400">Manage your account</p>
+          <p className="text-neutral-400">Manage your account</p>
           <div className="divider"></div>
           <div className="flex justify-between 2xs:flex-row flex-col">
             <p className="font-medium">Send verification mail</p>
@@ -860,7 +858,7 @@ function SettingsArea() {
       <div className="px-8">
         <div className="bg-base-200 rounded-lg p-4 mt-4">
           <p className="text-xl font-semibold text-error">Danger zone</p>
-          <p className="mt-4 text-neutral-400">You're walking on thin ice</p>
+          <p className="text-neutral-400">You're walking on thin ice</p>
           <div className="divider"></div>
 
           <div className="flex justify-between 2xs:flex-row flex-col">
