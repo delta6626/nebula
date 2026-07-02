@@ -116,7 +116,11 @@ function CreateNoteModal() {
   }
 
   return (
-    <dialog id={APP_CONSTANTS.CREATE_NOTE_MODAL} className="modal">
+    <dialog
+      id={APP_CONSTANTS.CREATE_NOTE_MODAL}
+      className="modal"
+      onClose={resetState}
+    >
       <div className="modal-box">
         <h3 className="text-lg font-bold">Create a new note</h3>
         <input

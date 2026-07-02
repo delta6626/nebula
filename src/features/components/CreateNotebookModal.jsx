@@ -81,7 +81,11 @@ function CreateNotebookModal() {
   }
 
   return (
-    <dialog id={APP_CONSTANTS.CREATE_NOTEBOOK_MODAL} className="modal">
+    <dialog
+      id={APP_CONSTANTS.CREATE_NOTEBOOK_MODAL}
+      className="modal"
+      onClose={resetState}
+    >
       <div className="modal-box">
         <h3 className="text-lg font-bold">Create a new notebook</h3>
         <input
